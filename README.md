@@ -12,6 +12,14 @@ Site de Luciane Almeida, consultora de imagem e estilo em Curitiba/PR. Feito por
 - Teste "Qual é a sua estação?" que manda o resultado pro WhatsApp
 - Serviços, como funciona e chamada final com vídeo de seda ao fundo
 
+## Estúdio de Coloração (protótipo)
+
+Ferramenta da Luciane para fazer a coloração online: https://p0sturee.github.io/luciane-almeida/estudio/
+
+- Senha de teste: 1234 (só uma tela de entrada; ainda não é um login de verdade)
+- Os dados e as fotos ficam salvos só no aparelho de quem usa (IndexedDB), nada vai para servidor
+- As 12 cartelas em `estudio/index.html` (array `SE`) são um ponto de partida, para ajustar com as cartelas dela
+
 ## Estrutura
 
 ```
