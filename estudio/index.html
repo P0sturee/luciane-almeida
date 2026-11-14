@@ -4,66 +4,68 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="robots" content="noindex,nofollow">
-<meta name="theme-color" content="#6B1424">
+<meta name="theme-color" content="#1F2A44">
 <title>Estúdio de Coloração · Luciane Almeida</title>
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 64 64%27%3E%3Ccircle cx=%2732%27 cy=%2732%27 r=%2732%27 fill=%27%236B1424%27/%3E%3Ctext x=%2732%27 y=%2744%27 font-family=%27Georgia,serif%27 font-size=%2734%27 fill=%27%23F7F3EE%27 text-anchor=%27middle%27%3EL%3C/text%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 64 64%27%3E%3Ccircle cx=%2732%27 cy=%2732%27 r=%2732%27 fill=%27%231F2A44%27/%3E%3Ctext x=%2732%27 y=%2744%27 font-family=%27Georgia,serif%27 font-style=%27italic%27 font-size=%2734%27 fill=%27%23F6F5F2%27 text-anchor=%27middle%27%3EL%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Antonio:wght@600;700&family=Jost:wght@400;500;600&family=Mrs+Saint+Delafield&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Jost:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 /* Protótipo: tudo fica salvo só neste aparelho (IndexedDB). Sem servidor. */
-:root{--vinho:#6B1424;--vinho-d:#3E0A14;--vinho-l:#8E2236;--rosa:#E9B9C2;--creme:#EEE8E0;--creme-2:#F7F3EE;--areia:#DDD3C7;--tinta:#1B1517;--muted:#6F6461;--ok:#2F8F5B;--warn:#B7791F;
-  --f-d:'Antonio','Arial Narrow',sans-serif;--f-b:'Jost',system-ui,-apple-system,sans-serif;--f-s:'Mrs Saint Delafield','Brush Script MT',cursive}
+:root{--pri:#1F2A44;--pri-d:#121A2E;--pri-l:#2F3F66;--soft:#CBD3EA;--key:#B0125B;--creme:#ECEAE6;--creme-2:#F6F5F2;--areia:#D9D7D2;--tinta:#1B1A1F;--muted:#6B6A72;--ok:#2F8F5B;--warn:#B7791F;
+  --f-d:'Cormorant Garamond',Georgia,'Times New Roman',serif;--f-b:'Jost',system-ui,-apple-system,sans-serif;--f-s:'Cormorant Garamond',Georgia,'Times New Roman',serif}
 *{box-sizing:border-box;margin:0;padding:0}
 html{-webkit-text-size-adjust:100%}
 body{background:var(--areia);color:var(--tinta);font-family:var(--f-b);font-size:16px;line-height:1.45;-webkit-font-smoothing:antialiased;overscroll-behavior:none}
 button{font:inherit;color:inherit;background:none;border:0;cursor:pointer;-webkit-tap-highlight-color:transparent}
 input,textarea{font:inherit;color:inherit}
-:focus-visible{outline:2px solid var(--vinho);outline-offset:2px}
+:focus-visible{outline:2px solid var(--pri);outline-offset:2px}
 [hidden]{display:none!important}
 #app{max-width:480px;min-height:100dvh;margin:0 auto;background:var(--creme-2);padding:max(18px,env(safe-area-inset-top)) 18px calc(28px + env(safe-area-inset-bottom));position:relative;overflow-x:hidden}
-.sig{font-family:var(--f-s);font-size:44px;line-height:1;color:var(--vinho)}
+.sig{font-family:var(--f-s);font-style:italic;font-weight:500;font-size:34px;line-height:1;color:var(--pri)}
+.brandbar{display:flex;width:96px;height:4px;border-radius:2px;overflow:hidden;margin:8px 0 6px}
+.brandbar i{flex:1}
 .up{font-size:11px;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:var(--muted)}
-.h1{font-family:var(--f-d);font-weight:700;text-transform:uppercase;font-size:34px;line-height:1;color:var(--vinho)}
-.h{font-family:var(--f-d);font-weight:600;text-transform:uppercase;letter-spacing:.04em;font-size:18px;color:var(--tinta);margin:26px 0 12px}
+.h1{font-family:var(--f-d);font-weight:600;font-size:38px;line-height:1.02;color:var(--pri)}
+.h{font-weight:600;text-transform:uppercase;letter-spacing:.14em;font-size:12.5px;color:var(--tinta);margin:26px 0 12px}
 .m{color:var(--muted);font-size:14px}
 .top{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:18px}
 .bar{display:flex;align-items:center;gap:10px;margin-bottom:16px;min-height:44px}
 .bar b{font-weight:600;font-size:17px;flex:1;min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .ib{width:44px;height:44px;border-radius:50%;display:grid;place-items:center;background:#fff;box-shadow:0 2px 8px -4px rgba(27,21,23,.4);flex:none}
 .ib svg{width:22px;height:22px}
-.btn{display:flex;align-items:center;justify-content:center;gap:10px;width:100%;min-height:54px;padding:12px 18px;border-radius:27px;background:var(--vinho);color:#fff;font-weight:500;font-size:16px;text-align:center;box-shadow:0 10px 22px -12px rgba(27,21,23,.7)}
+.btn{display:flex;align-items:center;justify-content:center;gap:10px;width:100%;min-height:54px;padding:12px 18px;border-radius:27px;background:var(--pri);color:#fff;font-weight:500;font-size:16px;text-align:center;box-shadow:0 10px 22px -12px rgba(27,21,23,.7)}
 a.btn{text-decoration:none}
 .btn:active{transform:scale(.98)}
 .btn svg{width:20px;height:20px;flex:none}
-.btn.ghost{background:transparent;color:var(--vinho);box-shadow:inset 0 0 0 2px var(--areia)}
-.btn.soft{background:#fff;color:var(--vinho);box-shadow:0 2px 10px -6px rgba(27,21,23,.5)}
+.btn.ghost{background:transparent;color:var(--pri);box-shadow:inset 0 0 0 2px var(--areia)}
+.btn.soft{background:#fff;color:var(--pri);box-shadow:0 2px 10px -6px rgba(27,21,23,.5)}
 .btn[disabled]{opacity:.5}
 .stack{display:grid;gap:10px}
 .card{background:#fff;border-radius:22px;padding:16px;box-shadow:0 8px 22px -18px rgba(27,21,23,.6)}
 .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:16px}
 .stat{background:#fff;border-radius:18px;padding:12px 8px;text-align:center}
-.stat b{display:block;font-family:var(--f-d);font-size:26px;line-height:1;color:var(--vinho);white-space:nowrap}
+.stat b{display:block;font-family:var(--f-d);font-weight:600;font-size:30px;line-height:1;color:var(--pri);white-space:nowrap}
 .stat span{display:block;font-size:11px;color:var(--muted);margin-top:6px;line-height:1.2}
 .row{display:flex;align-items:center;gap:14px;width:100%;text-align:left;background:#fff;border-radius:20px;padding:12px 14px;box-shadow:0 8px 22px -18px rgba(27,21,23,.6)}
 .row div{flex:1;min-width:0}
 .row b{display:block;font-weight:600;font-size:16px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .row small{display:block;font-size:13px;color:var(--muted)}
-.av{width:48px;height:64px;border-radius:50%;overflow:hidden;background:var(--areia);display:grid;place-items:center;font-weight:600;color:var(--vinho);flex:none}
+.av{width:48px;height:64px;border-radius:50%;overflow:hidden;background:var(--areia);display:grid;place-items:center;font-weight:600;color:var(--pri);flex:none}
 .av img{width:100%;height:100%;object-fit:cover;display:block}
-.av.lg{width:84px;height:112px;box-shadow:0 0 0 4px #fff,0 0 0 6px var(--vinho)}
+.av.lg{width:84px;height:112px;box-shadow:0 0 0 4px #fff,0 0 0 6px var(--pri)}
 .chip{font-size:11px;font-weight:500;padding:5px 10px;border-radius:999px;flex:none;white-space:nowrap}
 .chip.a{background:#F3E7D3;color:#8A5A12}.chip.b{background:#E6ECF7;color:#2F4F8F}.chip.c{background:#E3F1E7;color:#256B45}.chip.d{background:#EFE6F5;color:#6A3D8F}
 .tabs{display:flex;gap:6px;background:var(--creme);border-radius:999px;padding:5px;margin:16px 0}
-.tabs button{flex:1;height:40px;border-radius:999px;font-size:14px;font-weight:500;color:var(--muted)}
-.tabs button.on{background:#fff;color:var(--vinho);box-shadow:0 2px 8px -4px rgba(27,21,23,.4)}
+.tabs button{flex:1;height:40px;border-radius:999px;font-size:13px;font-weight:500;color:var(--muted)}
+.tabs button.on{background:#fff;color:var(--pri);box-shadow:0 2px 8px -4px rgba(27,21,23,.4)}
 .who{display:flex;align-items:center;gap:16px;margin:6px 4px 0}
 .who h1{font-size:22px;font-weight:600;line-height:1.15}
 label.f{display:block;font-size:13px;color:var(--muted);margin:14px 2px 6px}
 .inp{width:100%;min-height:50px;border-radius:14px;border:1.5px solid #E3D8CD;background:#fff;padding:12px 14px;font-size:16px}
 textarea.inp{min-height:96px;resize:vertical}
 .chk{display:flex;align-items:center;gap:12px;margin-top:14px;font-size:15px}
-.chk input{width:24px;height:24px;accent-color:var(--vinho);flex:none}
+.chk input{width:24px;height:24px;accent-color:var(--pri);flex:none}
 .pal{display:grid;grid-template-columns:repeat(8,1fr);gap:5px;margin-top:12px}
 .pal i{aspect-ratio:1;border-radius:7px;box-shadow:inset 0 0 0 1px rgba(0,0,0,.08)}
 .pills{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
@@ -72,20 +74,21 @@ textarea.inp{min-height:96px;resize:vertical}
 .empty{text-align:center;padding:26px 14px;color:var(--muted);font-size:14px}
 .steps{counter-reset:s;display:grid;gap:8px;margin:12px 0 4px}
 .steps li{list-style:none;counter-increment:s;display:flex;gap:10px;font-size:14px;align-items:flex-start}
-.steps li::before{content:counter(s);width:22px;height:22px;border-radius:50%;background:var(--vinho);color:#fff;font-size:12px;font-weight:600;display:grid;place-items:center;flex:none;margin-top:1px}
+.steps li::before{content:counter(s);width:22px;height:22px;border-radius:50%;background:var(--key);color:#fff;font-size:12px;font-weight:600;display:grid;place-items:center;flex:none;margin-top:1px}
 .link{display:block;margin:16px auto 0;font-size:14px;color:var(--muted);text-decoration:underline;padding:8px}
 
 /* login */
 .login{min-height:calc(100dvh - 60px);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center}
-.login .sig{font-size:64px}
+.login .sig{font-size:48px}
+.login .brandbar{margin:14px auto 10px}
 .dots{display:flex;gap:16px;margin:30px 0 8px}
-.dots i{width:16px;height:16px;border-radius:50%;border:2px solid var(--vinho)}
-.dots i.on{background:var(--vinho)}
+.dots i{width:16px;height:16px;border-radius:50%;border:2px solid var(--pri)}
+.dots i.on{background:var(--pri)}
 .shake{animation:shake .35s}
 @keyframes shake{25%{transform:translateX(-8px)}75%{transform:translateX(8px)}}
 .pad{display:grid;grid-template-columns:repeat(3,72px);gap:14px;margin-top:22px}
 .pad button{width:72px;height:72px;border-radius:50%;background:#fff;font-size:26px;font-weight:500;box-shadow:0 4px 12px -8px rgba(27,21,23,.6)}
-.pad button:active{background:var(--rosa)}
+.pad button:active{background:var(--soft)}
 .pad .x{background:none;box-shadow:none;font-size:14px;color:var(--muted)}
 
 /* foto no oval */
@@ -94,7 +97,7 @@ textarea.inp{min-height:96px;resize:vertical}
 #al-img{position:absolute;left:0;top:0;max-width:none;transform-origin:0 0;user-select:none;-webkit-user-drag:none;pointer-events:none}
 #al-area svg{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
 .zoom{display:flex;align-items:center;gap:12px;margin:16px 4px}
-.zoom input{flex:1;accent-color:var(--vinho);height:32px}
+.zoom input{flex:1;accent-color:var(--pri);height:32px}
 
 /* oval + cores */
 .ov{display:block;aspect-ratio:3/4;border-radius:50%;overflow:hidden;box-shadow:0 0 0 3px rgba(255,255,255,.9),0 10px 24px -10px rgba(0,0,0,.5);background:#ddd}
@@ -107,23 +110,33 @@ textarea.inp{min-height:96px;resize:vertical}
 .cmp.sel{box-shadow:0 0 0 4px var(--ok)}
 .prog{display:flex;gap:4px;margin:4px 0 14px}
 .prog i{flex:1;height:5px;border-radius:3px;background:var(--areia)}
-.prog i.on{background:var(--vinho)}
-.q{font-family:var(--f-d);font-weight:700;text-transform:uppercase;font-size:32px;line-height:1;color:var(--vinho)}
+.prog i.on{background:var(--key)}
+.q{font-family:var(--f-d);font-weight:600;font-size:38px;line-height:1.02;color:var(--pri)}
 .drape{position:relative;width:100%;aspect-ratio:1;border-radius:26px;display:grid;place-items:center;overflow:hidden;box-shadow:0 14px 30px -18px rgba(27,21,23,.7)}
 .drape .ov{width:46%}
 .chips{display:flex;gap:8px;overflow-x:auto;padding:14px 18px 6px;margin:0 -18px;scrollbar-width:none}
 .chips::-webkit-scrollbar{display:none}
 .chips button{flex:none;padding:9px 14px;border-radius:999px;border:1.5px solid var(--areia);font-size:13px;white-space:nowrap;background:#fff}
-.chips button.on{background:var(--vinho);color:#fff;border-color:var(--vinho)}
+.chips button.on{background:var(--pri);color:#fff;border-color:var(--pri)}
 .sws{display:grid;grid-template-columns:repeat(8,1fr);gap:7px;margin-top:10px}
 .sws button{aspect-ratio:1;border-radius:10px;box-shadow:inset 0 0 0 1px rgba(0,0,0,.1)}
-.sws button.on{box-shadow:0 0 0 3px var(--creme-2),0 0 0 5px var(--vinho)}
+.sws button.on{box-shadow:0 0 0 3px var(--creme-2),0 0 0 5px var(--pri)}
 .srow{display:flex;align-items:center;gap:12px;width:100%;text-align:left;background:#fff;border-radius:18px;padding:12px 14px}
 .srow b{flex:1;font-weight:600;font-size:15px}
 .srow span{display:flex;gap:3px}
 .srow i{width:16px;height:28px;border-radius:4px}
-.srow.on{box-shadow:0 0 0 3px var(--vinho)}
+.srow.on{box-shadow:0 0 0 3px var(--pri)}
 .srow em{font-style:normal;font-size:11px;color:var(--warn);font-weight:600}
+
+/* ficha e looks por ocasião */
+.seg{display:flex;gap:8px}
+.seg button{flex:1;height:48px;border-radius:14px;background:#fff;border:1.5px solid var(--areia);font-size:15px}
+.seg button.on,.tg button.on{background:var(--pri);color:#fff;border-color:var(--pri)}
+.tg{display:flex;flex-wrap:wrap;gap:8px}
+.tg button{padding:10px 14px;border-radius:999px;border:1.5px solid var(--areia);background:#fff;font-size:14px}
+.lk{display:flex;flex-wrap:wrap;gap:8px 14px;margin-top:10px}
+.lk span{display:flex;align-items:center;gap:7px;font-size:13.5px}
+.lk i{width:22px;height:22px;border-radius:50%;box-shadow:inset 0 0 0 1px rgba(0,0,0,.14);flex:none}
 
 /* editor de cartelas */
 .ed{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
@@ -134,7 +147,7 @@ textarea.inp{min-height:96px;resize:vertical}
 .thm{display:flex;gap:12px;margin-top:6px}
 .thm button{flex:1;display:grid;justify-items:center;gap:6px;font-size:12px;color:var(--muted);padding:10px 4px;border-radius:16px;background:#fff}
 .thm i{width:38px;height:38px;border-radius:50%;box-shadow:inset 0 0 0 4px #fff,0 0 0 1px rgba(0,0,0,.15)}
-.thm button.on{box-shadow:0 0 0 2px var(--vinho);color:var(--tinta)}
+.thm button.on{box-shadow:0 0 0 2px var(--pri);color:var(--tinta)}
 
 /* materiais */
 .pages{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;margin:0 -18px;padding:6px 18px 14px;scrollbar-width:none}
@@ -142,14 +155,14 @@ textarea.inp{min-height:96px;resize:vertical}
 .pages img{flex:none;width:78%;border-radius:8px;box-shadow:0 14px 30px -16px rgba(27,21,23,.7);scroll-snap-align:center;background:#fff}
 .pages.story img{width:58%;border-radius:18px}
 .load{display:grid;place-items:center;gap:14px;padding:70px 0;color:var(--muted)}
-.spin{width:38px;height:38px;border-radius:50%;border:4px solid var(--areia);border-top-color:var(--vinho);animation:sp 1s linear infinite}
+.spin{width:38px;height:38px;border-radius:50%;border:4px solid var(--areia);border-top-color:var(--pri);animation:sp 1s linear infinite}
 @keyframes sp{to{transform:rotate(360deg)}}
 
 /* looks */
 .pcs{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
 .pc{position:relative;aspect-ratio:1;border-radius:14px;overflow:hidden;background:var(--creme)}
 .pc img{width:100%;height:100%;object-fit:cover;display:block}
-.pc.add{display:grid;place-items:center;border:2px dashed #D3C4B6;color:var(--vinho);font-size:30px;background:#fff}
+.pc.add{display:grid;place-items:center;border:2px dashed #D3C4B6;color:var(--pri);font-size:30px;background:#fff}
 .pc.on{box-shadow:0 0 0 4px var(--ok)}
 .pc.on::after{content:"✓";position:absolute;top:4px;right:4px;width:24px;height:24px;border-radius:50%;background:var(--ok);color:#fff;font-size:14px;display:grid;place-items:center}
 .colg{display:grid;grid-template-columns:1fr 1fr;gap:4px;width:112px;height:112px;border-radius:14px;overflow:hidden;flex:none;background:var(--creme)}
@@ -232,14 +245,14 @@ const BASE = [
 ];
 const GROUPS = [['n', 'Neutros'], ['p', 'Cores principais'], ['x', 'Cores de destaque'], ['lips', 'Batom'], ['blush', 'Blush'], ['eyes', 'Sombra']];
 const THEMES = {
-  vinho: ['Vinho', { a: '#6B1424', l: '#8E2236', d: '#3E0A14', s: '#E9B9C2', bg: '#F7F3EE' }],
-  noir: ['Preto e dourado', { a: '#1E1A1B', l: '#3B3336', d: '#0B0909', s: '#D9BF8C', bg: '#F6F3EE' }],
-  rose: ['Rosé', { a: '#9E5468', l: '#BC7A8B', d: '#733A4A', s: '#F7DDE3', bg: '#FBF6F4' }],
-  oliva: ['Oliva', { a: '#4C5B3C', l: '#6C7E57', d: '#2F3A25', s: '#DEE5C9', bg: '#F6F4EC' }]
+  marinho: ['Marinho', { a: '#1F2A44', l: '#2F3F66', d: '#121A2E', s: '#CBD3EA', bg: '#F6F5F2', k: '#B0125B' }],
+  jade: ['Verde jade', { a: '#0B4D3B', l: '#146B53', d: '#062E23', s: '#CFE6DC', bg: '#F5F6F2', k: '#B0125B' }],
+  roxo: ['Roxo', { a: '#3B1F4A', l: '#563068', d: '#24122E', s: '#E2D3EA', bg: '#F7F5F8', k: '#B0125B' }],
+  preto: ['Preto', { a: '#17151A', l: '#2E2A33', d: '#000000', s: '#DAD5E2', bg: '#F6F5F3', k: '#B0125B' }]
 };
-const S = { clients: [], cfg: { brand: 'Luciane Almeida', sub: 'Consultoria de imagem', insta: '@lu.consultoradeimagem', pin: '1234', theme: 'vinho', pal: {} }, stack: [], pin: '' };
-const TH = () => (THEMES[S.cfg.theme] || THEMES.vinho)[1];
-function applyTheme() { const t = TH(), r = document.documentElement.style; r.setProperty('--vinho', t.a); r.setProperty('--vinho-l', t.l); r.setProperty('--vinho-d', t.d); r.setProperty('--rosa', t.s); r.setProperty('--creme-2', t.bg); const m = $('meta[name=theme-color]'); if (m) m.content = t.a; }
+const S = { clients: [], cfg: { brand: 'Luciane Almeida', sub: 'Consultoria de imagem', insta: '@lu.consultoradeimagem', pin: '1234', theme: 'marinho', pal: {} }, stack: [], pin: '' };
+const TH = () => (THEMES[S.cfg.theme] || THEMES.marinho)[1];
+function applyTheme() { const t = TH(), r = document.documentElement.style; r.setProperty('--pri', t.a); r.setProperty('--pri-l', t.l); r.setProperty('--pri-d', t.d); r.setProperty('--soft', t.s); r.setProperty('--creme-2', t.bg); r.setProperty('--key', t.k); const m = $('meta[name=theme-color]'); if (m) m.content = t.a; }
 const se = id => { const b = BASE.find(s => s.id === id), o = S.cfg.pal && S.cfg.pal[id]; return o ? { ...b, ...o } : b; };
 const ALLS = () => BASE.map(b => se(b.id));
 const all16 = s => [...s.p, ...s.x, ...s.n];
@@ -319,6 +332,7 @@ app.addEventListener('click', e => { const el = e.target.closest('[data-a]'); if
 app.addEventListener('change', e => { const el = e.target.closest('[data-c]'); if (el && C[el.dataset.c]) C[el.dataset.c](el, e); });
 app.addEventListener('input', e => { const el = e.target.closest('[data-i]'); if (el && C[el.dataset.i]) C[el.dataset.i](el, e); });
 let toastT; function toast(t) { const el = $('#toast'); el.textContent = t; el.classList.add('on'); clearTimeout(toastT); toastT = setTimeout(() => el.classList.remove('on'), 3400); }
+const BRBAR = '<span class="brandbar">' + ['#1F2A44', '#0B4D3B', '#5B2A86', '#B0125B', '#17151A'].map(k => `<i style="background:${k}"></i>`).join('') + '</span>';
 const bar = t => `<div class="bar"><button class="ib" data-a="back" aria-label="Voltar">${I.back}</button><b>${esc(t)}</b></div>`;
 const av = (c, cls = '') => `<span class="av ${cls}">${c.photo ? `<img src="${c.photo}" alt="">` : esc((c.name || '?').split(/\s+/).map(w => w[0]).slice(0, 2).join('').toUpperCase())}</span>`;
 const ovalImg = c => `<span class="ov"><img src="${c.photo}" alt="Rosto de ${esc(c.name)}"></span>`;
@@ -327,7 +341,7 @@ A.back = () => history.back();
 
 /* ---------- login ---------- */
 V.login = {
-  h: () => `<div class="login"><p class="sig">${esc(S.cfg.brand)}</p><p class="up" style="margin-top:8px">Estúdio de coloração</p>
+  h: () => `<div class="login"><p class="sig">${esc(S.cfg.brand)}</p>${BRBAR}<p class="up">Estúdio de coloração</p>
     <div class="dots" id="dots">${[0, 1, 2, 3].map(i => `<i class="${i < S.pin.length ? 'on' : ''}"></i>`).join('')}</div>
     <p class="m">Digite a sua senha</p>
     <div class="pad">${[1, 2, 3, 4, 5, 6, 7, 8, 9].map(n => `<button data-a="key" data-k="${n}">${n}</button>`).join('')}<span></span><button data-a="key" data-k="0">0</button><button class="x" data-a="key" data-k="x">apagar</button></div>
@@ -347,7 +361,7 @@ V.home = {
   h() {
     const cs = S.clients.slice().sort((a, b) => b.created - a.created), due = cs.filter(c => !c.paid).reduce((t, c) => t + money(c.price), 0);
     const row = c => { const [t, k] = status(c); return `<button class="row" data-a="open" data-id="${c.id}" data-n="${esc(c.name.toLowerCase())}">${av(c)}<div><b>${esc(c.name)}</b><small>${c.season ? esc(se(c.season).name) : esc(c.city || 'Sem cidade')}</small></div><span class="chip ${k}">${t}</span></button>`; };
-    return `<header class="top"><div><p class="sig">${esc(S.cfg.brand)}</p><p class="up">Estúdio de coloração</p></div><button class="ib" data-a="cfg" aria-label="Ajustes">${I.gear}</button></header>
+    return `<header class="top"><div><p class="sig">${esc(S.cfg.brand)}</p>${BRBAR}<p class="up">Estúdio de coloração</p></div><button class="ib" data-a="cfg" aria-label="Ajustes">${I.gear}</button></header>
       <div class="stats"><div class="stat"><b>${cs.filter(c => c.photo && !c.season).length}</b><span>para analisar</span></div><div class="stat"><b>${cs.filter(c => c.wantsCard && !c.cardSent).length}</b><span>cartelas físicas para enviar</span></div><div class="stat"><b>${brl(due)}</b><span>a receber</span></div></div>
       <button class="btn" data-a="new">${I.plus}Nova cliente</button>
       ${cs.length ? `<h2 class="h">Suas clientes (${cs.length})</h2>${cs.length > 5 ? '<input class="inp" id="q" data-i="search" placeholder="Buscar pelo nome" style="margin-bottom:10px" autocomplete="off">' : ''}<div class="stack" id="list">${cs.map(row).join('')}</div>`
@@ -386,6 +400,21 @@ A.create = async () => {
 };
 
 /* ---------- cliente ---------- */
+const fx = c => c.ficha || {};
+const OCC = { culto: 'Culto e igreja', trabalho: 'Trabalho', dia: 'Dia a dia', evento: 'Eventos e festas', conteudo: 'Gravação de conteúdo' };
+const fichaHTML = c => { const f = fx(c), oc = f.occ || []; return `<p class="m">Quanto mais você contar sobre a cliente, mais pessoal fica o material. O texto da interpretação é montado a partir daqui.</p>
+  <label class="f" for="k-about">Sobre ela e a rotina (escreva falando com ela)</label><textarea class="inp" id="k-about" placeholder="Você é mãe de dois, trabalha com moda e grava vídeos quase todos os dias.">${esc(f.about)}</textarea>
+  <label class="f" for="k-goal">Ela me procurou porque...</label><input class="inp" id="k-goal" value="${esc(f.goal)}" autocomplete="off" placeholder="quer acertar nas cores das roupas e da maquiagem">
+  <label class="f" for="k-hair">Cabelo hoje</label><input class="inp" id="k-hair" value="${esc(f.hair)}" autocomplete="off" placeholder="castanho escuro, longo e natural">
+  <label class="f">Contraste pessoal (pele, olhos e cabelo)</label><div class="seg" id="k-con">${[['baixo', 'Baixo'], ['medio', 'Médio'], ['alto', 'Alto']].map(([k, l]) => `<button type="button" class="${f.contrast === k ? 'on' : ''}" data-a="seg" data-k="${k}">${l}</button>`).join('')}</div>
+  <label class="f">Ocasiões para os looks</label><div class="tg" id="k-occ">${Object.entries(OCC).map(([k, l]) => `<button type="button" class="${oc.includes(k) ? 'on' : ''}" data-a="tg" data-k="${k}">${l}</button>`).join('')}</div>
+  <label class="chk"><input type="checkbox" id="k-skirt" ${f.skirt ? 'checked' : ''}> Usa só saias e vestidos</label>
+  <label class="f" for="k-obs">O que você observou na análise</label><textarea class="inp" id="k-obs" placeholder="As cores frias uniformizaram a pele na hora, e o olhar ganhou vida com os tons mais escuros.">${esc(f.obs)}</textarea>
+  <button class="btn" style="margin-top:20px" data-a="saveficha">Salvar ficha</button>`; };
+A.seg = el => { const was = el.classList.contains('on'); $$('#k-con button').forEach(b => b.classList.remove('on')); if (!was) el.classList.add('on'); };
+A.tg = el => el.classList.toggle('on');
+A.saveficha = async () => { const c = cur(), on = $('#k-con .on'); c.ficha = { about: $('#k-about').value.trim(), goal: $('#k-goal').value.trim(), hair: $('#k-hair').value.trim(), contrast: on ? on.dataset.k : '', occ: $$('#k-occ .on').map(b => b.dataset.k), skirt: $('#k-skirt').checked, obs: $('#k-obs').value.trim() }; await save(c); render(); toast('Ficha salva.'); };
+const lookCard = (c, s, o) => { const l = olook(c, s, o); return `<div class="card"><b>${OCC[o]}</b><div class="lk">${l.pieces.map(p => `<span><i style="background:${p.c}"></i>${esc(p.l)}: ${esc(p.n || cname(p.c))}</span>`).join('')}</div><p class="m" style="margin-top:8px">${esc(l.note)}</p><button class="link" style="margin:6px 0 0;padding:4px 0" data-a="oledit" data-k="${o}">Trocar cores e texto</button></div>`; };
 V.client = {
   h(p) {
     const c = cli(p.id), tab = p.tab || 'cor', s = c.season && se(c.season);
@@ -396,19 +425,19 @@ V.client = {
       else if (!s) body = `<div class="card" style="text-align:center"><p><b>Foto pronta.</b> Agora compare as cores, como você faz com os tecidos.</p></div>
         <div class="stack" style="margin-top:14px"><button class="btn" data-a="start">Começar a análise</button><button class="btn ghost" data-a="try">Provar as cartelas livremente</button><button class="btn soft" data-a="pickphoto">${I.cam}Trocar a foto</button></div>`;
       else body = `<div class="card"><p class="up">Cartela da cliente</p><p class="h1" style="margin-top:6px">${esc(s.name)}</p>${pills(s)}<div class="pal">${all16(s).map(k => `<i style="background:${k}"></i>`).join('')}</div></div>
-        <label class="f" for="f-read">Sua leitura da análise (aparece no material)</label><textarea class="inp" id="f-read" data-c="read" style="min-height:150px">${esc(c.reading ?? reading(c, s))}</textarea>
-        <label class="f" for="f-msg">Seu recado para a cliente (aparece no material)</label><textarea class="inp" id="f-msg" data-c="msg">${esc(c.msg ?? defMsg(c))}</textarea>
-        <div class="stack" style="margin-top:14px"><button class="btn" data-a="out" data-k="dossie">${I.doc}Gerar o material da cliente (PDF)</button><button class="btn ghost" data-a="out" data-k="kit">${I.img}Imagens para o Instagram</button><button class="btn ghost" data-a="out" data-k="bolsa">Cartela de bolsa para imprimir</button><button class="btn soft" data-a="try">Provar outras cartelas</button><button class="btn soft" data-a="start">Refazer a análise</button></div>`;
-    } else if (tab === 'looks') {
+        ${fx(c).about ? '' : `<div class="card" style="margin-top:12px"><p><b>Deixe o material com a cara dela.</b></p><p class="m" style="margin-top:4px">Preencha a Ficha com a rotina da cliente e o que você observou. A interpretação é escrita a partir dela.</p><button class="btn soft" style="margin-top:12px" data-a="tab" data-t="ficha">Preencher a ficha</button></div>`}
+        <div class="stack" style="margin-top:14px"><button class="btn ghost" data-a="texto">Revisar o texto da interpretação</button><button class="btn" data-a="out" data-k="dossie">${I.doc}Gerar o material da cliente (PDF)</button><button class="btn ghost" data-a="out" data-k="kit">${I.img}Imagens para o Instagram</button><button class="btn ghost" data-a="out" data-k="bolsa">Cartela de bolsa para imprimir</button><button class="btn soft" data-a="try">Provar outras cartelas</button><button class="btn soft" data-a="start">Refazer a análise</button></div>`;
+    } else if (tab === 'ficha') body = fichaHTML(c);
+    else if (tab === 'looks') {
       const pcs = c.pieces || [], lk = c.looks || [];
-      body = `<p class="m">Guarde aqui as fotos das peças que a cliente te mandar e monte combinações. Os looks entram no material em PDF.</p>
-        <h2 class="h">Peças da cliente</h2><div class="pcs">${pcs.map(u => `<span class="pc"><img src="${u}" alt="Peça"></span>`).join('')}<button class="pc add" data-a="addpiece" aria-label="Adicionar peça">+</button></div>
-        <h2 class="h">Looks montados</h2><div class="stack">${lk.map(l => `<div class="card look">${colg(c, l)}<div><b>${esc(l.title)}</b><p>${esc(l.note)}</p><button class="link" style="margin:6px 0 0;padding:4px 0" data-a="dellook" data-id="${l.id}">Excluir look</button></div></div>`).join('') || '<p class="empty">Nenhum look ainda.</p>'}</div>
-        <button class="btn" style="margin-top:14px" data-a="newlook" ${pcs.length ? '' : 'disabled'}>${I.plus}Montar um look</button>`;
+      body = `${s ? `<h2 class="h" style="margin-top:6px">Looks pelas cores da cartela</h2><p class="m" style="margin-bottom:10px">Uma sugestão para cada ocasião marcada na Ficha. Ajuste as cores e escreva a sua orientação.</p><div class="stack">${occs(c).map(o => lookCard(c, s, o)).join('')}</div>` : '<p class="m">Depois de confirmar a cartela, aqui aparecem os looks montados com as cores dela.</p>'}
+        <h2 class="h">Peças da própria cliente</h2><p class="m" style="margin-bottom:10px">Guarde as fotos das peças que ela te mandar e monte combinações com elas.</p><div class="pcs">${pcs.map(u => `<span class="pc"><img src="${u}" alt="Peça"></span>`).join('')}<button class="pc add" data-a="addpiece" aria-label="Adicionar peça">+</button></div>
+        <div class="stack" style="margin-top:12px">${lk.map(l => `<div class="card look">${colg(c, l)}<div><b>${esc(l.title)}</b><p>${esc(l.note)}</p><button class="link" style="margin:6px 0 0;padding:4px 0" data-a="dellook" data-id="${l.id}">Excluir look</button></div></div>`).join('')}</div>
+        <button class="btn soft" style="margin-top:14px" data-a="newlook" ${pcs.length ? '' : 'disabled'}>${I.plus}Montar um look com as peças dela</button>`;
     } else body = `${formHTML(c, true)}<div class="stack" style="margin-top:20px"><button class="btn" data-a="savedata">Salvar</button>${c.phone ? `<a class="btn ghost" href="${wa(c, `Oi, ${first(c)}!`)}" target="_blank" rel="noopener">${I.chat}Abrir conversa no WhatsApp</a>` : ''}<button class="link" data-a="del">Excluir esta cliente</button></div>`;
     const [t, k] = status(c);
     return `${bar('Cliente')}<div class="who">${av(c, 'lg')}<div><h1>${esc(c.name)}</h1><p class="m">${esc(c.city || '')}</p><span class="chip ${k}" style="display:inline-block;margin-top:8px">${t}</span></div></div>
-      <div class="tabs">${[['cor', 'Coloração'], ['looks', 'Looks'], ['dados', 'Dados']].map(([id, l]) => `<button class="${tab === id ? 'on' : ''}" data-a="tab" data-t="${id}">${l}</button>`).join('')}</div>
+      <div class="tabs">${[['cor', 'Coloração'], ['ficha', 'Ficha'], ['looks', 'Looks'], ['dados', 'Dados']].map(([id, l]) => `<button class="${tab === id ? 'on' : ''}" data-a="tab" data-t="${id}">${l}</button>`).join('')}</div>
       ${body}<input type="file" accept="image/*" id="fi-photo" data-c="photo" hidden><input type="file" accept="image/*" multiple id="fi-piece" data-c="piece" hidden>`;
   }
 };
@@ -499,7 +528,7 @@ V.result = {
       <div class="stack"><button class="btn" data-a="confirm">${I.check}Confirmar ${esc(s.name)}</button><button class="btn ghost" data-a="duel">Comparar com ${esc(s2.name)}</button><button class="btn soft" data-a="seasons">Escolher outra cartela</button></div>`;
   }
 };
-A.confirm = async () => { const p = topv().p, c = cli(p.id), id = p.sid || p.order[0]; if (c.season !== id) c.reading = undefined; c.season = id; if (p.ans) c.ans = p.ans; c.doneAt = Date.now(); c.sentAt = null; await save(c); backTo('client'); toast('Cartela confirmada: ' + se(id).name); };
+A.confirm = async () => { const p = topv().p, c = cli(p.id), id = p.sid || p.order[0]; if (c.season !== id) { c.txt = {}; c.olooks = {}; } c.season = id; if (p.ans) c.ans = p.ans; c.doneAt = Date.now(); c.sentAt = null; await save(c); backTo('client'); toast('Cartela confirmada: ' + se(id).name); };
 A.duel = () => { const p = topv().p; go('duel', { id: p.id, order: p.order }); };
 V.duel = {
   h(p) {
@@ -546,6 +575,94 @@ A.togglepiece = el => { const p = topv().p, i = +el.dataset.n; p.title = $('#l-t
 A.savelook = async () => { const p = topv().p, c = cli(p.id); if (!p.sel.length) { toast('Escolha pelo menos uma peça.'); return; } c.looks = c.looks || []; c.looks.push({ id: uid(), title: $('#l-title').value.trim() || 'Look ' + (c.looks.length + 1), note: $('#l-note').value.trim(), items: p.sel.slice() }); await save(c); backTo('client'); toast('Look salvo.'); };
 A.dellook = async el => { const c = cur(); c.looks = c.looks.filter(l => l.id !== el.dataset.id); await save(c); render(); };
 
+/* ---------- interpretação: o texto que a cliente lê ---------- */
+const dotend = t => { t = String(t || '').trim(); return t && !/[.!?…]$/.test(t) ? t + '.' : t; };
+const listPt = a => { a = [...new Set(a)]; return a.length < 2 ? a.join('') : a.slice(0, -1).join(', ') + ' e ' + a[a.length - 1]; };
+const contrast = (c, s) => fx(c).contrast || (s.v[2] > 0 || s.v[1] > 1 ? 'alto' : s.v[2] < 0 ? 'baixo' : 'medio');
+const prim = s => { const a = s.v.map(Math.abs); return ['a temperatura', 'a profundidade', 'a intensidade'][a.indexOf(Math.max(...a))]; };
+/* nome aproximado de uma cor, em português */
+function cname(h) {
+  const n = parseInt(h.slice(1), 16), r = (n >> 16 & 255) / 255, g = (n >> 8 & 255) / 255, b = (n & 255) / 255, mx = Math.max(r, g, b), mn = Math.min(r, g, b), l = (mx + mn) / 2, d = mx - mn, s = d ? d / (1 - Math.abs(2 * l - 1)) : 0;
+  let hue = 0; if (d) { hue = mx === r ? ((g - b) / d) % 6 : mx === g ? (b - r) / d + 2 : (r - g) / d + 4; hue = (hue * 60 + 360) % 360; }
+  if (l < .09) return 'preto';
+  if (s < .16) return l > .93 ? 'branco' : l > .8 ? 'off-white' : l > .58 ? 'cinza-claro' : l > .34 ? 'cinza' : l > .15 ? 'grafite' : 'preto';
+  const dk = l < .3, lt = l > .72;
+  if (hue < 12 || hue >= 345) return dk ? 'vinho' : lt ? 'rosa-claro' : s < .5 ? 'rosa-antigo' : l < .4 ? 'cereja' : 'vermelho';
+  if (hue < 25) return dk ? 'marrom' : lt ? 'pêssego' : s < .55 ? 'terracota' : 'coral';
+  if (hue < 45) return dk ? 'marrom' : lt ? (s < .6 ? 'bege' : 'pêssego') : l < .5 ? (s < .6 ? 'caramelo' : 'ferrugem') : s < .5 ? 'camelo' : 'laranja';
+  if (hue < 65) return dk ? 'oliva-escuro' : lt ? (s < .6 ? 'creme' : 'amarelo-claro') : s < .45 ? 'cáqui' : l < .5 ? 'mostarda' : 'amarelo';
+  if (hue < 95) return dk ? 'verde-musgo' : lt ? 'verde-claro' : s < .45 ? 'verde-oliva' : 'verde-limão';
+  if (hue < 170) return dk ? 'verde-escuro' : lt ? 'verde-menta' : s < .4 ? 'verde-sálvia' : 'verde';
+  if (hue < 190) return dk ? 'verde-petróleo' : lt ? 'verde-água' : s < .4 ? 'verde-acinzentado' : 'turquesa';
+  if (hue < 215) return dk ? 'azul-petróleo' : lt ? 'azul-claro' : s < .4 ? 'azul-acinzentado' : 'azul';
+  if (hue < 250) return dk ? 'azul-marinho' : lt ? 'azul-claro' : s < .4 ? 'azul-acinzentado' : 'azul-royal';
+  if (hue < 290) return dk ? 'roxo-escuro' : lt ? 'lilás' : s < .4 ? 'malva' : 'roxo';
+  if (hue < 325) return dk ? 'ameixa' : lt ? 'rosa-lilás' : s < .4 ? 'malva' : 'magenta';
+  return dk ? 'vinho' : lt ? 'rosa-claro' : s < .45 ? 'rosa-antigo' : l < .45 ? 'cereja' : 'pink';
+}
+const SECS = [['abertura', 'Abertura: sobre ela'], ['metodo', 'Como você fez a análise'], ['sintese', 'Frase de destaque'], ['temp', 'Temperatura'], ['contraste', 'Contraste'], ['prof', 'Profundidade'], ['intens', 'Intensidade'], ['cores', 'Melhores cores'], ['neutros', 'Neutros ideais'], ['cuidado', 'Cores que pedem cuidado'], ['acess', 'Acessórios e metais'], ['make', 'Maquiagem'], ['cabelo', 'Cabelo'], ['fecho', 'Recado final']];
+/* sugestão de texto, montada com a ficha e a análise. A Luciane ajusta com as palavras dela. */
+function sugg(c, s, k) {
+  const f = fx(c), n = first(c), warm = s.v[0] > 0, d = s.v[1], i = s.v[2], ax = axes(s), mt = metals(s), goal = f.goal ? ` Você me procurou porque ${dotend(f.goal)}` : '';
+  switch (k) {
+    case 'abertura': return f.about ? `${n}, antes de falar de cores, quero falar de você. ${dotend(f.about)}${goal} Foi pensando nessa rotina que fiz a sua análise e montei este material.` : `${n}, este material foi feito só para você.${goal} Ele não é uma lista de regras: é a minha leitura das cores que valorizam o seu rosto, para facilitar as suas escolhas no dia a dia.`;
+    case 'metodo': return `Recebi a sua foto com luz natural e sem maquiagem e comparei o seu rosto com cores de diferentes temperaturas, profundidades e intensidades. Em cada uma, observei como a pele, os olhos e o contorno do rosto reagiam.${f.obs ? ' ' + dotend(f.obs) : ''}`;
+    case 'sintese': return `A sua cartela é ${s.name}. A característica mais forte dela é ${prim(s)}.`;
+    case 'temp': return `A temperatura mostra se a sua pele combina mais com cores de fundo amarelado, as quentes, ou de fundo azulado, as frias. ${warm ? 'No seu rosto, os tons quentes deixaram a pele mais viva e uniforme, e os frios tiraram um pouco do seu brilho natural. Por isso a sua temperatura é quente: dourados, corais e terrosos são seus aliados.' : 'No seu rosto, os tons frios deixaram a pele mais uniforme e descansada, e os quentes amarelaram e pesaram a expressão. Por isso a sua temperatura é fria: tons azulados, rosados e arroxeados são seus aliados.'}`;
+    case 'contraste': return `Contraste é a diferença entre os tons da sua pele, dos seus olhos e do seu cabelo. ${{ alto: 'O seu é alto: há bastante diferença entre eles. Por isso você sustenta combinações marcantes, como claro com escuro, e fica apagada quando usa tudo no mesmo tom.', medio: 'O seu é médio: existe diferença entre eles, mas sem extremos. Tons médios com um ponto mais claro ou mais escuro ficam em equilíbrio com você.', baixo: 'O seu é baixo: os tons são próximos entre si. Por isso o tom sobre tom e as combinações suaves valorizam você, e contrastes muito fortes chamam mais atenção do que o seu rosto.' }[contrast(c, s)]}`;
+    case 'prof': return `A profundidade mostra o quanto de escuro a sua beleza sustenta. ${d > 0 ? 'No seu rosto, as cores escuras deram definição ao contorno e destacaram o olhar, e as muito claras deixaram a pele sem força. A sua profundidade é escura: use os tons profundos da cartela perto do rosto.' : d < 0 ? 'No seu rosto, as cores claras iluminaram a pele e deixaram a expressão leve, e as muito escuras pesaram e endureceram os traços. A sua profundidade é clara: use os tons claros da cartela perto do rosto.' : 'No seu rosto, os tons médios ficaram em equilíbrio: os muito claros apagaram e os muito escuros pesaram. A sua profundidade é média: deixe os extremos para os detalhes.'}`;
+    case 'intens': return `A intensidade mostra se você combina com cores vivas ou com cores mais suaves e acinzentadas. ${i > 0 ? 'No seu rosto, as cores vivas trouxeram brilho ao olhar, e as opacas deixaram a pele sem vida. A sua intensidade é alta: cores puras e nítidas valorizam você.' : i < 0 ? 'No seu rosto, as cores suaves ficaram em harmonia com a pele, e as muito vivas chamaram mais atenção do que você. A sua intensidade é suave: prefira cores levemente acinzentadas.' : 'No seu rosto, cores ricas, sem serem gritantes, ficaram em harmonia. A sua intensidade é média: nem opaca, nem neon.'}`;
+    case 'cores': return 'Estas são as cores que mais valorizam você. Use as principais em blusas, vestidos, casacos e lenços, sempre perto do rosto. As de destaque ficam lindas no batom, nos acessórios e naquela peça que você quer que seja notada.';
+    case 'neutros': return `Os neutros são a base do guarda-roupa: saias, casacos, bolsas e sapatos. Para você, ${listPt(s.n.map(cname))} funcionam melhor que os neutros comuns e combinam com todas as outras cores da cartela.`;
+    case 'cuidado': return `Estas cores não são proibidas, mas pedem cuidado: perto do rosto elas tendem a ${warm ? 'acinzentar' : 'amarelar'} a sua pele. Se gostar de alguma, use na parte de baixo, em sapatos e bolsas, ou junto de uma cor da sua cartela perto do rosto.`;
+    case 'acess': return `${listPt(mt.filter(m => m[2]).map(m => m[0].toLowerCase())).replace(/^./, m => m.toUpperCase())} são os metais que mais iluminam o seu rosto. ${mt.filter(m => !m[2]).map(m => m[0]).join('')} fica melhor longe do rosto, em cintos e bolsas. Em pedras e bijuterias, siga as cores de destaque da cartela.`;
+    case 'make': return `Na maquiagem vale a mesma lógica das roupas: estes tons de batom, blush e sombra acompanham a sua temperatura ${ax.t.toLowerCase()}. No dia a dia, fique com os mais discretos. Em ocasiões especiais, use os mais marcantes.`;
+    case 'cabelo': return `${f.hair ? `Hoje o seu cabelo é ${dotend(f.hair)} ` : ''}${warm ? (d > 0 ? 'Tons escuros e quentes harmonizam com você: castanho chocolate, castanho acobreado e ruivo escuro. Tons acinzentados e o preto azulado tendem a apagar a sua pele.' : 'Tons quentes e luminosos harmonizam com você: loiro dourado, mel, caramelo e cobre claro. Tons acinzentados tendem a apagar a sua pele.') : (d > 0 ? 'Tons escuros e frios harmonizam com você: castanho escuro, café e preto. Se quiser iluminar, prefira reflexos discretos em tom frio. Dourados e acobreados tendem a amarelar a sua pele.' : 'Tons frios harmonizam com você: loiro bege, loiro acinzentado e castanho claro frio. Dourados intensos e acobreados tendem a amarelar a sua pele.')}`;
+    case 'fecho': return defMsg(c);
+  }
+  return '';
+}
+const txt = (c, s, k) => { const o = c.txt && c.txt[k]; return o ? o : sugg(c, s, k); };
+A.texto = () => go('texto', { id: cur().id });
+V.texto = {
+  h(p) {
+    const c = cli(p.id), s = se(c.season);
+    return `${bar('Interpretação')}<p class="m">Este é o texto que a cliente vai ler. Ele começa como uma sugestão, montada com a ficha e a análise. Ajuste com as suas palavras.</p>
+      ${SECS.map(([k, l]) => `<label class="f" for="t-${k}">${l}</label><textarea class="inp" id="t-${k}" data-c="txt" data-k="${k}" style="min-height:${k === 'sintese' ? 84 : 170}px">${esc(txt(c, s, k))}</textarea>`).join('')}
+      <button class="btn" style="margin-top:20px" data-a="back">Pronto</button><button class="link" data-a="txtreset">Voltar aos textos sugeridos</button>`;
+  }
+};
+C.txt = async el => { const c = cur(), s = se(c.season), k = el.dataset.k, v = el.value.trim(); c.txt = c.txt || {}; if (!v || v === sugg(c, s, k)) delete c.txt[k]; else c.txt[k] = v; await save(c); };
+A.txtreset = async () => { const c = cur(); c.txt = {}; await save(c); render(); toast('Textos sugeridos restaurados.'); };
+
+/* ---------- looks por ocasião, com as cores da cartela ---------- */
+function genLook(c, s, o) {
+  const b = fx(c).skirt ? 'Saia' : 'Calça ou saia', m = metals(s)[0], P = (l, k, i) => ({ l, c: s[k][i] }), M = { l: 'Brincos', c: m[1][1], n: m[0].toLowerCase() };
+  const L = {
+    culto: [[P('Saia midi', 'p', 1), P('Blusa', 'n', 0), P('Bolsa', 'x', 3), P('Sapato', 'n', 3)], 'Elegante e discreto. A blusa, perto do rosto, é o que ilumina você.'],
+    trabalho: [[P('Blazer', 'n', 2), P('Blusa', 'p', 4), P(b, 'n', 3), P('Sapato', 'n', 2)], 'O blazer neutro dá seriedade e a blusa traz a sua cor para perto do rosto.'],
+    dia: [[P('Camisa', 'p', 5), P(b, 'p', 1), P('Bolsa', 'n', 1), P('Sapatilha', 'n', 0)], 'Prático para a rotina, sem abrir mão das suas cores.'],
+    evento: [[P('Vestido', 'x', 0), P('Bolsa', 'n', 3), P('Sapato', 'n', 3), M], 'A cor de destaque no vestido faz o look sozinha. Deixe os acessórios no seu metal.'],
+    conteudo: [[P('Blusa', 'x', 1), P('Terceira peça', 'n', 2), P('Batom', 'lips', 0), M], 'Na câmera, aparece o que está perto do rosto. Use ali as cores de destaque.']
+  };
+  return { pieces: L[o][0], note: L[o][1] };
+}
+const olook = (c, s, o) => (c.olooks && c.olooks[o]) || genLook(c, s, o);
+const occs = c => (fx(c).occ && fx(c).occ.length ? fx(c).occ : ['dia', 'trabalho', 'evento']).filter(o => OCC[o]);
+A.oledit = el => go('olook', { id: cur().id, occ: el.dataset.k });
+V.olook = {
+  h(p) {
+    const c = cli(p.id), s = se(c.season), l = p.l || (p.l = JSON.parse(JSON.stringify(olook(c, s, p.occ)))), pal = all16(s);
+    return `${bar(OCC[p.occ])}<p class="m">Toque numa cor para trocar a cor de cada peça.</p>
+      ${l.pieces.map((pc, i) => `<h2 class="h">${esc(pc.l)}: ${esc(pc.n || cname(pc.c))}</h2><div class="sws">${pal.map(k => `<button data-a="olc" data-n="${i}" data-k="${k}" class="${k === pc.c ? 'on' : ''}" style="background:${k}" aria-label="${cname(k)}"></button>`).join('')}</div>`).join('')}
+      <label class="f" for="ol-note">Sua orientação</label><textarea class="inp" id="ol-note">${esc(l.note)}</textarea>
+      <button class="btn" style="margin-top:18px" data-a="olsave">Salvar look</button><button class="link" data-a="olreset">Voltar à sugestão</button>`;
+  }
+};
+A.olc = el => { const p = topv().p, pc = p.l.pieces[+el.dataset.n], y = window.scrollY; p.l.note = $('#ol-note').value; pc.c = el.dataset.k; delete pc.n; render(); window.scrollTo(0, y); };
+A.olsave = async () => { const p = topv().p, c = cli(p.id); p.l.note = $('#ol-note').value.trim(); c.olooks = c.olooks || {}; c.olooks[p.occ] = p.l; await save(c); backTo('client'); toast('Look salvo.'); };
+A.olreset = async () => { const p = topv().p, c = cli(p.id); if (c.olooks) delete c.olooks[p.occ]; await save(c); backTo('client'); toast('Sugestão restaurada.'); };
+
 /* ---------- ajustes, cartelas, backup ---------- */
 V.cfg = {
   h: () => `${bar('Ajustes')}<h2 class="h" style="margin-top:4px">Sua marca no material</h2>
@@ -578,121 +695,163 @@ A.palreset = async () => { delete S.cfg.pal[topv().p.sid]; await saveCfg(); rend
 function dl(blob, name) { const a = document.createElement('a'); a.href = URL.createObjectURL(blob); a.download = name; document.body.appendChild(a); a.click(); a.remove(); setTimeout(() => URL.revokeObjectURL(a.href), 4000); }
 A.backup = () => { dl(new Blob([JSON.stringify({ app: 'lu-estudio', v: 2, when: new Date().toISOString(), cfg: S.cfg, clients: S.clients })], { type: 'application/json' }), `backup-estudio-${new Date().toISOString().slice(0, 10)}.json`); toast('Backup baixado. Guarde o arquivo em um lugar seguro.'); };
 A.pickrestore = () => $('#fi-restore').click();
-C.restore = async el => { try { const d = JSON.parse(await el.files[0].text()); if (d.app !== 'lu-estudio' || !Array.isArray(d.clients)) throw 0; for (const c of d.clients) if (c && c.id && c.name) await DB.put(c); if (d.cfg) { Object.assign(S.cfg, d.cfg); S.cfg.pal = S.cfg.pal || {}; await saveCfg(); } S.clients = await DB.all(); applyTheme(); backTo('home'); toast(`Backup restaurado: ${d.clients.length} cliente(s).`); } catch (e) { toast('Esse arquivo não é um backup do Estúdio.'); } };
+C.restore = async el => { try { const d = JSON.parse(await el.files[0].text()); if (d.app !== 'lu-estudio' || !Array.isArray(d.clients)) throw 0; for (const c of d.clients) if (c && c.id && c.name) await DB.put(c); if (d.cfg) { Object.assign(S.cfg, d.cfg); S.cfg.pal = S.cfg.pal || {}; if (!THEMES[S.cfg.theme]) S.cfg.theme = 'marinho'; await saveCfg(); } S.clients = await DB.all(); applyTheme(); backTo('home'); toast(`Backup restaurado: ${d.clients.length} cliente(s).`); } catch (e) { toast('Esse arquivo não é um backup do Estúdio.'); } };
 
 /* ===================== MATERIAIS (desenhados em canvas) ===================== */
-const PW = 1240, PH = 1754, SW = 1080, SH = 1920, INK = '#1B1517', MUT = '#6F6461', OKC = '#2F8F5B';
-let VIN, VINL, VIND, ROS, CRE;
-const useTheme = () => { const t = TH(); VIN = t.a; VINL = t.l; VIND = t.d; ROS = t.s; CRE = t.bg; };
-const FD = (w, s) => `${w} ${s}px Antonio, "Arial Narrow", sans-serif`, FB = (w, s) => `${w} ${s}px Jost, Arial, sans-serif`, FS = s => `400 ${s}px "Mrs Saint Delafield", cursive`;
+const PW = 1240, PH = 1754, SW = 1080, SH = 1920, MX = 100, INK = '#1B1A1F', MUT = '#6B6A72', OKC = '#2F8F5B';
+const BR = ['#1F2A44', '#0B4D3B', '#5B2A86', '#B0125B', '#17151A']; /* as cores da marca: marinho, jade, roxo, fúcsia, preto */
+let VIN, VINL, VIND, ROS, CRE, KEY;
+const useTheme = () => { const t = TH(); VIN = t.a; VINL = t.l; VIND = t.d; ROS = t.s; CRE = t.bg; KEY = t.k; };
+const FD = (w, s) => `${w} ${s}px "Cormorant Garamond", Georgia, serif`, FI = (w, s) => `italic ${w} ${s}px "Cormorant Garamond", Georgia, serif`, FB = (w, s) => `${w} ${s}px Jost, Arial, sans-serif`;
 const mk = (w = PW, h = PH) => { const cv = document.createElement('canvas'); cv.width = w; cv.height = h; return [cv, cv.getContext('2d')]; };
 const loadImg = src => new Promise((res, rej) => { const i = new Image(); i.onload = () => res(i); i.onerror = rej; i.src = src; });
 const lum = h => { const n = parseInt(h.slice(1), 16); return (.299 * (n >> 16 & 255) + .587 * (n >> 8 & 255) + .114 * (n & 255)) / 255; };
 function tx(x, t, X, Y, font, col, al = 'left', ls = 0) { x.font = font; x.fillStyle = col; x.textAlign = al; x.textBaseline = 'alphabetic'; try { x.letterSpacing = ls + 'px'; } catch (e) {} x.fillText(t, X, Y); }
-function wrapT(x, t, X, Y, mw, lh, font, col, al = 'left') {
+function wrapT(x, t, X, Y, mw, lh, font, col, al = 'left', maxY = 1e9) {
   x.font = font; x.fillStyle = col; x.textAlign = al; try { x.letterSpacing = '0px'; } catch (e) {}
-  for (const para of String(t).split('\n')) { let line = ''; for (const w of para.split(/\s+/)) { const tt = line ? line + ' ' + w : w; if (x.measureText(tt).width > mw && line) { x.fillText(line, X, Y); Y += lh; line = w; } else line = tt; } x.fillText(line, X, Y); Y += lh; }
-  return Y;
+  const put = l => { if (Y <= maxY) x.fillText(l, X, Y); Y += lh; };
+  for (const para of String(t).split('\n')) { let line = ''; for (const w of para.split(/\s+/)) { const tt = line ? line + ' ' + w : w; if (x.measureText(tt).width > mw && line) { put(line); line = w; } else line = tt; } put(line); }
+  return Math.min(Y, maxY + lh);
 }
+function fitTx(x, t, X, Y, f, size, maxW, col, al = 'left') { try { x.letterSpacing = '0px'; } catch (e) {} x.font = f(size); while (x.measureText(t).width > maxW && size > 40) { size -= 4; x.font = f(size); } tx(x, t, X, Y, f(size), col, al); }
 function rrp(x, X, Y, w, h, r) { x.beginPath(); x.roundRect ? x.roundRect(X, Y, w, h, r) : x.rect(X, Y, w, h); }
 function box(x, X, Y, w, h, r, fill) { rrp(x, X, Y, w, h, r); x.fillStyle = fill; x.fill(); }
-function sw(x, col, X, Y, w, h, r = 18) { box(x, X, Y, w, h, r, col); if (lum(col) > .86) { x.lineWidth = 2; x.strokeStyle = '#D9CFC4'; x.stroke(); } }
+function sw(x, col, X, Y, w, h, r = 18) { box(x, X, Y, w, h, r, col); if (lum(col) > .86) { x.lineWidth = 2; x.strokeStyle = '#D5D3CE'; x.stroke(); } }
 function cover(x, img, X, Y, w, h) { const k = Math.max(w / img.naturalWidth, h / img.naturalHeight), iw = img.naturalWidth * k, ih = img.naturalHeight * k; x.drawImage(img, X + (w - iw) / 2, Y + (h - ih) / 2, iw, ih); }
 function oval(x, img, cx, cy, rx, ry, ring, rw) { x.save(); x.beginPath(); x.ellipse(cx, cy, rx, ry, 0, 0, 7); x.clip(); cover(x, img, cx - rx, cy - ry, rx * 2, ry * 2); x.restore(); if (ring) { x.beginPath(); x.ellipse(cx, cy, rx, ry, 0, 0, 7); x.lineWidth = rw; x.strokeStyle = ring; x.stroke(); } }
 function rays(x, cx, cy, r, cols) { const n = cols.length; cols.forEach((k, i) => { x.beginPath(); x.moveTo(cx, cy); x.arc(cx, cy, r, i / n * 6.2832 - 1.76, (i + 1) / n * 6.2832 - 1.75); x.closePath(); x.fillStyle = k; x.fill(); }); }
 function fan(x, face, s, cx, cy, r) { x.beginPath(); x.arc(cx, cy, r * 1.045, 0, 7); x.fillStyle = CRE; x.fill(); rays(x, cx, cy, r, rayCols(s)); oval(x, face, cx, cy, r * .525, r * .7, CRE, r * .04); }
 function vinBg(x, w, h) { const g = x.createRadialGradient(w / 2, h * .32, 40, w / 2, h * .4, h * .8); g.addColorStop(0, VINL); g.addColorStop(.5, VIN); g.addColorStop(1, VIND); x.fillStyle = g; x.fillRect(0, 0, w, h); }
-function head(x, c, s, title) { x.fillStyle = CRE; x.fillRect(0, 0, PW, PH); tx(x, `${c.name} · ${s.name}`.toUpperCase(), 90, 132, FB(500, 22), MUT, 'left', 4); tx(x, S.cfg.brand, PW - 90, 146, FS(84), VIN, 'right'); tx(x, title, 90, 310, FD(700, 118), VIN); }
-function foot(x, n) { tx(x, [S.cfg.sub, S.cfg.insta].filter(Boolean).join(' · ').toUpperCase(), 90, PH - 72, FB(500, 18), MUT, 'left', 3); tx(x, String(n), PW - 90, PH - 72, FB(500, 20), MUT, 'right'); }
-const lab = (x, t, Y) => tx(x, t.toUpperCase(), 90, Y, FB(600, 22), INK, 'left', 4);
-const grid4 = (x, cols, Y, h = 150) => cols.forEach((k, i) => sw(x, k, 90 + (i % 4) * 272, Y + Math.floor(i / 4) * (h + 26), 245, h));
+const stripe = (x, w, h) => BR.forEach((k, i) => { x.fillStyle = k; x.fillRect(i * w / 5, 0, w / 5 + 1, h); });
 /* um "tecido": o rosto da cliente sobre a cor, com a marca de qual valorizou */
 function drapeTile(x, face, col, X, Y, w, h, ok, label, fs = 28) {
-  sw(x, col, X, Y, w, h, 28); oval(x, face, X + w / 2, Y + h / 2, h * .3, h * .4, '#fff', Math.max(5, h * .02));
-  if (ok) { const cx = X + w - 44, cy = Y + 44; x.beginPath(); x.arc(cx, cy, 32, 0, 7); x.fillStyle = OKC; x.fill(); x.beginPath(); x.moveTo(cx - 14, cy + 1); x.lineTo(cx - 4, cy + 11); x.lineTo(cx + 15, cy - 10); x.lineWidth = 7; x.lineCap = 'round'; x.lineJoin = 'round'; x.strokeStyle = '#fff'; x.stroke(); }
+  sw(x, col, X, Y, w, h, 24); oval(x, face, X + w / 2, Y + h / 2, h * .3, h * .4, '#fff', Math.max(4, h * .02));
+  if (ok) { const r = Math.max(20, w * .085), cx = X + w - r - 12, cy = Y + r + 12; x.beginPath(); x.arc(cx, cy, r, 0, 7); x.fillStyle = OKC; x.fill(); x.beginPath(); x.moveTo(cx - r * .44, cy + r * .03); x.lineTo(cx - r * .12, cy + r * .34); x.lineTo(cx + r * .47, cy - r * .31); x.lineWidth = r * .22; x.lineCap = 'round'; x.lineJoin = 'round'; x.strokeStyle = '#fff'; x.stroke(); }
   tx(x, label, X + w / 2, Y + h + fs * 1.6, FB(ok ? 600 : 400, fs), ok ? INK : MUT, 'center');
 }
 const evOk = (s, a, o) => s.v[a] !== 0 && Math.sign(o[2]) === Math.sign(s.v[a]);
+/* página interna: faixa com as cores da marca, assinatura, título */
+function pg(c, kicker, title, n) {
+  const [cv, x] = mk(); x.fillStyle = CRE; x.fillRect(0, 0, PW, PH); stripe(x, PW, 14);
+  tx(x, S.cfg.brand, MX, 122, FI(500, 46), VIN); tx(x, c.name.toUpperCase(), PW - MX, 114, FB(500, 20), MUT, 'right', 4);
+  tx(x, kicker.toUpperCase(), MX, 240, FB(600, 22), KEY, 'left', 6);
+  fitTx(x, title, MX, 346, z => FD(600, z), 108, PW - 2 * MX, VIN);
+  tx(x, [S.cfg.sub, S.cfg.insta].filter(Boolean).join(' · ').toUpperCase(), MX, PH - 70, FB(500, 18), MUT, 'left', 3); tx(x, String(n), PW - MX, PH - 70, FB(500, 20), MUT, 'right');
+  return [cv, x];
+}
+const para = (x, t, Y, w = PW - 2 * MX, X = MX, size = 30, maxY) => wrapT(x, t, X, Y, w, Math.round(size * 1.5), FB(400, size), INK, 'left', maxY);
+const sub = (x, t, Y) => { tx(x, t, MX, Y, FD(600, 58), VIN); return Y + 60; };
+const kick = (x, t, Y, X = MX) => tx(x, t.toUpperCase(), X, Y, FB(600, 22), KEY, 'left', 6);
+function named(x, cols, Y, h = 110, per = 4) { const w = 245, step = (PW - 2 * MX - w) / (per - 1); cols.forEach((k, i) => { const X = MX + (i % per) * step, y = Y + Math.floor(i / per) * (h + 62); sw(x, k, X, y, w, h, 18); tx(x, cname(k), X + w / 2, y + h + 34, FB(400, 21), MUT, 'center'); }); return Y + Math.ceil(cols.length / per) * (h + 62); }
 
 function pgCover(c, s, face) {
   const [cv, x] = mk(); vinBg(x, PW, PH);
-  tx(x, S.cfg.brand, PW / 2, 250, FS(190), ROS, 'center'); tx(x, S.cfg.sub.toUpperCase(), PW / 2, 318, FB(500, 26), '#fff', 'center', 8);
-  fan(x, face, s, PW / 2, 830, 410);
-  tx(x, 'ANÁLISE DE COLORAÇÃO PESSOAL', PW / 2, 1376, FD(600, 42), '#fff', 'center', 6);
-  tx(x, c.name, PW / 2, 1478, FB(600, 80), '#fff', 'center');
-  tx(x, s.name.toUpperCase(), PW / 2, 1566, FD(700, 62), ROS, 'center', 4);
-  tx(x, [new Date(c.doneAt || Date.now()).toLocaleDateString('pt-BR', { month: 'long', year: 'numeric' }), c.city].filter(Boolean).join(' · '), PW / 2, 1660, FB(400, 28), ROS, 'center');
+  tx(x, S.cfg.brand, PW / 2, 214, FI(500, 96), '#fff', 'center'); tx(x, S.cfg.sub.toUpperCase(), PW / 2, 272, FB(500, 24), ROS, 'center', 8);
+  x.beginPath(); x.ellipse(PW / 2, 770, 290, 378, 0, 0, 7); x.lineWidth = 2; x.strokeStyle = 'rgba(255,255,255,.4)'; x.stroke(); oval(x, face, PW / 2, 770, 264, 352, '#fff', 6);
+  s.p.forEach((k, i) => { x.beginPath(); x.arc(PW / 2 - 3.5 * 76 + i * 76, 1236, 25, 0, 7); x.fillStyle = k; x.fill(); x.lineWidth = 3; x.strokeStyle = 'rgba(255,255,255,.9)'; x.stroke(); });
+  tx(x, 'Sua coloração pessoal', PW / 2, 1386, FI(500, 84), '#fff', 'center'); fitTx(x, c.name, PW / 2, 1494, z => FD(600, z), 96, PW - 2 * MX, '#fff', 'center');
+  tx(x, s.name.toUpperCase(), PW / 2, 1566, FB(600, 28), ROS, 'center', 10);
+  tx(x, [`Uma leitura feita por ${S.cfg.brand}`, new Date(c.doneAt || Date.now()).toLocaleDateString('pt-BR', { month: 'long', year: 'numeric' }), c.city].filter(Boolean).join(' · '), PW / 2, 1664, FB(400, 25), ROS, 'center');
   return cv;
 }
-function pgAnalise(c, s, face) {
-  const [cv, x] = mk(), ax = axes(s); head(x, c, s, 'SUA ANÁLISE');
-  let Y = wrapT(x, c.reading ?? reading(c, s), 90, 386, PW - 180, 44, FB(400, 29), INK); Y = Math.min(Math.max(Y + 6, 610), 700);
-  EV.forEach(([a, l, ri, k], n) => {
-    const r = ROUNDS[ri], y = Y + n * 322; tx(x, l.toUpperCase(), 90, y + 96, FB(600, 20), MUT, 'left', 4); tx(x, ax[k], 90, y + 176, FD(700, 76), VIN);
-    [r.a, r.b].forEach((o, i) => drapeTile(x, face, o[1], 440 + i * 366, y, 340, 240, evOk(s, a, o), o[0]));
+function pgSobre(c, s, n) {
+  const [cv, x] = pg(c, 'Antes das cores', 'Sobre você', n);
+  let Y = para(x, txt(c, s, 'abertura'), 452, PW - 2 * MX, MX, 36, 900); Y = sub(x, 'Como fiz a sua análise', Y + 60) + 6; Y = para(x, txt(c, s, 'metodo'), Y, PW - 2 * MX, MX, 33, 1290);
+  const q = txt(c, s, 'sintese'), y0 = Y + 40, end = wrapT(x, q, MX + 60, y0 + 116, PW - 2 * MX - 120, 74, FI(500, 60), 'rgba(0,0,0,0)'), h = Math.min(end - y0 - 10, PH - 130 - y0);
+  box(x, MX, y0, PW - 2 * MX, h, 30, VIN); stripe2(x, MX + 60, y0 + 46); wrapT(x, q, MX + 60, y0 + 116, PW - 2 * MX - 120, 74, FI(500, 60), '#fff', 'left', y0 + h - 40);
+  return cv;
+}
+const stripe2 = (x, X, Y) => [ROS, '#fff', ROS].forEach((k, i) => { x.fillStyle = k; x.globalAlpha = i === 1 ? .9 : .5; x.fillRect(X + i * 44, Y, 36, 5); x.globalAlpha = 1; });
+function dim(x, c, s, face, Y, key, a, label, ri) {
+  const ax = axes(s), r = ROUNDS[ri]; kick(x, label, Y); tx(x, { temp: ax.t, prof: ax.d, intens: ax.c }[key], MX, Y + 96, FD(600, 100), VIN);
+  [r.a, r.b].forEach((o, i) => drapeTile(x, face, o[1], 730 + i * 215, Y - 22, 195, 252, evOk(s, a, o), o[0], 24));
+  para(x, txt(c, s, key), Y + 338, PW - 2 * MX, MX, 29, Y + 338 + 44 * 5);
+}
+function scale(x, lvl, X, Y) {
+  const tones = { baixo: '#C9AE93', medio: '#8A6A4E', alto: '#2A1E1A' }, nm = { baixo: 'Baixo', medio: 'Médio', alto: 'Alto' };
+  Object.keys(tones).forEach((k, i) => { const cx = X + 64 + i * 141, cy = Y + 96, on = k === lvl; x.save(); x.beginPath(); x.arc(cx, cy, 54, 0, 7); x.clip(); x.fillStyle = '#EBD5C0'; x.fillRect(cx - 54, cy - 54, 54, 108); x.fillStyle = tones[k]; x.fillRect(cx, cy - 54, 54, 108); x.restore(); if (on) { x.beginPath(); x.arc(cx, cy, 65, 0, 7); x.lineWidth = 5; x.strokeStyle = KEY; x.stroke(); } tx(x, nm[k], cx, cy + 112, FB(on ? 600 : 400, 24), on ? INK : MUT, 'center'); });
+  tx(x, 'pele e cabelo', X + 64 + 141, Y + 262, FB(400, 20), MUT, 'center');
+}
+function pgTC(c, s, face, n) {
+  const [cv, x] = pg(c, 'A leitura do seu rosto', 'Temperatura e contraste', n), lv = contrast(c, s), Y = 1100;
+  dim(x, c, s, face, 486, 'temp', 0, 'Temperatura', 1);
+  kick(x, 'Contraste', Y); tx(x, { baixo: 'Baixo', medio: 'Médio', alto: 'Alto' }[lv], MX, Y + 96, FD(600, 100), VIN); scale(x, lv, 720, Y - 22); para(x, txt(c, s, 'contraste'), Y + 338, PW - 2 * MX, MX, 29, Y + 338 + 44 * 5);
+  return cv;
+}
+function pgPI(c, s, face, n) { const [cv, x] = pg(c, 'A leitura do seu rosto', 'Profundidade e intensidade', n); dim(x, c, s, face, 486, 'prof', 1, 'Profundidade', 0); dim(x, c, s, face, 1100, 'intens', 2, 'Intensidade', 2); return cv; }
+function pgCores(c, s, n) {
+  const [cv, x] = pg(c, s.name, 'As suas melhores cores', n);
+  let Y = para(x, txt(c, s, 'cores'), 446, PW - 2 * MX, MX, 30, 620); kick(x, 'Cores principais', Y + 26); Y = named(x, s.p, Y + 50);
+  kick(x, 'Cores de destaque', Y + 14); Y = named(x, s.x, Y + 38);
+  Y = sub(x, 'Neutros ideais', Y + 62); Y = para(x, txt(c, s, 'neutros'), Y, PW - 2 * MX, MX, 28, Y + 130); named(x, s.n, Y + 6, 84);
+  return cv;
+}
+function pgCuidado(c, s, n) {
+  const [cv, x] = pg(c, 'Para usar com atenção', 'Cores que pedem cuidado', n);
+  let Y = para(x, txt(c, s, 'cuidado'), 452, PW - 2 * MX, MX, 33, 700) + 18; const cols = se(s.opp).p.slice(0, 4); named(x, cols, Y);
+  cols.forEach((k, i) => { const X = MX + i * 265; x.save(); rrp(x, X, Y, 245, 110, 18); x.clip(); x.beginPath(); x.moveTo(X, Y + 110); x.lineTo(X + 245, Y); x.lineWidth = 5; x.strokeStyle = 'rgba(255,255,255,.9)'; x.stroke(); x.restore(); });
+  Y = sub(x, 'Acessórios e metais', Y + 290);
+  metals(s).forEach(([nm, g, ok], i) => { const cx = MX + 86 + i * 347, cy = Y + 110, gr = x.createRadialGradient(cx - 28, cy - 32, 6, cx, cy, 94); gr.addColorStop(0, g[0]); gr.addColorStop(.45, g[1]); gr.addColorStop(1, g[2]); x.globalAlpha = ok ? 1 : .4; x.beginPath(); x.arc(cx, cy, 86, 0, 7); x.fillStyle = gr; x.fill(); x.globalAlpha = 1; tx(x, nm, cx + 100, cy - 2, FB(600, 24), ok ? INK : MUT); tx(x, ok ? 'Perto do rosto' : 'Longe do rosto', cx + 100, cy + 32, FB(400, 21), ok ? '#256B45' : MUT); });
+  para(x, txt(c, s, 'acess'), Y + 280, PW - 2 * MX, MX, 33, PH - 150);
+  return cv;
+}
+function pgRotina(c, s, list, n) {
+  const [cv, x] = pg(c, 'Da cartela para o espelho', 'Looks para a sua rotina', n);
+  para(x, 'Combinações montadas com as cores da sua cartela, pensando nas ocasiões do seu dia a dia.', 440, PW - 2 * MX, MX, 28);
+  list.forEach((o, li) => {
+    const l = olook(c, s, o), Y = 506 + li * 290; box(x, MX, Y, PW - 2 * MX, 272, 28, '#fff'); tx(x, OCC[o], MX + 44, Y + 70, FD(600, 50), VIN);
+    l.pieces.forEach((p, i) => { const X = MX + 44 + i * 245; x.beginPath(); x.arc(X + 34, Y + 138, 34, 0, 7); x.fillStyle = p.c; x.fill(); if (lum(p.c) > .86) { x.lineWidth = 2; x.strokeStyle = '#D5D3CE'; x.stroke(); } tx(x, p.l, X + 82, Y + 132, FB(600, 22), INK); tx(x, p.n || cname(p.c), X + 82, Y + 160, FB(400, 20), MUT); });
+    wrapT(x, l.note || '', MX + 44, Y + 218, PW - 2 * MX - 88, 30, FB(400, 23), MUT, 'left', Y + 250);
   });
-  foot(x, 2); return cv;
+  return cv;
 }
-function pgCores(c, s) {
-  const [cv, x] = mk(), ax = axes(s); head(x, c, s, 'SUAS CORES');
-  const y = wrapT(x, s.desc, 90, 386, PW - 180, 46, FB(400, 31), INK);
-  [['Profundidade', ax.d], ['Temperatura', ax.t], ['Intensidade', ax.c]].forEach(([l, v], i) => { box(x, 90 + i * 362, y + 4, 336, 96, 48, '#fff'); tx(x, l.toUpperCase(), 90 + i * 362 + 168, y + 44, FB(500, 17), MUT, 'center', 3); tx(x, v, 90 + i * 362 + 168, y + 80, FB(600, 28), VIN, 'center'); });
-  let Y = y + 176; lab(x, 'Neutros · a base do guarda-roupa', Y); grid4(x, s.n, Y + 24);
-  Y += 250; lab(x, 'Cores principais', Y); grid4(x, s.p, Y + 24);
-  Y += 426; lab(x, 'Cores de destaque', Y); grid4(x, s.x, Y + 24);
-  wrapT(x, 'Leve esta cartela com você na hora de comprar roupas, acessórios e maquiagem.', 90, Y + 236, PW - 180, 38, FB(400, 26), MUT);
-  foot(x, 3); return cv;
+function pgMake(c, s, n) {
+  const [cv, x] = pg(c, 'Perto do rosto', 'Maquiagem e cabelo', n);
+  let Y = para(x, txt(c, s, 'make'), 452, PW - 2 * MX, MX, 33, 700) + 30;
+  [['Batom', s.lips], ['Blush', s.blush], ['Sombra', s.eyes], ['Esmalte', nails(s)]].forEach(([l, cols], r) => { const y = Y + r * 104; tx(x, l.toUpperCase(), MX, y + 44, FB(600, 20), INK, 'left', 4); cols.forEach((k, i) => sw(x, k, MX + 210 + i * 164, y, 148, 72, 36)); });
+  Y = sub(x, 'Cabelo', Y + 4 * 104 + 76) + 6; para(x, txt(c, s, 'cabelo'), Y, PW - 2 * MX, MX, 33, PH - 150);
+  return cv;
 }
-function pgMake(c, s) {
-  const [cv, x] = mk(); head(x, c, s, 'METAIS E MAQUIAGEM');
-  lab(x, 'Metais · joias e acessórios', 420);
-  metals(s).forEach(([n, g, ok], i) => { const cx = 266 + i * 353, cy = 548, gr = x.createRadialGradient(cx - 28, cy - 32, 6, cx, cy, 94); gr.addColorStop(0, g[0]); gr.addColorStop(.45, g[1]); gr.addColorStop(1, g[2]); x.globalAlpha = ok ? 1 : .4; x.beginPath(); x.arc(cx, cy, 90, 0, 7); x.fillStyle = gr; x.fill(); x.globalAlpha = 1; tx(x, n, cx, cy + 138, FB(600, 28), ok ? INK : MUT, 'center'); tx(x, ok ? 'Combina com você' : 'Evite perto do rosto', cx, cy + 174, FB(400, 22), ok ? '#256B45' : MUT, 'center'); });
-  lab(x, 'Batom', 806);
-  s.lips.forEach((k, i) => { const X = 90 + i * 272, Y = 836; x.beginPath(); x.moveTo(X + 60, Y + 46); x.lineTo(X + 185, Y); x.lineTo(X + 185, Y + 170); x.lineTo(X + 60, Y + 170); x.closePath(); x.fillStyle = k; x.fill(); box(x, X + 44, Y + 170, 157, 50, 8, '#2A2226'); });
-  lab(x, 'Blush', 1130); s.blush.forEach((k, i) => { x.beginPath(); x.arc(164 + i * 176, 1236, 74, 0, 7); x.fillStyle = k; x.fill(); });
-  tx(x, 'SOMBRA', 540, 1130, FB(600, 22), INK, 'left', 4); s.eyes.forEach((k, i) => sw(x, k, 540 + i * 156, 1164, 136, 140, 22));
-  lab(x, 'Esmaltes', 1392);
-  nails(s).forEach((k, i) => { const X = 90 + i * 218; rrp(x, X, 1420, 140, 170, [70, 70, 20, 20]); x.fillStyle = k; x.fill(); if (lum(k) > .86) { x.lineWidth = 2; x.strokeStyle = '#D9CFC4'; x.stroke(); } x.beginPath(); x.ellipse(X + 40, 1474, 11, 40, 0, 0, 7); x.fillStyle = 'rgba(255,255,255,.28)'; x.fill(); });
-  foot(x, 4); return cv;
+function pgFecho(c, s, n) {
+  const [cv, x] = pg(c, 'Para o dia a dia', 'Como usar a sua cartela', n); let Y = 450;
+  tips(s).slice(3).concat(['Na dúvida entre duas peças, aproxime cada uma do rosto, na luz natural, e escolha a que deixa a pele mais uniforme.']).forEach(t => { x.beginPath(); x.arc(MX + 10, Y - 11, 8, 0, 7); x.fillStyle = KEY; x.fill(); Y = wrapT(x, t, MX + 44, Y, PW - 2 * MX - 60, 49, FB(400, 33), INK) + 18; });
+  Y += 40; const msg = txt(c, s, 'fecho'), end = wrapT(x, msg, MX + 50, Y + 134, PW - 2 * MX - 100, 50, FB(400, 33), 'rgba(0,0,0,0)'), h = Math.min(end - Y + 120, PH - 130 - Y);
+  box(x, MX, Y, PW - 2 * MX, h, 30, '#fff'); kick(x, 'Um recado para você', Y + 72, MX + 50); wrapT(x, msg, MX + 50, Y + 134, PW - 2 * MX - 100, 50, FB(400, 33), INK, 'left', Y + h - 130); tx(x, S.cfg.brand, PW - MX - 50, Y + h - 46, FI(500, 68), VIN, 'right');
+  return cv;
 }
-function pgUso(c, s) {
-  const [cv, x] = mk(); head(x, c, s, 'COMO USAR'); let Y = 420;
-  tips(s).forEach(t => { x.beginPath(); x.arc(104, Y - 10, 9, 0, 7); x.fillStyle = VIN; x.fill(); Y = wrapT(x, t, 140, Y, PW - 230, 42, FB(400, 29), INK) + 14; });
-  Y += 22; lab(x, 'Cores para evitar perto do rosto', Y);
-  se(s.opp).p.slice(0, 4).forEach((k, i) => { const X = 90 + i * 272; sw(x, k, X, Y + 24, 245, 116); x.save(); rrp(x, X, Y + 24, 245, 116, 18); x.clip(); x.beginPath(); x.moveTo(X, Y + 140); x.lineTo(X + 245, Y + 24); x.lineWidth = 5; x.strokeStyle = 'rgba(255,255,255,.9)'; x.stroke(); x.restore(); });
-  Y += 186; const msg = (c.msg ?? defMsg(c)).trim();
-  if (msg) { const end = wrapT(x, msg, 140, Y + 128, PW - 280, 44, FB(400, 30), 'rgba(0,0,0,0)'), h = Math.min(end - Y + 96, PH - 130 - Y); box(x, 90, Y, PW - 180, h, 30, '#fff'); tx(x, 'UM RECADO PARA VOCÊ', 140, Y + 70, FB(600, 20), VIN, 'left', 4); wrapT(x, msg, 140, Y + 128, PW - 280, 44, FB(400, 30), INK); tx(x, S.cfg.brand, PW - 140, Y + h - 34, FS(96), VIN, 'right'); }
-  foot(x, 5); return cv;
-}
-async function pgLooks(c, s, looks, n) {
-  const [cv, x] = mk(); head(x, c, s, 'SEUS LOOKS');
+async function pgPecas(c, s, looks, n) {
+  const [cv, x] = pg(c, 'Com o que você já tem', 'Looks com as suas peças', n);
   for (let li = 0; li < looks.length; li++) {
-    const l = looks[li], Y = 400 + li * 620; box(x, 90, Y, PW - 180, 580, 30, '#fff');
+    const l = looks[li], Y = 440 + li * 610; box(x, MX, Y, PW - 2 * MX, 580, 30, '#fff');
     const imgs = await Promise.all(l.items.map(i => loadImg(c.pieces[i]))), cells = { 1: [[0, 0, 500, 500]], 2: [[0, 0, 246, 500], [254, 0, 246, 500]], 3: [[0, 0, 246, 500], [254, 0, 246, 246], [254, 254, 246, 246]], 4: [[0, 0, 246, 246], [254, 0, 246, 246], [0, 254, 246, 246], [254, 254, 246, 246]] }[imgs.length];
-    imgs.forEach((im, i) => { const [a, b, w, h] = cells[i]; x.save(); rrp(x, 130 + a, Y + 40 + b, w, h, 16); x.clip(); cover(x, im, 130 + a, Y + 40 + b, w, h); x.restore(); });
-    tx(x, l.title.toUpperCase(), 680, Y + 110, FD(600, 54), VIN); wrapT(x, l.note || '', 680, Y + 180, 420, 42, FB(400, 28), INK);
+    imgs.forEach((im, i) => { const [a, b, w, h] = cells[i]; x.save(); rrp(x, MX + 40 + a, Y + 40 + b, w, h, 16); x.clip(); cover(x, im, MX + 40 + a, Y + 40 + b, w, h); x.restore(); });
+    tx(x, l.title, MX + 590, Y + 110, FD(600, 60), VIN); wrapT(x, l.note || '', MX + 590, Y + 180, 410, 42, FB(400, 28), INK, 'left', Y + 520);
   }
-  foot(x, n); return cv;
+  return cv;
 }
 async function buildDossie(c, s, face) {
-  const pages = [pgCover(c, s, face), pgAnalise(c, s, face), pgCores(c, s), pgMake(c, s), pgUso(c, s)], lk = c.looks || [];
-  for (let i = 0; i < lk.length; i += 2) pages.push(await pgLooks(c, s, lk.slice(i, i + 2), pages.length + 1));
+  const pages = [pgCover(c, s, face)], add = f => pages.push(f(pages.length + 1)), oc = occs(c), lk = c.looks || [];
+  add(n => pgSobre(c, s, n)); add(n => pgTC(c, s, face, n)); add(n => pgPI(c, s, face, n)); add(n => pgCores(c, s, n)); add(n => pgCuidado(c, s, n));
+  for (let i = 0; i < oc.length; i += 4) add(n => pgRotina(c, s, oc.slice(i, i + 4), n));
+  add(n => pgMake(c, s, n));
+  for (let i = 0; i < lk.length; i += 2) pages.push(await pgPecas(c, s, lk.slice(i, i + 2), pages.length + 1));
+  add(n => pgFecho(c, s, n));
   return pages;
 }
 function buildBolsa(c, s, face) {
   const [cv, x] = mk(), CW = 532, CH = 827, Y0 = 250, X1 = 70, X2 = PW - 70 - CW;
   x.fillStyle = '#fff'; x.fillRect(0, 0, PW, PH);
-  tx(x, 'CARTELA DE BOLSA', 70, 120, FD(700, 54), INK); tx(x, 'Imprima em papel firme (250 g ou mais), recorte nas marcas e cole frente e verso. Tamanho: 9 × 14 cm.', 70, 170, FB(400, 24), MUT);
-  const [f, fx] = mk(CW, CH); vinBg(fx, CW, CH); tx(fx, S.cfg.brand, CW / 2, 120, FS(92), ROS, 'center'); tx(fx, 'MINHA CARTELA DE CORES', CW / 2, 168, FB(500, 16), '#fff', 'center', 5);
-  fan(fx, face, s, CW / 2, 420, 186); tx(fx, c.name, CW / 2, 700, FB(600, 40), '#fff', 'center'); tx(fx, s.name.toUpperCase(), CW / 2, 756, FD(700, 34), ROS, 'center', 3); x.drawImage(f, X1, Y0);
-  const [b, bx] = mk(CW, CH); bx.fillStyle = CRE; bx.fillRect(0, 0, CW, CH); tx(bx, s.name.toUpperCase(), 36, 78, FD(700, 44), VIN); tx(bx, c.name, 36, 116, FB(500, 22), MUT);
-  all16(s).forEach((k, i) => sw(bx, k, 36 + (i % 4) * 118, 148 + Math.floor(i / 4) * 118, 106, 106, 12));
+  tx(x, 'Cartela de bolsa', 70, 124, FD(600, 70), INK); tx(x, 'Imprima em papel firme (250 g ou mais), recorte nas marcas e cole frente e verso. Tamanho: 9 × 14 cm.', 70, 176, FB(400, 24), MUT);
+  const [f, fx2] = mk(CW, CH); vinBg(fx2, CW, CH); tx(fx2, S.cfg.brand, CW / 2, 112, FI(500, 58), '#fff', 'center'); tx(fx2, 'MINHA CARTELA DE CORES', CW / 2, 158, FB(500, 16), ROS, 'center', 5);
+  fan(fx2, face, s, CW / 2, 420, 186); tx(fx2, c.name, CW / 2, 704, FD(600, 54), '#fff', 'center'); tx(fx2, s.name.toUpperCase(), CW / 2, 756, FB(600, 20), ROS, 'center', 6); x.drawImage(f, X1, Y0);
+  const [b, bx] = mk(CW, CH); bx.fillStyle = CRE; bx.fillRect(0, 0, CW, CH); stripe(bx, CW, 8); tx(bx, s.name, 36, 86, FD(600, 52), VIN); tx(bx, c.name, 36, 122, FB(500, 21), MUT);
+  all16(s).forEach((k, i) => sw(bx, k, 36 + (i % 4) * 118, 152 + Math.floor(i / 4) * 118, 106, 106, 12));
   tx(bx, 'METAIS', 36, 664, FB(600, 16), INK, 'left', 3); metals(s).filter(m => m[2]).forEach(([n, g], i) => { const cx = 62 + i * 230, gr = bx.createRadialGradient(cx - 8, 700, 2, cx, 708, 28); gr.addColorStop(0, g[0]); gr.addColorStop(.5, g[1]); gr.addColorStop(1, g[2]); bx.beginPath(); bx.arc(cx, 708, 26, 0, 7); bx.fillStyle = gr; bx.fill(); tx(bx, n, cx + 40, 716, FB(500, 20), INK); });
   tx(bx, [S.cfg.brand, S.cfg.insta].filter(Boolean).join(' · '), CW / 2, 794, FB(400, 17), MUT, 'center'); x.drawImage(b, X2, Y0);
   x.strokeStyle = '#999'; x.lineWidth = 1.5;
   [X1, X2].forEach(X => [[X, Y0], [X + CW, Y0], [X, Y0 + CH], [X + CW, Y0 + CH]].forEach(([a, d]) => { const dx = a === X ? -1 : 1, dy = d === Y0 ? -1 : 1; x.beginPath(); x.moveTo(a + dx * 8, d); x.lineTo(a + dx * 34, d); x.moveTo(a, d + dy * 8); x.lineTo(a, d + dy * 34); x.stroke(); }));
   tx(x, 'FRENTE', X1 + CW / 2, Y0 + CH + 70, FB(500, 20), MUT, 'center', 4); tx(x, 'VERSO', X2 + CW / 2, Y0 + CH + 70, FB(500, 20), MUT, 'center', 4);
-  box(x, 70, 1270, PW - 140, 330, 24, '#F4F0EA'); tx(x, 'ENVIAR PARA', 110, 1336, FB(600, 20), VIN, 'left', 4); tx(x, c.name, 110, 1392, FB(600, 34), INK);
+  box(x, 70, 1270, PW - 140, 330, 24, '#F3F2EF'); tx(x, 'ENVIAR PARA', 110, 1336, FB(600, 20), KEY, 'left', 4); tx(x, c.name, 110, 1392, FB(600, 34), INK);
   wrapT(x, c.address || 'Endereço ainda não informado. Preencha na aba Dados da cliente.', 110, 1440, PW - 220, 38, FB(400, 26), c.address ? INK : MUT);
   return [cv];
 }
@@ -700,18 +859,18 @@ function buildBolsa(c, s, face) {
 function buildKit(c, s, face) {
   const ax = axes(s), insta = S.cfg.insta || S.cfg.brand, out = [];
   let [cv, x] = mk(SW, SH); vinBg(x, SW, SH);
-  tx(x, S.cfg.brand, SW / 2, 300, FS(170), ROS, 'center'); tx(x, 'COLORAÇÃO PESSOAL', SW / 2, 372, FB(500, 28), '#fff', 'center', 10);
-  fan(x, face, s, SW / 2, 930, 400);
-  tx(x, 'MINHA CARTELA É', SW / 2, 1500, FB(500, 30), '#fff', 'center', 8); tx(x, s.name.toUpperCase(), SW / 2, 1636, FD(700, 118), ROS, 'center', 2);
-  tx(x, 'Análise por ' + insta, SW / 2, 1764, FB(400, 34), '#fff', 'center'); out.push(cv);
-  [cv, x] = mk(SW, SH); x.fillStyle = CRE; x.fillRect(0, 0, SW, SH);
-  tx(x, S.cfg.brand, SW / 2, 230, FS(120), VIN, 'center'); tx(x, 'VEJA A DIFERENÇA', SW / 2, 400, FD(700, 112), VIN, 'center');
-  EV.slice(0, 2).forEach(([a, l, ri, k], n) => { const r = ROUNDS[ri], y = 480 + n * 630; tx(x, `${l}: ${ax[k]}`.toUpperCase(), SW / 2, y + 44, FB(600, 28), INK, 'center', 5); [r.a, r.b].forEach((o, i) => drapeTile(x, face, o[1], 70 + i * 480, y + 76, 460, 430, evOk(s, a, o), o[0], 32)); });
+  tx(x, S.cfg.brand, SW / 2, 270, FI(500, 100), '#fff', 'center'); tx(x, 'COLORAÇÃO PESSOAL', SW / 2, 336, FB(500, 28), ROS, 'center', 10);
+  fan(x, face, s, SW / 2, 910, 400);
+  tx(x, 'Minha cartela é', SW / 2, 1500, FI(500, 66), '#fff', 'center'); fitTx(x, s.name, SW / 2, 1640, z => FD(600, z), 132, SW - 120, '#fff', 'center');
+  tx(x, 'Uma leitura de ' + insta, SW / 2, 1770, FB(400, 34), ROS, 'center'); out.push(cv);
+  [cv, x] = mk(SW, SH); x.fillStyle = CRE; x.fillRect(0, 0, SW, SH); stripe(x, SW, 18);
+  tx(x, S.cfg.brand, SW / 2, 200, FI(500, 70), VIN, 'center'); tx(x, 'Veja a diferença', SW / 2, 390, FD(600, 138), VIN, 'center');
+  EV.slice(0, 2).forEach(([a, l, ri, k], n) => { const r = ROUNDS[ri], y = 480 + n * 630; tx(x, `${l}: ${ax[k]}`.toUpperCase(), SW / 2, y + 44, FB(600, 28), KEY, 'center', 6); [r.a, r.b].forEach((o, i) => drapeTile(x, face, o[1], 70 + i * 480, y + 76, 460, 430, evOk(s, a, o), o[0], 32)); });
   tx(x, 'Coloração online com ' + insta, SW / 2, 1810, FB(500, 32), MUT, 'center'); out.push(cv);
-  [cv, x] = mk(SW, SH); x.fillStyle = CRE; x.fillRect(0, 0, SW, SH);
-  tx(x, S.cfg.brand, SW / 2, 230, FS(120), VIN, 'center'); tx(x, 'MINHAS CORES', SW / 2, 400, FD(700, 112), VIN, 'center'); tx(x, s.name.toUpperCase(), SW / 2, 474, FB(600, 30), INK, 'center', 8);
+  [cv, x] = mk(SW, SH); x.fillStyle = CRE; x.fillRect(0, 0, SW, SH); stripe(x, SW, 18);
+  tx(x, S.cfg.brand, SW / 2, 200, FI(500, 70), VIN, 'center'); tx(x, 'Minhas cores', SW / 2, 390, FD(600, 138), VIN, 'center'); tx(x, s.name.toUpperCase(), SW / 2, 468, FB(600, 30), KEY, 'center', 8);
   all16(s).forEach((k, i) => sw(x, k, 64 + (i % 4) * 244, 540 + Math.floor(i / 4) * 244, 220, 220, 26));
-  box(x, 64, 1560, SW - 128, 250, 40, VIN); tx(x, 'Quer descobrir as suas cores?', SW / 2, 1664, FB(600, 44), '#fff', 'center'); tx(x, 'Coloração online · ' + insta, SW / 2, 1736, FB(400, 32), ROS, 'center'); out.push(cv);
+  box(x, 64, 1560, SW - 128, 250, 40, VIN); tx(x, 'Quer descobrir as suas cores?', SW / 2, 1672, FD(600, 70), '#fff', 'center'); tx(x, 'Coloração online · ' + insta, SW / 2, 1742, FB(400, 32), ROS, 'center'); out.push(cv);
   return out;
 }
 let OUT = null;
@@ -722,7 +881,7 @@ V.out = {
   async a(p) {
     const c = cli(p.id), out = $('#out'); OUT = null;
     try {
-      await Promise.all([FD(700, 40), FD(600, 40), FB(400, 30), FB(500, 30), FB(600, 30), FS(80)].map(f => document.fonts.load(f, 'Aã'))).catch(() => {});
+      await Promise.all([FD(600, 40), FI(500, 40), FB(400, 30), FB(500, 30), FB(600, 30)].map(f => document.fonts.load(f, 'Aã'))).catch(() => {});
       useTheme(); const s = se(c.season), face = await loadImg(c.photo), nm = c.name.normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/[^\w]+/g, '-');
       const pages = p.kind === 'kit' ? buildKit(c, s, face) : p.kind === 'bolsa' ? buildBolsa(c, s, face) : await buildDossie(c, s, face), urls = pages.map(cv => cv.toDataURL('image/jpeg', .92));
       let files;
@@ -748,7 +907,7 @@ A.share = async () => {
 (async () => {
   await DB.open();
   try {
-    const cfg = await DB.get('cfg'); if (cfg) Object.assign(S.cfg, cfg); S.cfg.pal = S.cfg.pal || {};
+    const cfg = await DB.get('cfg'); if (cfg) Object.assign(S.cfg, cfg); S.cfg.pal = S.cfg.pal || {}; if (!THEMES[S.cfg.theme]) S.cfg.theme = 'marinho';
     S.clients = await DB.all();
     for (const c of S.clients.filter(c => c.demo)) await DB.del(c.id); /* remove os exemplos da primeira versão */
     S.clients = S.clients.filter(c => !c.demo);

@@ -19,7 +19,10 @@ Ferramenta da Luciane para fazer a coloração online: https://p0sturee.github.i
 - Clientes, valores, autorizações de uso da foto e cartela física
 - Foto no oval com correção de luz (balanço de branco)
 - 9 comparações de cor, sugestão de cartela e provador das 12 cartelas
-- Material em PDF com a análise no rosto da própria cliente, cartela de bolsa e imagens para stories
+- Ficha da cliente (rotina, objetivo, cabelo, contraste, ocasiões) e texto de interpretação editável
+- Material em PDF em formato de leitura: sobre ela, temperatura, contraste, profundidade, intensidade, melhores cores, cores que pedem cuidado, neutros, looks por ocasião, maquiagem, cabelo e acessórios
+- Cartela de bolsa e imagens para stories
+- Identidade nas cores da cartela dela: marinho, verde jade, roxo, fúcsia e preto
 - Editor das cores de cada cartela, temas do material e backup em arquivo
 - Primeiro acesso: senha 1234 (é só uma tela de entrada; ainda não é um login de verdade)
 - Os dados e as fotos ficam salvos só no aparelho de quem usa (IndexedDB), nada vai para servidor
