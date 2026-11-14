@@ -32,19 +32,18 @@ input,textarea{font:inherit;color:inherit}
 .bar b{font-weight:600;font-size:17px;flex:1;min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .ib{width:44px;height:44px;border-radius:50%;display:grid;place-items:center;background:#fff;box-shadow:0 2px 8px -4px rgba(27,21,23,.4);flex:none}
 .ib svg{width:22px;height:22px}
-.btn{display:flex;align-items:center;justify-content:center;gap:10px;width:100%;min-height:54px;padding:12px 18px;border-radius:27px;background:var(--vinho);color:#fff;font-weight:500;font-size:16px;text-align:center;box-shadow:0 10px 22px -12px rgba(107,20,36,.8)}
+.btn{display:flex;align-items:center;justify-content:center;gap:10px;width:100%;min-height:54px;padding:12px 18px;border-radius:27px;background:var(--vinho);color:#fff;font-weight:500;font-size:16px;text-align:center;box-shadow:0 10px 22px -12px rgba(27,21,23,.7)}
 a.btn{text-decoration:none}
 .btn:active{transform:scale(.98)}
 .btn svg{width:20px;height:20px;flex:none}
-.btn.ghost{background:transparent;color:var(--vinho);box-shadow:inset 0 0 0 2px rgba(107,20,36,.28)}
+.btn.ghost{background:transparent;color:var(--vinho);box-shadow:inset 0 0 0 2px var(--areia)}
 .btn.soft{background:#fff;color:var(--vinho);box-shadow:0 2px 10px -6px rgba(27,21,23,.5)}
-.btn.ok{background:var(--ok);box-shadow:none}
 .btn[disabled]{opacity:.5}
 .stack{display:grid;gap:10px}
 .card{background:#fff;border-radius:22px;padding:16px;box-shadow:0 8px 22px -18px rgba(27,21,23,.6)}
 .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:16px}
-.stat{background:#fff;border-radius:18px;padding:12px 10px;text-align:center}
-.stat b{display:block;font-family:var(--f-d);font-size:28px;line-height:1;color:var(--vinho)}
+.stat{background:#fff;border-radius:18px;padding:12px 8px;text-align:center}
+.stat b{display:block;font-family:var(--f-d);font-size:26px;line-height:1;color:var(--vinho);white-space:nowrap}
 .stat span{display:block;font-size:11px;color:var(--muted);margin-top:6px;line-height:1.2}
 .row{display:flex;align-items:center;gap:14px;width:100%;text-align:left;background:#fff;border-radius:20px;padding:12px 14px;box-shadow:0 8px 22px -18px rgba(27,21,23,.6)}
 .row div{flex:1;min-width:0}
@@ -54,8 +53,7 @@ a.btn{text-decoration:none}
 .av img{width:100%;height:100%;object-fit:cover;display:block}
 .av.lg{width:84px;height:112px;box-shadow:0 0 0 4px #fff,0 0 0 6px var(--vinho)}
 .chip{font-size:11px;font-weight:500;padding:5px 10px;border-radius:999px;flex:none;white-space:nowrap}
-.chip.a{background:#F3E7D3;color:#8A5A12}.chip.b{background:#E6ECF7;color:#2F4F8F}.chip.c{background:#E3F1E7;color:#256B45}
-.tag{display:inline-block;font-size:10px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--warn);background:#F6ECD9;padding:3px 8px;border-radius:6px;margin-left:6px;vertical-align:middle}
+.chip.a{background:#F3E7D3;color:#8A5A12}.chip.b{background:#E6ECF7;color:#2F4F8F}.chip.c{background:#E3F1E7;color:#256B45}.chip.d{background:#EFE6F5;color:#6A3D8F}
 .tabs{display:flex;gap:6px;background:var(--creme);border-radius:999px;padding:5px;margin:16px 0}
 .tabs button{flex:1;height:40px;border-radius:999px;font-size:14px;font-weight:500;color:var(--muted)}
 .tabs button.on{background:#fff;color:var(--vinho);box-shadow:0 2px 8px -4px rgba(27,21,23,.4)}
@@ -64,7 +62,7 @@ a.btn{text-decoration:none}
 label.f{display:block;font-size:13px;color:var(--muted);margin:14px 2px 6px}
 .inp{width:100%;min-height:50px;border-radius:14px;border:1.5px solid #E3D8CD;background:#fff;padding:12px 14px;font-size:16px}
 textarea.inp{min-height:96px;resize:vertical}
-.chk{display:flex;align-items:center;gap:12px;margin-top:16px;font-size:15px}
+.chk{display:flex;align-items:center;gap:12px;margin-top:14px;font-size:15px}
 .chk input{width:24px;height:24px;accent-color:var(--vinho);flex:none}
 .pal{display:grid;grid-template-columns:repeat(8,1fr);gap:5px;margin-top:12px}
 .pal i{aspect-ratio:1;border-radius:7px;box-shadow:inset 0 0 0 1px rgba(0,0,0,.08)}
@@ -75,6 +73,7 @@ textarea.inp{min-height:96px;resize:vertical}
 .steps{counter-reset:s;display:grid;gap:8px;margin:12px 0 4px}
 .steps li{list-style:none;counter-increment:s;display:flex;gap:10px;font-size:14px;align-items:flex-start}
 .steps li::before{content:counter(s);width:22px;height:22px;border-radius:50%;background:var(--vinho);color:#fff;font-size:12px;font-weight:600;display:grid;place-items:center;flex:none;margin-top:1px}
+.link{display:block;margin:16px auto 0;font-size:14px;color:var(--muted);text-decoration:underline;padding:8px}
 
 /* login */
 .login{min-height:calc(100dvh - 60px);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center}
@@ -91,6 +90,7 @@ textarea.inp{min-height:96px;resize:vertical}
 
 /* foto no oval */
 #al-area{position:relative;width:min(100%,340px);aspect-ratio:3/4;margin:0 auto;border-radius:22px;overflow:hidden;background:#cfc7be;touch-action:none;cursor:grab}
+#al-area.wb{cursor:crosshair;box-shadow:0 0 0 4px var(--warn)}
 #al-img{position:absolute;left:0;top:0;max-width:none;transform-origin:0 0;user-select:none;-webkit-user-drag:none;pointer-events:none}
 #al-area svg{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
 .zoom{display:flex;align-items:center;gap:12px;margin:16px 4px}
@@ -104,18 +104,16 @@ textarea.inp{min-height:96px;resize:vertical}
 .cmp .sw{width:100%;aspect-ratio:3/4.4;display:grid;place-items:center;background:var(--bg)}
 .cmp .ov{width:66%}
 .cmp b{font-size:17px;font-weight:600}
-.cmp small{font-size:12px;color:var(--muted);margin-top:-8px}
 .cmp.sel{box-shadow:0 0 0 4px var(--ok)}
-.prog{display:flex;gap:5px;margin:4px 0 14px}
+.prog{display:flex;gap:4px;margin:4px 0 14px}
 .prog i{flex:1;height:5px;border-radius:3px;background:var(--areia)}
 .prog i.on{background:var(--vinho)}
 .q{font-family:var(--f-d);font-weight:700;text-transform:uppercase;font-size:32px;line-height:1;color:var(--vinho)}
-.link{display:block;margin:16px auto 0;font-size:14px;color:var(--muted);text-decoration:underline;padding:8px}
 .drape{position:relative;width:100%;aspect-ratio:1;border-radius:26px;display:grid;place-items:center;overflow:hidden;box-shadow:0 14px 30px -18px rgba(27,21,23,.7)}
 .drape .ov{width:46%}
-.chips{display:flex;gap:8px;overflow-x:auto;padding:14px 2px 6px;margin:0 -18px;padding-inline:18px;scrollbar-width:none}
+.chips{display:flex;gap:8px;overflow-x:auto;padding:14px 18px 6px;margin:0 -18px;scrollbar-width:none}
 .chips::-webkit-scrollbar{display:none}
-.chips button{flex:none;padding:9px 14px;border-radius:999px;border:1.5px solid rgba(107,20,36,.25);font-size:13px;white-space:nowrap;background:#fff}
+.chips button{flex:none;padding:9px 14px;border-radius:999px;border:1.5px solid var(--areia);font-size:13px;white-space:nowrap;background:#fff}
 .chips button.on{background:var(--vinho);color:#fff;border-color:var(--vinho)}
 .sws{display:grid;grid-template-columns:repeat(8,1fr);gap:7px;margin-top:10px}
 .sws button{aspect-ratio:1;border-radius:10px;box-shadow:inset 0 0 0 1px rgba(0,0,0,.1)}
@@ -125,11 +123,24 @@ textarea.inp{min-height:96px;resize:vertical}
 .srow span{display:flex;gap:3px}
 .srow i{width:16px;height:28px;border-radius:4px}
 .srow.on{box-shadow:0 0 0 3px var(--vinho)}
+.srow em{font-style:normal;font-size:11px;color:var(--warn);font-weight:600}
 
-/* PDF */
+/* editor de cartelas */
+.ed{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.cin{-webkit-appearance:none;appearance:none;border:0;padding:0;width:100%;height:60px;border-radius:12px;background:none;cursor:pointer;display:block}
+.cin::-webkit-color-swatch-wrapper{padding:0}
+.cin::-webkit-color-swatch{border:1px solid rgba(0,0,0,.12);border-radius:12px}
+.cin::-moz-color-swatch{border:1px solid rgba(0,0,0,.12);border-radius:12px}
+.thm{display:flex;gap:12px;margin-top:6px}
+.thm button{flex:1;display:grid;justify-items:center;gap:6px;font-size:12px;color:var(--muted);padding:10px 4px;border-radius:16px;background:#fff}
+.thm i{width:38px;height:38px;border-radius:50%;box-shadow:inset 0 0 0 4px #fff,0 0 0 1px rgba(0,0,0,.15)}
+.thm button.on{box-shadow:0 0 0 2px var(--vinho);color:var(--tinta)}
+
+/* materiais */
 .pages{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;margin:0 -18px;padding:6px 18px 14px;scrollbar-width:none}
 .pages::-webkit-scrollbar{display:none}
 .pages img{flex:none;width:78%;border-radius:8px;box-shadow:0 14px 30px -16px rgba(27,21,23,.7);scroll-snap-align:center;background:#fff}
+.pages.story img{width:58%;border-radius:18px}
 .load{display:grid;place-items:center;gap:14px;padding:70px 0;color:var(--muted)}
 .spin{width:38px;height:38px;border-radius:50%;border:4px solid var(--areia);border-top-color:var(--vinho);animation:sp 1s linear infinite}
 @keyframes sp{to{transform:rotate(360deg)}}
@@ -172,15 +183,16 @@ const I = {
   cam: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><path d="M4 8h3l2-3h6l2 3h3v11H4z"/><circle cx="12" cy="13" r="3.6"/></svg>',
   chat: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><path d="M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 21l2.1-5.3A8.5 8.5 0 1 1 21 11.5z"/></svg>',
   doc: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"><path d="M6 2.5h8l4.5 4.5v14.5H6z"/><path d="M14 2.5V7h4.5M9 13h6M9 17h4"/></svg>',
+  img: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"><rect x="3.5" y="3.5" width="17" height="17" rx="4.5"/><circle cx="12" cy="12" r="3.8"/><path d="M17 7h.01"/></svg>',
   plus: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>',
   check: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.2 4.2L19 7"/></svg>'
 };
 
 /* ===================== CARTELAS =====================
-   v = [temperatura (+quente / -fria), profundidade (+escura / -clara), intensidade (+brilhante / -suave)]
+   v = [temperatura (+quente / -fria), profundidade (+escura / -clara), intensidade (+intensa / -suave)]
    n = neutros, p = cores principais, x = cores de destaque.
-   Ponto de partida: ajustar com as cartelas reais da Luciane. */
-const SE = [
+   São um ponto de partida. A Luciane ajusta cada cor em Ajustes > Minhas cartelas. */
+const BASE = [
   { id: 'primavera-clara', name: 'Primavera Clara', v: [1, -2, 1], desc: 'Cores claras, quentes e delicadas. Pêssego, coral suave e verde-água iluminam o seu rosto com leveza.',
     n: ['#FFF8E7', '#E8D9C0', '#C8B79E', '#8A7B6B'], p: ['#F8D5B0', '#F5A88E', '#F7C6C7', '#FFE38F', '#9ED9C6', '#8FC7E6', '#B7E3A1', '#F2A7B8'], x: ['#FF8A6B', '#3FBFB0', '#F6C445', '#6FA8DC'],
     lips: ['#F08A7B', '#E9967A', '#F4A6A0', '#E57373'], blush: ['#F7B7A3', '#F4A590'], eyes: ['#E8D3B0', '#C9A77C', '#9ED9C6', '#8C6B4F'], opp: 'inverno-escuro' },
@@ -218,7 +230,18 @@ const SE = [
     n: ['#F4F4F2', '#9EA3A8', '#3A3F4A', '#111111'], p: ['#4A0D18', '#1F2A44', '#0B4D3B', '#3B1F4A', '#8B1A2B', '#2C3E73', '#1E5631', '#5B2A86'], x: ['#A0153E', '#1B3B8A', '#0F5257', '#7A0F2A'],
     lips: ['#7A0F2A', '#8B1A2B', '#5B1F4A', '#A0153E'], blush: ['#B04A6A', '#8E3A5A'], eyes: ['#9EA3A8', '#3B1F4A', '#1F2A44', '#3A3F4A'], opp: 'primavera-clara' }
 ];
-const se = id => SE.find(s => s.id === id);
+const GROUPS = [['n', 'Neutros'], ['p', 'Cores principais'], ['x', 'Cores de destaque'], ['lips', 'Batom'], ['blush', 'Blush'], ['eyes', 'Sombra']];
+const THEMES = {
+  vinho: ['Vinho', { a: '#6B1424', l: '#8E2236', d: '#3E0A14', s: '#E9B9C2', bg: '#F7F3EE' }],
+  noir: ['Preto e dourado', { a: '#1E1A1B', l: '#3B3336', d: '#0B0909', s: '#D9BF8C', bg: '#F6F3EE' }],
+  rose: ['Rosé', { a: '#9E5468', l: '#BC7A8B', d: '#733A4A', s: '#F7DDE3', bg: '#FBF6F4' }],
+  oliva: ['Oliva', { a: '#4C5B3C', l: '#6C7E57', d: '#2F3A25', s: '#DEE5C9', bg: '#F6F4EC' }]
+};
+const S = { clients: [], cfg: { brand: 'Luciane Almeida', sub: 'Consultoria de imagem', insta: '@lu.consultoradeimagem', pin: '1234', theme: 'vinho', pal: {} }, stack: [], pin: '' };
+const TH = () => (THEMES[S.cfg.theme] || THEMES.vinho)[1];
+function applyTheme() { const t = TH(), r = document.documentElement.style; r.setProperty('--vinho', t.a); r.setProperty('--vinho-l', t.l); r.setProperty('--vinho-d', t.d); r.setProperty('--rosa', t.s); r.setProperty('--creme-2', t.bg); const m = $('meta[name=theme-color]'); if (m) m.content = t.a; }
+const se = id => { const b = BASE.find(s => s.id === id), o = S.cfg.pal && S.cfg.pal[id]; return o ? { ...b, ...o } : b; };
+const ALLS = () => BASE.map(b => se(b.id));
 const all16 = s => [...s.p, ...s.x, ...s.n];
 const rayCols = s => [s.p[0], s.p[1], s.x[0], s.p[2], s.p[3], s.n[1], s.p[4], s.p[5], s.x[1], s.p[6], s.p[7], s.n[2], s.x[2], s.n[0], s.x[3], s.n[3]];
 const raysCSS = s => { const c = rayCols(s), a = 360 / c.length; return `conic-gradient(from -11deg,${c.map((k, i) => `${k} ${i * a}deg ${(i + 1) * a}deg`).join(',')})`; };
@@ -235,17 +258,22 @@ const tips = s => [
   'As cores de destaque são ótimas para batom, acessórios e peças que você quer que chamem atenção.',
   'Gostou de uma cor fora da cartela? Use longe do rosto: na parte de baixo ou nos acessórios.'
 ];
+/* comparações: 3 por dimensão. As 3 primeiras também ilustram a análise no material. */
 const ROUNDS = [
   { ax: 1, q: 'Clara ou escura?', a: ['Clara', '#A9D8F0', -1], b: ['Escura', '#16245C', 1] },
   { ax: 0, q: 'Quente ou fria?', a: ['Quente', '#E07B39', 1], b: ['Fria', '#D6337A', -1] },
   { ax: 2, q: 'Suave ou intensa?', a: ['Suave', '#B58A8F', -1], b: ['Intensa', '#E3004F', 1] },
   { ax: 1, q: 'Clara ou escura?', a: ['Escura', '#1E5E2F', 1], b: ['Clara', '#C9E4B4', -1] },
   { ax: 0, q: 'Dourado ou prateado?', a: ['Dourado', '#C9A227', 1], b: ['Prateado', '#BFC5CC', -1] },
-  { ax: 2, q: 'Suave ou intensa?', a: ['Intensa', '#00A878', 1], b: ['Suave', '#8FA89B', -1] }
+  { ax: 2, q: 'Suave ou intensa?', a: ['Intensa', '#00A878', 1], b: ['Suave', '#8FA89B', -1] },
+  { ax: 1, q: 'Clara ou escura?', a: ['Clara', '#F3C6D3', -1], b: ['Escura', '#5A0F2E', 1] },
+  { ax: 0, q: 'Quente ou fria?', a: ['Fria', '#0E7C86', -1], b: ['Quente', '#7A8B2E', 1] },
+  { ax: 2, q: 'Suave ou intensa?', a: ['Suave', '#9AA7B8', -1], b: ['Intensa', '#1447E6', 1] }
 ];
+const EV = [[1, 'Profundidade', 0, 'd'], [0, 'Temperatura', 1, 't'], [2, 'Intensidade', 2, 'c']];
 function rank(ans) {
   const v = [0, 0, 0]; ans.forEach((a, i) => v[ROUNDS[i].ax] += a);
-  return SE.map(s => ({ id: s.id, sc: s.v[0] * v[0] + s.v[1] * v[1] + s.v[2] * v[2] })).sort((a, b) => b.sc - a.sc).map(r => r.id);
+  return BASE.map(s => ({ id: s.id, sc: s.v[0] * v[0] + s.v[1] * v[1] + s.v[2] * v[2] })).sort((a, b) => b.sc - a.sc).map(r => r.id);
 }
 
 /* ===================== DADOS (só neste aparelho) ===================== */
@@ -262,34 +290,39 @@ const DB = (() => {
     set: (k, v) => db ? req(st('kv', 'readwrite').put(v, k)) : Promise.resolve(mem.kv.set(k, v))
   };
 })();
-const S = { clients: [], cfg: { brand: 'Luciane Almeida', sub: 'Consultoria de imagem', insta: '@lu.consultoradeimagem', pin: '1234' }, stack: [], pin: '' };
 const cli = id => S.clients.find(c => c.id === id);
 const save = async c => { await DB.put(c); if (!cli(c.id)) S.clients.push(c); };
+const saveCfg = () => DB.set('cfg', S.cfg);
 const first = c => (c.name || '').trim().split(/\s+/)[0] || '';
-const status = c => !c.photo ? ['Aguardando foto', 'a'] : !c.season ? ['Em análise', 'b'] : ['Concluída', 'c'];
+const status = c => !c.photo ? ['Aguardando foto', 'a'] : !c.season ? ['Em análise', 'b'] : c.sentAt ? ['Entregue', 'c'] : ['Pronta para enviar', 'd'];
+const money = v => { const n = parseFloat(String(v || '').replace(/\./g, '').replace(',', '.')); return isFinite(n) ? n : 0; };
+const brl = n => 'R$ ' + n.toLocaleString('pt-BR', { maximumFractionDigits: 0 });
 const defMsg = c => `${first(c)}, foi um prazer fazer a sua análise! Use esta cartela como guia na hora de escolher roupas, acessórios e maquiagem. Qualquer dúvida, é só me chamar.`;
+const reading = (c, s) => {
+  const d = s.v[1] > 0 ? 'as cores mais escuras deram definição ao seu rosto' : s.v[1] < 0 ? 'as cores mais claras deixaram o seu rosto leve e iluminado' : 'os tons médios foram os que mais equilibraram o seu rosto';
+  const t = s.v[0] > 0 ? 'os tons quentes aqueceram e uniformizaram a sua pele' : 'os tons frios deixaram a sua pele mais uniforme e descansada';
+  const i = s.v[2] > 0 ? 'as cores intensas trouxeram vida ao seu olhar' : s.v[2] < 0 ? 'as cores suaves ficaram em harmonia com a sua delicadeza natural' : 'as cores de intensidade média ficaram em harmonia com você';
+  return `${first(c)}, analisei o seu rosto com cores de diferentes profundidades, temperaturas e intensidades. Na comparação, ${d}, ${t} e ${i}. Por isso, a sua cartela é ${s.name}.`;
+};
 const digits = p => { const d = String(p || '').replace(/\D/g, ''); return d && d.length <= 11 ? '55' + d : d; };
 const wa = (c, msg) => `https://wa.me/${digits(c.phone)}?text=${encodeURIComponent(msg)}`;
-const photoGuide = c => `Oi, ${first(c)}! Para a sua análise de coloração online, preciso de uma foto sua assim:\n\n1. De frente para uma janela, com luz natural (sem sol direto)\n2. Sem maquiagem e sem filtro\n3. Cabelo solto, mostrando a cor natural\n4. Sem óculos, com uma blusa branca ou neutra\n5. Rosto e pescoço aparecendo, olhando para a câmera\n\nPode me enviar por aqui mesmo. 🤍`;
-async function seed() {
-  const now = Date.now();
-  await save({ id: 'demo-ana', demo: true, name: 'Ana Souza', phone: '', city: 'Toronto, Canadá', address: '', wantsCard: false, note: '', photo: 'demo/ana.jpg', season: 'inverno-escuro', pieces: [], looks: [], created: now - 2 });
-  await save({ id: 'demo-bia', demo: true, name: 'Bia Martins', phone: '', city: 'Curitiba, PR', address: '', wantsCard: false, note: '', photo: 'demo/bia.jpg', season: null, pieces: [], looks: [], created: now - 1 });
-  await DB.set('seeded', 1);
-}
+const photoGuide = c => `Oi, ${first(c)}! Para a sua análise de coloração online, preciso de uma foto sua assim:\n\n1. De frente para uma janela, com luz natural (sem sol direto)\n2. Sem maquiagem e sem filtro\n3. Cabelo solto, mostrando a cor natural\n4. Sem óculos, com uma blusa branca\n5. Segure uma folha de papel branca ao lado do rosto (ajuda a acertar as cores da foto)\n6. Rosto e pescoço aparecendo, olhando para a câmera\n\nPode me enviar por aqui mesmo. 🤍`;
 
 /* ===================== NAVEGAÇÃO ===================== */
 const V = {}, A = {}, C = {};
-function render() { const { name, p } = S.stack[S.stack.length - 1]; app.innerHTML = V[name].h(p); window.scrollTo(0, 0); V[name].a && V[name].a(p); }
+const topv = () => S.stack[S.stack.length - 1];
+function render() { const { name, p } = topv(); app.innerHTML = V[name].h(p); window.scrollTo(0, 0); V[name].a && V[name].a(p); }
 function go(name, p = {}, replace) { if (replace) S.stack.pop(); else history.pushState({}, ''); S.stack.push({ name, p }); render(); }
-function backTo(name) { while (S.stack.length > 1 && S.stack[S.stack.length - 1].name !== name) S.stack.pop(); render(); }
+function backTo(name) { while (S.stack.length > 1 && topv().name !== name) S.stack.pop(); render(); }
 window.addEventListener('popstate', () => { if (S.stack.length > 1) { S.stack.pop(); render(); } else history.pushState({}, ''); });
 app.addEventListener('click', e => { const el = e.target.closest('[data-a]'); if (el && A[el.dataset.a]) A[el.dataset.a](el, e); });
 app.addEventListener('change', e => { const el = e.target.closest('[data-c]'); if (el && C[el.dataset.c]) C[el.dataset.c](el, e); });
-let toastT; function toast(t) { const el = $('#toast'); el.textContent = t; el.classList.add('on'); clearTimeout(toastT); toastT = setTimeout(() => el.classList.remove('on'), 3200); }
+app.addEventListener('input', e => { const el = e.target.closest('[data-i]'); if (el && C[el.dataset.i]) C[el.dataset.i](el, e); });
+let toastT; function toast(t) { const el = $('#toast'); el.textContent = t; el.classList.add('on'); clearTimeout(toastT); toastT = setTimeout(() => el.classList.remove('on'), 3400); }
 const bar = t => `<div class="bar"><button class="ib" data-a="back" aria-label="Voltar">${I.back}</button><b>${esc(t)}</b></div>`;
 const av = (c, cls = '') => `<span class="av ${cls}">${c.photo ? `<img src="${c.photo}" alt="">` : esc((c.name || '?').split(/\s+/).map(w => w[0]).slice(0, 2).join('').toUpperCase())}</span>`;
 const ovalImg = c => `<span class="ov"><img src="${c.photo}" alt="Rosto de ${esc(c.name)}"></span>`;
+const pills = s => { const ax = axes(s); return `<div class="pills"><span>Profundidade: <b>${ax.d}</b></span><span>Temperatura: <b>${ax.t}</b></span><span>Intensidade: <b>${ax.c}</b></span></div>`; };
 A.back = () => history.back();
 
 /* ---------- login ---------- */
@@ -298,7 +331,7 @@ V.login = {
     <div class="dots" id="dots">${[0, 1, 2, 3].map(i => `<i class="${i < S.pin.length ? 'on' : ''}"></i>`).join('')}</div>
     <p class="m">Digite a sua senha</p>
     <div class="pad">${[1, 2, 3, 4, 5, 6, 7, 8, 9].map(n => `<button data-a="key" data-k="${n}">${n}</button>`).join('')}<span></span><button data-a="key" data-k="0">0</button><button class="x" data-a="key" data-k="x">apagar</button></div>
-    <p class="m" style="margin-top:22px">Senha de teste: <b>1234</b></p></div>`
+    ${S.cfg.pin === '1234' ? '<p class="m" style="margin-top:22px">Primeiro acesso: a senha é <b>1234</b>. Troque em Ajustes.</p>' : ''}</div>`
 };
 A.key = el => {
   const k = el.dataset.k; S.pin = k === 'x' ? S.pin.slice(0, -1) : (S.pin + k).slice(0, 4);
@@ -312,31 +345,42 @@ A.key = el => {
 /* ---------- início ---------- */
 V.home = {
   h() {
-    const cs = S.clients.slice().sort((a, b) => b.created - a.created);
-    const row = c => { const [t, k] = status(c); return `<button class="row" data-a="open" data-id="${c.id}">${av(c)}<div><b>${esc(c.name)}${c.demo ? '<span class="tag">exemplo</span>' : ''}</b><small>${c.season ? esc(se(c.season).name) : esc(c.city || 'Sem cidade')}</small></div><span class="chip ${k}">${t}</span></button>`; };
+    const cs = S.clients.slice().sort((a, b) => b.created - a.created), due = cs.filter(c => !c.paid).reduce((t, c) => t + money(c.price), 0);
+    const row = c => { const [t, k] = status(c); return `<button class="row" data-a="open" data-id="${c.id}" data-n="${esc(c.name.toLowerCase())}">${av(c)}<div><b>${esc(c.name)}</b><small>${c.season ? esc(se(c.season).name) : esc(c.city || 'Sem cidade')}</small></div><span class="chip ${k}">${t}</span></button>`; };
     return `<header class="top"><div><p class="sig">${esc(S.cfg.brand)}</p><p class="up">Estúdio de coloração</p></div><button class="ib" data-a="cfg" aria-label="Ajustes">${I.gear}</button></header>
-      <div class="stats"><div class="stat"><b>${cs.length}</b><span>clientes</span></div><div class="stat"><b>${cs.filter(c => c.photo && !c.season).length}</b><span>para analisar</span></div><div class="stat"><b>${cs.filter(c => c.wantsCard && !c.cardSent).length}</b><span>cartelas físicas para enviar</span></div></div>
+      <div class="stats"><div class="stat"><b>${cs.filter(c => c.photo && !c.season).length}</b><span>para analisar</span></div><div class="stat"><b>${cs.filter(c => c.wantsCard && !c.cardSent).length}</b><span>cartelas físicas para enviar</span></div><div class="stat"><b>${brl(due)}</b><span>a receber</span></div></div>
       <button class="btn" data-a="new">${I.plus}Nova cliente</button>
-      <h2 class="h">Suas clientes</h2>
-      <div class="stack">${cs.map(row).join('') || '<p class="empty">Nenhuma cliente ainda. Toque em Nova cliente para começar.</p>'}</div>
-      <p class="m" style="text-align:center;margin-top:26px">Protótipo. Os dados ficam salvos só neste aparelho.</p>`;
+      ${cs.length ? `<h2 class="h">Suas clientes (${cs.length})</h2>${cs.length > 5 ? '<input class="inp" id="q" data-i="search" placeholder="Buscar pelo nome" style="margin-bottom:10px" autocomplete="off">' : ''}<div class="stack" id="list">${cs.map(row).join('')}</div>`
+        : `<div class="card" style="margin-top:18px"><p class="h1" style="font-size:26px">Comece por aqui</p><ol class="steps"><li>Toque em Nova cliente e cadastre você mesma, só para testar.</li><li>Adicione uma foto de rosto, com luz natural e sem maquiagem.</li><li>Compare as cores, confirme a cartela e gere o material.</li></ol></div>`}
+      <p class="m" style="text-align:center;margin-top:26px">Os dados e as fotos ficam salvos só neste aparelho. Faça backup em Ajustes.</p>`;
   }
 };
 A.open = el => go('client', { id: el.dataset.id });
 A.new = () => go('form', {});
 A.cfg = () => go('cfg', {});
+C.search = el => { const q = el.value.trim().toLowerCase(); $$('#list .row').forEach(r => r.hidden = !!q && !r.dataset.n.includes(q)); };
 
 /* ---------- cadastro ---------- */
-const formHTML = (c = {}) => `
-  <label class="f" for="f-name">Nome da cliente</label><input class="inp" id="f-name" value="${esc(c.name)}" autocomplete="off" placeholder="Ex.: Ana Souza">
-  <label class="f" for="f-phone">WhatsApp (com DDD)</label><input class="inp" id="f-phone" value="${esc(c.phone)}" inputmode="tel" autocomplete="off" placeholder="Ex.: 41 99999-0000">
-  <label class="f" for="f-city">Cidade</label><input class="inp" id="f-city" value="${esc(c.city)}" autocomplete="off" placeholder="Ex.: Toronto, Canadá">
-  <label class="chk"><input type="checkbox" id="f-card" ${c.wantsCard ? 'checked' : ''}> Quer receber a cartela física em casa</label>
-  <label class="f" for="f-addr">Endereço para envio da cartela</label><textarea class="inp" id="f-addr" placeholder="Rua, número, bairro, cidade, CEP">${esc(c.address)}</textarea>`;
-const readForm = c => Object.assign(c, { name: $('#f-name').value.trim(), phone: $('#f-phone').value.trim(), city: $('#f-city').value.trim(), wantsCard: $('#f-card').checked, address: $('#f-addr').value.trim() });
+const formHTML = (c = {}, full) => `
+  <label class="f" for="f-name">Nome da cliente</label><input class="inp" id="f-name" value="${esc(c.name)}" autocomplete="off" placeholder="Nome e sobrenome">
+  <label class="f" for="f-phone">WhatsApp (com DDD)</label><input class="inp" id="f-phone" value="${esc(c.phone)}" inputmode="tel" autocomplete="off" placeholder="41 99999-0000">
+  <label class="f" for="f-city">Cidade</label><input class="inp" id="f-city" value="${esc(c.city)}" autocomplete="off" placeholder="Cidade e país">
+  <label class="f" for="f-price">Valor da análise (R$)</label><input class="inp" id="f-price" value="${esc(c.price)}" inputmode="decimal" autocomplete="off" placeholder="0,00">
+  ${full ? `<label class="chk"><input type="checkbox" id="f-paid" ${c.paid ? 'checked' : ''}> Já pagou</label>` : ''}
+  <label class="chk"><input type="checkbox" id="f-c1" ${c.okPhoto ? 'checked' : ''}> A cliente autorizou o uso da foto na análise</label>
+  <label class="chk"><input type="checkbox" id="f-c2" ${c.okPost ? 'checked' : ''}> Autorizou divulgar o resultado (Instagram)</label>
+  ${full ? `<label class="chk"><input type="checkbox" id="f-card" ${c.wantsCard ? 'checked' : ''}> Quer receber a cartela física em casa</label>
+  <label class="f" for="f-addr">Endereço para envio da cartela</label><textarea class="inp" id="f-addr" placeholder="Rua, número, bairro, cidade, CEP">${esc(c.address)}</textarea>
+  ${c.wantsCard ? `<label class="chk"><input type="checkbox" id="f-sent" ${c.cardSent ? 'checked' : ''}> Cartela física já enviada</label>` : ''}
+  <label class="f" for="f-note">Suas anotações (só você vê)</label><textarea class="inp" id="f-note">${esc(c.note)}</textarea>` : ''}`;
+function readForm(c) {
+  const v = id => $('#' + id), set = (k, id, chk) => { if (v(id)) c[k] = chk ? v(id).checked : v(id).value.trim(); };
+  set('name', 'f-name'); set('phone', 'f-phone'); set('city', 'f-city'); set('price', 'f-price'); set('paid', 'f-paid', 1); set('okPhoto', 'f-c1', 1); set('okPost', 'f-c2', 1);
+  set('wantsCard', 'f-card', 1); set('address', 'f-addr'); set('cardSent', 'f-sent', 1); set('note', 'f-note'); return c;
+}
 V.form = { h: () => `${bar('Nova cliente')}${formHTML()}<button class="btn" style="margin-top:22px" data-a="create">Salvar e continuar</button>` };
 A.create = async () => {
-  const c = readForm({ id: uid(), photo: null, season: null, note: '', pieces: [], looks: [], created: Date.now() });
+  const c = readForm({ id: uid(), photo: null, season: null, note: '', address: '', pieces: [], looks: [], created: Date.now() });
   if (!c.name) { toast('Escreva o nome da cliente.'); $('#f-name').focus(); return; }
   await save(c); go('client', { id: c.id }, true);
 };
@@ -347,74 +391,85 @@ V.client = {
     const c = cli(p.id), tab = p.tab || 'cor', s = c.season && se(c.season);
     let body = '';
     if (tab === 'cor') {
-      if (!c.photo) body = `<div class="card"><p><b>Falta a foto da cliente.</b></p><ol class="steps"><li>Peça a foto pelo WhatsApp (o texto com as instruções já vai pronto).</li><li>Quando ela enviar, salve a foto no celular.</li><li>Toque em Adicionar foto.</li></ol></div>
+      if (!c.photo) body = `<div class="card"><p><b>Falta a foto da cliente.</b></p><ol class="steps"><li>Peça a foto pelo WhatsApp. O texto com as instruções já vai pronto.</li><li>Quando ela enviar, salve a foto no celular.</li><li>Toque em Adicionar foto.</li></ol></div>
         <div class="stack" style="margin-top:14px"><button class="btn" data-a="pickphoto">${I.cam}Adicionar foto</button><a class="btn ghost" href="${wa(c, photoGuide(c))}" target="_blank" rel="noopener">${I.chat}Pedir a foto pelo WhatsApp</a></div>`;
-      else if (!s) body = `<div class="card" style="text-align:center"><p><b>Foto pronta.</b> Agora é só comparar as cores, como você faz com os tecidos.</p></div>
+      else if (!s) body = `<div class="card" style="text-align:center"><p><b>Foto pronta.</b> Agora compare as cores, como você faz com os tecidos.</p></div>
         <div class="stack" style="margin-top:14px"><button class="btn" data-a="start">Começar a análise</button><button class="btn ghost" data-a="try">Provar as cartelas livremente</button><button class="btn soft" data-a="pickphoto">${I.cam}Trocar a foto</button></div>`;
-      else { const ax = axes(s); body = `<div class="card"><p class="up">Cartela da cliente</p><p class="h1" style="margin-top:6px">${esc(s.name)}</p>
-          <div class="pills"><span>Profundidade: <b>${ax.d}</b></span><span>Temperatura: <b>${ax.t}</b></span><span>Intensidade: <b>${ax.c}</b></span></div>
-          <div class="pal">${all16(s).map(k => `<i style="background:${k}"></i>`).join('')}</div></div>
+      else body = `<div class="card"><p class="up">Cartela da cliente</p><p class="h1" style="margin-top:6px">${esc(s.name)}</p>${pills(s)}<div class="pal">${all16(s).map(k => `<i style="background:${k}"></i>`).join('')}</div></div>
+        <label class="f" for="f-read">Sua leitura da análise (aparece no material)</label><textarea class="inp" id="f-read" data-c="read" style="min-height:150px">${esc(c.reading ?? reading(c, s))}</textarea>
         <label class="f" for="f-msg">Seu recado para a cliente (aparece no material)</label><textarea class="inp" id="f-msg" data-c="msg">${esc(c.msg ?? defMsg(c))}</textarea>
-        <div class="stack" style="margin-top:14px"><button class="btn" data-a="pdf" data-k="dossie">${I.doc}Gerar o material da cliente (PDF)</button><button class="btn ghost" data-a="pdf" data-k="bolsa">Cartela de bolsa para imprimir</button><button class="btn soft" data-a="try">Provar outras cartelas</button><button class="btn soft" data-a="start">Refazer a análise</button></div>`; }
+        <div class="stack" style="margin-top:14px"><button class="btn" data-a="out" data-k="dossie">${I.doc}Gerar o material da cliente (PDF)</button><button class="btn ghost" data-a="out" data-k="kit">${I.img}Imagens para o Instagram</button><button class="btn ghost" data-a="out" data-k="bolsa">Cartela de bolsa para imprimir</button><button class="btn soft" data-a="try">Provar outras cartelas</button><button class="btn soft" data-a="start">Refazer a análise</button></div>`;
     } else if (tab === 'looks') {
       const pcs = c.pieces || [], lk = c.looks || [];
       body = `<p class="m">Guarde aqui as fotos das peças que a cliente te mandar e monte combinações. Os looks entram no material em PDF.</p>
         <h2 class="h">Peças da cliente</h2><div class="pcs">${pcs.map(u => `<span class="pc"><img src="${u}" alt="Peça"></span>`).join('')}<button class="pc add" data-a="addpiece" aria-label="Adicionar peça">+</button></div>
         <h2 class="h">Looks montados</h2><div class="stack">${lk.map(l => `<div class="card look">${colg(c, l)}<div><b>${esc(l.title)}</b><p>${esc(l.note)}</p><button class="link" style="margin:6px 0 0;padding:4px 0" data-a="dellook" data-id="${l.id}">Excluir look</button></div></div>`).join('') || '<p class="empty">Nenhum look ainda.</p>'}</div>
         <button class="btn" style="margin-top:14px" data-a="newlook" ${pcs.length ? '' : 'disabled'}>${I.plus}Montar um look</button>`;
-    } else {
-      body = `${formHTML(c)}<label class="f" for="f-note">Suas anotações (só você vê)</label><textarea class="inp" id="f-note">${esc(c.note)}</textarea>
-        ${c.wantsCard ? `<label class="chk"><input type="checkbox" id="f-sent" ${c.cardSent ? 'checked' : ''}> Cartela física já enviada</label>` : ''}
-        <div class="stack" style="margin-top:20px"><button class="btn" data-a="savedata">Salvar</button>${c.phone ? `<a class="btn ghost" href="${wa(c, `Oi, ${first(c)}!`)}" target="_blank" rel="noopener">${I.chat}Abrir conversa no WhatsApp</a>` : ''}<button class="link" data-a="del">Excluir esta cliente</button></div>`;
-    }
+    } else body = `${formHTML(c, true)}<div class="stack" style="margin-top:20px"><button class="btn" data-a="savedata">Salvar</button>${c.phone ? `<a class="btn ghost" href="${wa(c, `Oi, ${first(c)}!`)}" target="_blank" rel="noopener">${I.chat}Abrir conversa no WhatsApp</a>` : ''}<button class="link" data-a="del">Excluir esta cliente</button></div>`;
     const [t, k] = status(c);
-    return `${bar('Cliente')}<div class="who">${av(c, 'lg')}<div><h1>${esc(c.name)}${c.demo ? '<span class="tag">exemplo</span>' : ''}</h1><p class="m">${esc(c.city || '')}</p><span class="chip ${k}" style="display:inline-block;margin-top:8px">${t}</span></div></div>
+    return `${bar('Cliente')}<div class="who">${av(c, 'lg')}<div><h1>${esc(c.name)}</h1><p class="m">${esc(c.city || '')}</p><span class="chip ${k}" style="display:inline-block;margin-top:8px">${t}</span></div></div>
       <div class="tabs">${[['cor', 'Coloração'], ['looks', 'Looks'], ['dados', 'Dados']].map(([id, l]) => `<button class="${tab === id ? 'on' : ''}" data-a="tab" data-t="${id}">${l}</button>`).join('')}</div>
       ${body}<input type="file" accept="image/*" id="fi-photo" data-c="photo" hidden><input type="file" accept="image/*" multiple id="fi-piece" data-c="piece" hidden>`;
   }
 };
-const cur = () => cli(S.stack[S.stack.length - 1].p.id);
+const cur = () => cli(topv().p.id);
 const colg = (c, l) => `<span class="colg n${l.items.length}">${l.items.map(i => `<img src="${c.pieces[i]}" alt="">`).join('')}</span>`;
-A.tab = el => { S.stack[S.stack.length - 1].p.tab = el.dataset.t; render(); };
+A.tab = el => { topv().p.tab = el.dataset.t; render(); };
 A.pickphoto = () => $('#fi-photo').click();
 A.addpiece = () => $('#fi-piece').click();
-A.savedata = async () => { const c = cur(); readForm(c); c.note = $('#f-note').value.trim(); if ($('#f-sent')) c.cardSent = $('#f-sent').checked; if (!c.name) { toast('O nome não pode ficar vazio.'); return; } await save(c); render(); toast('Dados salvos.'); };
+A.savedata = async () => { const c = cur(), n = $('#f-name').value.trim(); if (!n) { toast('O nome não pode ficar vazio.'); return; } readForm(c); await save(c); render(); toast('Dados salvos.'); };
 A.del = async el => { const c = cur(); if (el.dataset.sure) { await DB.del(c.id); S.clients = S.clients.filter(x => x.id !== c.id); backTo('home'); toast('Cliente excluída.'); } else { el.dataset.sure = 1; el.textContent = 'Toque de novo para confirmar a exclusão'; } };
 C.msg = async el => { const c = cur(); c.msg = el.value; await save(c); };
+C.read = async el => { const c = cur(); c.reading = el.value; await save(c); };
 const fileImg = f => new Promise((res, rej) => { const i = new Image(); i.onload = () => res(i); i.onerror = rej; i.src = URL.createObjectURL(f); });
-async function shrink(f, max, q = .9) { const i = await fileImg(f), k = Math.min(1, max / Math.max(i.naturalWidth, i.naturalHeight)), cv = document.createElement('canvas'); cv.width = Math.round(i.naturalWidth * k); cv.height = Math.round(i.naturalHeight * k); cv.getContext('2d').drawImage(i, 0, 0, cv.width, cv.height); URL.revokeObjectURL(i.src); return cv.toDataURL('image/jpeg', q); }
+async function shrink(f, max, q = .92) { const i = await fileImg(f), k = Math.min(1, max / Math.max(i.naturalWidth, i.naturalHeight)), cv = document.createElement('canvas'); cv.width = Math.round(i.naturalWidth * k); cv.height = Math.round(i.naturalHeight * k); cv.getContext('2d').drawImage(i, 0, 0, cv.width, cv.height); URL.revokeObjectURL(i.src); return cv.toDataURL('image/jpeg', q); }
 C.photo = async el => { const f = el.files[0]; if (!f) return; try { const src = await shrink(f, 1600); go('align', { id: cur().id, src }); } catch (e) { toast('Não consegui abrir essa foto. Tente outra imagem.'); } };
 C.piece = async el => { const c = cur(); c.pieces = c.pieces || []; for (const f of [...el.files]) { try { c.pieces.push(await shrink(f, 520, .82)); } catch (e) {} } await save(c); render(); };
 
-/* ---------- foto no oval ---------- */
+/* ---------- foto: encaixar no oval e corrigir a luz ---------- */
 V.align = {
-  h: p => `${bar('Encaixe o rosto')}<p class="m" style="text-align:center;margin-bottom:14px">Arraste a foto com o dedo até o rosto ficar dentro do oval. Use a barra para aproximar.</p>
+  h: p => `${bar('Preparar a foto')}<p class="m" id="al-tip" style="text-align:center;margin-bottom:14px">Arraste a foto até o rosto ficar dentro do oval. Use a barra para aproximar.</p>
     <div id="al-area"><img id="al-img" src="${p.src}" alt="Foto da cliente"><svg viewBox="0 0 300 400" preserveAspectRatio="none"><path fill-rule="evenodd" fill="rgba(20,14,16,.55)" d="M0 0H300V400H0Z M45 200a105 140 0 1 0 210 0a105 140 0 1 0 -210 0Z"/><ellipse cx="150" cy="200" rx="105" ry="140" fill="none" stroke="#fff" stroke-width="2.5" stroke-dasharray="8 6"/></svg></div>
     <div class="zoom"><span class="m">−</span><input type="range" id="al-zoom" min="0" max="100" value="12" aria-label="Aproximar a foto"><span class="m">+</span></div>
-    <button class="btn" data-a="alok">Pronto, usar esta foto</button>`,
+    <div class="stack"><button class="btn soft" data-a="wb" id="al-wb">Corrigir a luz da foto</button><button class="btn soft" data-a="wbundo" id="al-undo" ${p.orig ? '' : 'hidden'}>Desfazer a correção de luz</button><button class="btn" data-a="alok">Pronto, usar esta foto</button></div>
+    <p class="m" style="margin-top:14px;text-align:center">A correção de luz tira o tom amarelado ou azulado da foto, para as cores da pele aparecerem como são.</p>`,
   a() {
-    const area = $('#al-area'), img = $('#al-img'), zoom = $('#al-zoom'), st = V.align.st = { x: 0, y: 0, s: 1, s0: 1 };
+    const area = $('#al-area'), img = $('#al-img'), zoom = $('#al-zoom'), st = V.align.st = { x: 0, y: 0, s: 1, s0: 1, wb: false };
     const apply = () => { img.style.transform = `translate(${st.x}px,${st.y}px) scale(${st.s})`; };
     const setS = (s, cx, cy) => { s = Math.max(st.s0 * .6, Math.min(st.s0 * 4, s)); st.x = cx - (cx - st.x) * s / st.s; st.y = cy - (cy - st.y) * s / st.s; st.s = s; zoom.value = (s / st.s0 - .6) / 3.4 * 100; apply(); };
-    const init = () => { const W = area.clientWidth, H = area.clientHeight; st.s0 = st.s = Math.max(W / img.naturalWidth, H / img.naturalHeight); st.x = (W - img.naturalWidth * st.s) / 2; st.y = (H - img.naturalHeight * st.s) / 2; apply(); };
+    const init = () => { img.onload = null; const W = area.clientWidth, H = area.clientHeight; st.s0 = st.s = Math.max(W / img.naturalWidth, H / img.naturalHeight); st.x = (W - img.naturalWidth * st.s) / 2; st.y = (H - img.naturalHeight * st.s) / 2; apply(); };
     img.complete && img.naturalWidth ? init() : img.onload = init;
-    zoom.addEventListener('input', () => { const s = st.s0 * (.6 + zoom.value / 100 * 3.4), v = zoom.value; setS(s, area.clientWidth / 2, area.clientHeight / 2); zoom.value = v; });
-    const pts = new Map();
-    area.addEventListener('pointerdown', e => { area.setPointerCapture(e.pointerId); pts.set(e.pointerId, { x: e.clientX, y: e.clientY }); });
+    zoom.addEventListener('input', () => { const v = zoom.value; setS(st.s0 * (.6 + v / 100 * 3.4), area.clientWidth / 2, area.clientHeight / 2); zoom.value = v; });
+    const pts = new Map(); let moved = 0;
+    area.addEventListener('pointerdown', e => { area.setPointerCapture(e.pointerId); pts.set(e.pointerId, { x: e.clientX, y: e.clientY }); moved = 0; });
     area.addEventListener('pointermove', e => {
       if (!pts.has(e.pointerId)) return; const r = area.getBoundingClientRect(), prev = pts.get(e.pointerId);
+      moved += Math.abs(e.clientX - prev.x) + Math.abs(e.clientY - prev.y);
       if (pts.size === 1) { st.x += e.clientX - prev.x; st.y += e.clientY - prev.y; apply(); }
       else if (pts.size === 2) { const o = [...pts.entries()].find(([id]) => id !== e.pointerId)[1], d0 = Math.hypot(prev.x - o.x, prev.y - o.y), d1 = Math.hypot(e.clientX - o.x, e.clientY - o.y); if (d0 > 0) setS(st.s * d1 / d0, (e.clientX + o.x) / 2 - r.left, (e.clientY + o.y) / 2 - r.top); }
       pts.set(e.pointerId, { x: e.clientX, y: e.clientY });
     });
-    const up = e => pts.delete(e.pointerId); area.addEventListener('pointerup', up); area.addEventListener('pointercancel', up);
+    area.addEventListener('pointerup', e => { pts.delete(e.pointerId); if (st.wb && moved < 10) { const r = area.getBoundingClientRect(); whiteBalance((e.clientX - r.left - st.x) / st.s, (e.clientY - r.top - st.y) / st.s); } });
+    area.addEventListener('pointercancel', e => pts.delete(e.pointerId));
   }
 };
+A.wb = () => { const st = V.align.st; st.wb = !st.wb; $('#al-area').classList.toggle('wb', st.wb); $('#al-wb').textContent = st.wb ? 'Cancelar' : 'Corrigir a luz da foto'; $('#al-tip').textContent = st.wb ? 'Toque em algo branco na foto: a folha de papel, a blusa branca ou o branco dos olhos.' : 'Arraste a foto até o rosto ficar dentro do oval. Use a barra para aproximar.'; };
+function whiteBalance(px, py) {
+  const img = $('#al-img'), p = topv().p, w = img.naturalWidth, h = img.naturalHeight;
+  if (px < 4 || py < 4 || px > w - 4 || py > h - 4) return;
+  const cv = document.createElement('canvas'); cv.width = w; cv.height = h; const x = cv.getContext('2d', { willReadFrequently: true }); x.drawImage(img, 0, 0);
+  const sm = x.getImageData(Math.round(px) - 4, Math.round(py) - 4, 9, 9).data; let r = 0, g = 0, b = 0; for (let i = 0; i < sm.length; i += 4) { r += sm[i]; g += sm[i + 1]; b += sm[i + 2]; } const n = sm.length / 4; r /= n; g /= n; b /= n;
+  const avg = (r + g + b) / 3; if (avg < 110) { toast('Esse ponto está escuro. Toque em uma área branca e bem iluminada.'); return; }
+  const cl = v => Math.max(.7, Math.min(1.45, v)), gr = cl(avg / r), gg = cl(avg / g), gb = cl(avg / b), d = x.getImageData(0, 0, w, h), a = d.data;
+  for (let i = 0; i < a.length; i += 4) { a[i] = Math.min(255, a[i] * gr); a[i + 1] = Math.min(255, a[i + 1] * gg); a[i + 2] = Math.min(255, a[i + 2] * gb); }
+  x.putImageData(d, 0, 0); p.orig = p.orig || p.src; p.src = cv.toDataURL('image/jpeg', .92); img.onload = null; img.src = p.src; $('#al-undo').hidden = false; A.wb(); toast('Luz corrigida.');
+}
+A.wbundo = () => { const p = topv().p, img = $('#al-img'); if (!p.orig) return; p.src = p.orig; p.orig = null; img.onload = null; img.src = p.src; $('#al-undo').hidden = true; toast('Correção desfeita.'); };
 A.alok = async () => {
   const area = $('#al-area'), img = $('#al-img'), st = V.align.st, k = area.clientWidth / 300, ox = 45 * k, oy = 60 * k, ow = 210 * k, oh = 280 * k;
-  const cv = document.createElement('canvas'); cv.width = 600; cv.height = 800; const x = cv.getContext('2d'); x.fillStyle = '#d9d2ca'; x.fillRect(0, 0, 600, 800);
-  x.drawImage(img, (ox - st.x) / st.s, (oy - st.y) / st.s, ow / st.s, oh / st.s, 0, 0, 600, 800);
-  const c = cur(); c.photo = cv.toDataURL('image/jpeg', .9); await save(c); backTo('client'); toast('Foto encaixada.');
+  const cv = document.createElement('canvas'); cv.width = 750; cv.height = 1000; const x = cv.getContext('2d'); x.fillStyle = '#d9d2ca'; x.fillRect(0, 0, 750, 1000);
+  x.drawImage(img, (ox - st.x) / st.s, (oy - st.y) / st.s, ow / st.s, oh / st.s, 0, 0, 750, 1000);
+  const c = cur(); c.photo = cv.toDataURL('image/jpeg', .92); await save(c); backTo('client'); toast('Foto pronta.');
 };
 
 /* ---------- análise: comparar ---------- */
@@ -422,44 +477,41 @@ A.start = () => go('cmp', { id: cur().id, i: 0, ans: [] });
 V.cmp = {
   h(p) {
     const c = cli(p.id), r = ROUNDS[p.i];
-    const tile = (o) => `<button class="cmp" data-a="pick" data-v="${o[2]}"><span class="sw" style="--bg:${o[1]}">${ovalImg(c)}</span><b>${o[0]}</b></button>`;
+    const tile = o => `<button class="cmp" data-a="pick" data-v="${o[2]}"><span class="sw" style="--bg:${o[1]}">${ovalImg(c)}</span><b>${o[0]}</b></button>`;
     return `${bar('Análise de ' + first(c))}<div class="prog">${ROUNDS.map((_, i) => `<i class="${i <= p.i ? 'on' : ''}"></i>`).join('')}</div>
       <p class="q">${r.q}</p><p class="m" style="margin:6px 0 14px">Comparação ${p.i + 1} de ${ROUNDS.length}. Toque na cor que deixa o rosto mais bonito.</p>
       <div class="duo">${tile(r.a)}${tile(r.b)}</div><button class="link" data-a="pick" data-v="0">Não vejo diferença</button>`;
   }
 };
 A.pick = el => {
-  const p = S.stack[S.stack.length - 1].p, ans = [...p.ans, +el.dataset.v];
-  if (el.classList.contains('cmp')) el.classList.add('sel');
-  setTimeout(() => { if (p.i + 1 < ROUNDS.length) go('cmp', { id: p.id, i: p.i + 1, ans }, true); else go('result', { id: p.id, order: rank(ans) }, true); }, el.classList.contains('cmp') ? 260 : 0);
+  const p = topv().p, ans = [...p.ans, +el.dataset.v], isT = el.classList.contains('cmp');
+  if (isT) el.classList.add('sel');
+  setTimeout(() => { if (p.i + 1 < ROUNDS.length) go('cmp', { id: p.id, i: p.i + 1, ans }, true); else go('result', { id: p.id, order: rank(ans), ans }, true); }, isT ? 260 : 0);
 };
 
 /* ---------- resultado ---------- */
 V.result = {
   h(p) {
-    const c = cli(p.id), s = se(p.order[0]), s2 = se(p.order[1]), ax = axes(s);
+    const c = cli(p.id), s = se(p.order[0]), s2 = se(p.order[1]);
     return `${bar('Sugestão')}<p class="up">Sugestão para ${esc(first(c))}</p><p class="h1" style="margin:6px 0 14px">${esc(s.name)}</p>
-      <div class="drape" style="background:${raysCSS(s)}">${ovalImg(c)}</div>
-      <div class="pills"><span>Profundidade: <b>${ax.d}</b></span><span>Temperatura: <b>${ax.t}</b></span><span>Intensidade: <b>${ax.c}</b></span></div>
+      <div class="drape" style="background:${raysCSS(s)}">${ovalImg(c)}</div>${pills(s)}
       <p class="m" style="margin:12px 0 16px">Isto é só uma sugestão a partir das suas escolhas. Quem decide é você.</p>
       <div class="stack"><button class="btn" data-a="confirm">${I.check}Confirmar ${esc(s.name)}</button><button class="btn ghost" data-a="duel">Comparar com ${esc(s2.name)}</button><button class="btn soft" data-a="seasons">Escolher outra cartela</button></div>`;
   }
 };
-A.confirm = async () => { const p = S.stack[S.stack.length - 1].p, c = cli(p.id); c.season = p.sid || p.order[0]; c.doneAt = Date.now(); await save(c); backTo('client'); toast('Cartela confirmada: ' + se(c.season).name); };
-A.duel = () => { const p = S.stack[S.stack.length - 1].p; go('duel', { id: p.id, order: p.order }); };
+A.confirm = async () => { const p = topv().p, c = cli(p.id), id = p.sid || p.order[0]; if (c.season !== id) c.reading = undefined; c.season = id; if (p.ans) c.ans = p.ans; c.doneAt = Date.now(); c.sentAt = null; await save(c); backTo('client'); toast('Cartela confirmada: ' + se(id).name); };
+A.duel = () => { const p = topv().p; go('duel', { id: p.id, order: p.order }); };
 V.duel = {
   h(p) {
-    const c = cli(p.id);
-    const tile = id => { const s = se(id); return `<button class="cmp" data-a="duelpick" data-s="${id}"><span class="sw" style="background:${raysCSS(s)}">${ovalImg(c)}</span><b>${esc(s.name)}</b></button>`; };
+    const c = cli(p.id), tile = id => { const s = se(id); return `<button class="cmp" data-a="setseason" data-s="${id}"><span class="sw" style="background:${raysCSS(s)}">${ovalImg(c)}</span><b>${esc(s.name)}</b></button>`; };
     return `${bar('Qual cartela?')}<p class="q">Qual valoriza mais?</p><p class="m" style="margin:6px 0 14px">As duas cartelas mais próximas, lado a lado.</p><div class="duo">${tile(p.order[0])}${tile(p.order[1])}</div>`;
   }
 };
-A.duelpick = el => { const p = S.stack[S.stack.length - 1].p, id = el.dataset.s; S.stack.pop(); S.stack[S.stack.length - 1].p.order = [id, ...p.order.filter(x => x !== id)]; render(); };
-A.seasons = () => { const p = S.stack[S.stack.length - 1].p; go('seasons', { id: p.id, order: p.order }); };
+A.seasons = () => { const p = topv().p; go('seasons', { id: p.id, order: p.order }); };
 V.seasons = {
-  h: p => `${bar('Escolher cartela')}<div class="stack">${SE.map(s => `<button class="srow ${p.order[0] === s.id ? 'on' : ''}" data-a="setseason" data-s="${s.id}"><b>${esc(s.name)}</b><span>${[...s.p.slice(0, 6), ...s.x.slice(0, 2)].map(k => `<i style="background:${k}"></i>`).join('')}</span></button>`).join('')}</div>`
+  h: p => `${bar('Escolher cartela')}<div class="stack">${ALLS().map(s => `<button class="srow ${p.order[0] === s.id ? 'on' : ''}" data-a="setseason" data-s="${s.id}"><b>${esc(s.name)}</b><span>${[...s.p.slice(0, 6), ...s.x.slice(0, 2)].map(k => `<i style="background:${k}"></i>`).join('')}</span></button>`).join('')}</div>`
 };
-A.setseason = el => { const p = S.stack[S.stack.length - 1].p, id = el.dataset.s; S.stack.pop(); S.stack[S.stack.length - 1].p.order = [id, ...p.order.filter(x => x !== id)]; render(); };
+A.setseason = el => { const p = topv().p, id = el.dataset.s; S.stack.pop(); topv().p.order = [id, ...p.order.filter(x => x !== id)]; render(); };
 
 /* ---------- provador ---------- */
 A.try = () => { const c = cur(); go('try', { id: c.id, sid: c.season || 'inverno-escuro' }); };
@@ -467,16 +519,16 @@ V.try = {
   h(p) {
     const c = cli(p.id), s = se(p.sid);
     return `${bar('Provar cartelas')}<div class="drape" id="tr-drape" style="background:${raysCSS(s)}">${ovalImg(c)}</div>
-      <div class="chips" id="tr-chips">${SE.map(k => `<button class="${k.id === s.id ? 'on' : ''}" data-a="trychip" data-s="${k.id}">${esc(k.name)}</button>`).join('')}</div>
+      <div class="chips" id="tr-chips">${ALLS().map(k => `<button class="${k.id === s.id ? 'on' : ''}" data-a="trychip" data-s="${k.id}">${esc(k.name)}</button>`).join('')}</div>
       <p class="m" style="margin-top:6px">Toque numa cor para ver o “tecido” inteiro atrás do rosto.</p>
       <div class="sws" id="tr-sws">${all16(s).map(k => `<button data-a="tryswatch" data-k="${k}" style="background:${k}" aria-label="Cor ${k}"></button>`).join('')}</div>
-      <div class="stack" style="margin-top:18px"><button class="btn ghost" data-a="tryrays">Ver o leque da cartela</button><button class="btn" data-a="confirm" id="tr-use">${I.check}Usar ${esc(s.name)} para ${esc(first(c))}</button></div>`;
+      <div class="stack" style="margin-top:18px"><button class="btn ghost" data-a="tryrays">Ver o leque da cartela</button><button class="btn" data-a="confirm">${I.check}Usar ${esc(s.name)} para ${esc(first(c))}</button></div>`;
   },
-  a(p) { const on = $('#tr-chips .on'); if (on) on.scrollIntoView({ inline: 'center', block: 'nearest' }); }
+  a() { const on = $('#tr-chips .on'); if (on) on.scrollIntoView({ inline: 'center', block: 'nearest' }); }
 };
-A.trychip = el => { const p = S.stack[S.stack.length - 1].p, y = window.scrollY; p.sid = el.dataset.s; render(); window.scrollTo(0, y); };
+A.trychip = el => { const y = window.scrollY; topv().p.sid = el.dataset.s; render(); window.scrollTo(0, y); };
 A.tryswatch = el => { $('#tr-drape').style.background = el.dataset.k; $$('#tr-sws button').forEach(b => b.classList.toggle('on', b === el)); };
-A.tryrays = () => { const p = S.stack[S.stack.length - 1].p; $('#tr-drape').style.background = raysCSS(se(p.sid)); $$('#tr-sws button').forEach(b => b.classList.remove('on')); };
+A.tryrays = () => { $('#tr-drape').style.background = raysCSS(se(topv().p.sid)); $$('#tr-sws button').forEach(b => b.classList.remove('on')); };
 
 /* ---------- looks ---------- */
 A.newlook = () => go('look', { id: cur().id, sel: [] });
@@ -484,29 +536,54 @@ V.look = {
   h(p) {
     const c = cli(p.id);
     return `${bar('Montar look')}<p class="m">Toque em até 4 peças para combinar.</p>
-      <div class="pcs" style="margin-top:12px">${c.pieces.map((u, i) => `<button class="pc ${p.sel.includes(i) ? 'on' : ''}" data-a="togglepiece" data-i="${i}"><img src="${u}" alt="Peça ${i + 1}"></button>`).join('')}</div>
-      <label class="f" for="l-title">Nome do look</label><input class="inp" id="l-title" placeholder="Ex.: Trabalho, dia a dia" value="${esc(p.title || '')}">
-      <label class="f" for="l-note">Sua orientação</label><textarea class="inp" id="l-note" placeholder="Ex.: Use o blazer aberto e dobre a manga.">${esc(p.note || '')}</textarea>
+      <div class="pcs" style="margin-top:12px">${c.pieces.map((u, i) => `<button class="pc ${p.sel.includes(i) ? 'on' : ''}" data-a="togglepiece" data-n="${i}"><img src="${u}" alt="Peça ${i + 1}"></button>`).join('')}</div>
+      <label class="f" for="l-title">Nome do look</label><input class="inp" id="l-title" placeholder="Trabalho, dia a dia, festa" value="${esc(p.title || '')}">
+      <label class="f" for="l-note">Sua orientação</label><textarea class="inp" id="l-note" placeholder="Como usar as peças juntas">${esc(p.note || '')}</textarea>
       <button class="btn" style="margin-top:18px" data-a="savelook">Salvar look</button>`;
   }
 };
-A.togglepiece = el => { const p = S.stack[S.stack.length - 1].p, i = +el.dataset.i; p.title = $('#l-title').value; p.note = $('#l-note').value; if (p.sel.includes(i)) p.sel = p.sel.filter(x => x !== i); else if (p.sel.length < 4) p.sel.push(i); else toast('No máximo 4 peças por look.'); const y = window.scrollY; render(); window.scrollTo(0, y); };
-A.savelook = async () => { const p = S.stack[S.stack.length - 1].p, c = cli(p.id); if (!p.sel.length) { toast('Escolha pelo menos uma peça.'); return; } c.looks = c.looks || []; c.looks.push({ id: uid(), title: $('#l-title').value.trim() || 'Look ' + (c.looks.length + 1), note: $('#l-note').value.trim(), items: p.sel.slice() }); await save(c); backTo('client'); toast('Look salvo.'); };
+A.togglepiece = el => { const p = topv().p, i = +el.dataset.n; p.title = $('#l-title').value; p.note = $('#l-note').value; if (p.sel.includes(i)) p.sel = p.sel.filter(x => x !== i); else if (p.sel.length < 4) p.sel.push(i); else toast('No máximo 4 peças por look.'); const y = window.scrollY; render(); window.scrollTo(0, y); };
+A.savelook = async () => { const p = topv().p, c = cli(p.id); if (!p.sel.length) { toast('Escolha pelo menos uma peça.'); return; } c.looks = c.looks || []; c.looks.push({ id: uid(), title: $('#l-title').value.trim() || 'Look ' + (c.looks.length + 1), note: $('#l-note').value.trim(), items: p.sel.slice() }); await save(c); backTo('client'); toast('Look salvo.'); };
 A.dellook = async el => { const c = cur(); c.looks = c.looks.filter(l => l.id !== el.dataset.id); await save(c); render(); };
 
-/* ---------- ajustes ---------- */
+/* ---------- ajustes, cartelas, backup ---------- */
 V.cfg = {
-  h: () => `${bar('Ajustes')}<p class="m">Estes dados aparecem no material que a cliente recebe.</p>
+  h: () => `${bar('Ajustes')}<h2 class="h" style="margin-top:4px">Sua marca no material</h2>
     <label class="f" for="c-brand">Seu nome (assinatura)</label><input class="inp" id="c-brand" value="${esc(S.cfg.brand)}">
     <label class="f" for="c-sub">Linha abaixo do nome</label><input class="inp" id="c-sub" value="${esc(S.cfg.sub)}">
     <label class="f" for="c-insta">Instagram</label><input class="inp" id="c-insta" value="${esc(S.cfg.insta)}">
+    <label class="f">Estilo do material e do aplicativo</label><div class="thm">${Object.entries(THEMES).map(([id, [n, t]]) => `<button class="${S.cfg.theme === id ? 'on' : ''}" data-a="theme" data-t="${id}"><i style="background:${t.a}"></i>${n}</button>`).join('')}</div>
     <label class="f" for="c-pin">Senha de entrada (4 números)</label><input class="inp" id="c-pin" inputmode="numeric" maxlength="4" value="${esc(S.cfg.pin)}">
-    <button class="btn" style="margin-top:22px" data-a="savecfg">Salvar</button>`
+    <button class="btn" style="margin-top:18px" data-a="savecfg">Salvar</button>
+    <h2 class="h">Minhas cartelas</h2><p class="m" style="margin-bottom:10px">Ajuste as cores de cada cartela para ficarem iguais às suas.</p><button class="btn ghost" data-a="pals">Editar as cores das cartelas</button>
+    <h2 class="h">Backup</h2><p class="m" style="margin-bottom:10px">As clientes e as fotos ficam só neste aparelho. Guarde uma cópia de vez em quando.</p>
+    <div class="stack"><button class="btn ghost" data-a="backup">Baixar backup</button><button class="btn soft" data-a="pickrestore">Restaurar um backup</button></div><input type="file" accept="application/json,.json" id="fi-restore" data-c="restore" hidden>`
 };
-A.savecfg = async () => { const pin = $('#c-pin').value.trim(); if (!/^\d{4}$/.test(pin)) { toast('A senha precisa ter 4 números.'); return; } Object.assign(S.cfg, { brand: $('#c-brand').value.trim() || 'Luciane Almeida', sub: $('#c-sub').value.trim(), insta: $('#c-insta').value.trim(), pin }); await DB.set('cfg', S.cfg); history.back(); toast('Ajustes salvos.'); };
+const readCfg = () => { const pin = $('#c-pin').value.trim(); if (!/^\d{4}$/.test(pin)) { toast('A senha precisa ter 4 números.'); return false; } Object.assign(S.cfg, { brand: $('#c-brand').value.trim() || 'Luciane Almeida', sub: $('#c-sub').value.trim(), insta: $('#c-insta').value.trim(), pin }); return true; };
+A.savecfg = async () => { if (!readCfg()) return; await saveCfg(); history.back(); toast('Ajustes salvos.'); };
+A.theme = async el => { if (!readCfg()) return; S.cfg.theme = el.dataset.t; applyTheme(); await saveCfg(); const y = window.scrollY; render(); window.scrollTo(0, y); };
+A.pals = () => go('pals', {});
+V.pals = { h: () => `${bar('Minhas cartelas')}<div class="stack">${ALLS().map(s => `<button class="srow" data-a="pal" data-s="${s.id}"><b>${esc(s.name)}${S.cfg.pal[s.id] ? ' <em>ajustada</em>' : ''}</b><span>${[...s.p.slice(0, 6), ...s.x.slice(0, 2)].map(k => `<i style="background:${k}"></i>`).join('')}</span></button>`).join('')}</div>` };
+A.pal = el => go('pal', { sid: el.dataset.s });
+V.pal = {
+  h(p) {
+    const s = se(p.sid);
+    return `${bar(s.name)}<p class="m">Toque numa cor para trocar. A mudança vale para as próximas análises e materiais.</p>
+      ${GROUPS.map(([g, l]) => `<h2 class="h">${l}</h2><div class="ed">${s[g].map((k, i) => `<input type="color" class="cin" value="${k}" data-c="palc" data-g="${g}" data-n="${i}" aria-label="${l}, cor ${i + 1}">`).join('')}</div>`).join('')}
+      <button class="link" data-a="palreset">Voltar às cores originais desta cartela</button>`;
+  }
+};
+C.palc = async el => { const id = topv().p.sid, g = el.dataset.g, o = S.cfg.pal[id] = S.cfg.pal[id] || {}; o[g] = (o[g] || BASE.find(b => b.id === id)[g]).slice(); o[g][+el.dataset.n] = el.value.toUpperCase(); await saveCfg(); };
+A.palreset = async () => { delete S.cfg.pal[topv().p.sid]; await saveCfg(); render(); toast('Cores originais restauradas.'); };
+function dl(blob, name) { const a = document.createElement('a'); a.href = URL.createObjectURL(blob); a.download = name; document.body.appendChild(a); a.click(); a.remove(); setTimeout(() => URL.revokeObjectURL(a.href), 4000); }
+A.backup = () => { dl(new Blob([JSON.stringify({ app: 'lu-estudio', v: 2, when: new Date().toISOString(), cfg: S.cfg, clients: S.clients })], { type: 'application/json' }), `backup-estudio-${new Date().toISOString().slice(0, 10)}.json`); toast('Backup baixado. Guarde o arquivo em um lugar seguro.'); };
+A.pickrestore = () => $('#fi-restore').click();
+C.restore = async el => { try { const d = JSON.parse(await el.files[0].text()); if (d.app !== 'lu-estudio' || !Array.isArray(d.clients)) throw 0; for (const c of d.clients) if (c && c.id && c.name) await DB.put(c); if (d.cfg) { Object.assign(S.cfg, d.cfg); S.cfg.pal = S.cfg.pal || {}; await saveCfg(); } S.clients = await DB.all(); applyTheme(); backTo('home'); toast(`Backup restaurado: ${d.clients.length} cliente(s).`); } catch (e) { toast('Esse arquivo não é um backup do Estúdio.'); } };
 
-/* ===================== MATERIAL EM PDF (desenhado em canvas) ===================== */
-const PW = 1240, PH = 1754, INK = '#1B1517', VIN = '#6B1424', MUT = '#6F6461', CRE = '#F7F3EE', ROS = '#E9B9C2';
+/* ===================== MATERIAIS (desenhados em canvas) ===================== */
+const PW = 1240, PH = 1754, SW = 1080, SH = 1920, INK = '#1B1517', MUT = '#6F6461', OKC = '#2F8F5B';
+let VIN, VINL, VIND, ROS, CRE;
+const useTheme = () => { const t = TH(); VIN = t.a; VINL = t.l; VIND = t.d; ROS = t.s; CRE = t.bg; };
 const FD = (w, s) => `${w} ${s}px Antonio, "Arial Narrow", sans-serif`, FB = (w, s) => `${w} ${s}px Jost, Arial, sans-serif`, FS = s => `400 ${s}px "Mrs Saint Delafield", cursive`;
 const mk = (w = PW, h = PH) => { const cv = document.createElement('canvas'); cv.width = w; cv.height = h; return [cv, cv.getContext('2d')]; };
 const loadImg = src => new Promise((res, rej) => { const i = new Image(); i.onload = () => res(i); i.onerror = rej; i.src = src; });
@@ -517,27 +594,44 @@ function wrapT(x, t, X, Y, mw, lh, font, col, al = 'left') {
   for (const para of String(t).split('\n')) { let line = ''; for (const w of para.split(/\s+/)) { const tt = line ? line + ' ' + w : w; if (x.measureText(tt).width > mw && line) { x.fillText(line, X, Y); Y += lh; line = w; } else line = tt; } x.fillText(line, X, Y); Y += lh; }
   return Y;
 }
-function box(x, X, Y, w, h, r, fill) { x.beginPath(); x.roundRect ? x.roundRect(X, Y, w, h, r) : x.rect(X, Y, w, h); x.fillStyle = fill; x.fill(); }
+function rrp(x, X, Y, w, h, r) { x.beginPath(); x.roundRect ? x.roundRect(X, Y, w, h, r) : x.rect(X, Y, w, h); }
+function box(x, X, Y, w, h, r, fill) { rrp(x, X, Y, w, h, r); x.fillStyle = fill; x.fill(); }
 function sw(x, col, X, Y, w, h, r = 18) { box(x, X, Y, w, h, r, col); if (lum(col) > .86) { x.lineWidth = 2; x.strokeStyle = '#D9CFC4'; x.stroke(); } }
 function cover(x, img, X, Y, w, h) { const k = Math.max(w / img.naturalWidth, h / img.naturalHeight), iw = img.naturalWidth * k, ih = img.naturalHeight * k; x.drawImage(img, X + (w - iw) / 2, Y + (h - ih) / 2, iw, ih); }
 function oval(x, img, cx, cy, rx, ry, ring, rw) { x.save(); x.beginPath(); x.ellipse(cx, cy, rx, ry, 0, 0, 7); x.clip(); cover(x, img, cx - rx, cy - ry, rx * 2, ry * 2); x.restore(); if (ring) { x.beginPath(); x.ellipse(cx, cy, rx, ry, 0, 0, 7); x.lineWidth = rw; x.strokeStyle = ring; x.stroke(); } }
 function rays(x, cx, cy, r, cols) { const n = cols.length; cols.forEach((k, i) => { x.beginPath(); x.moveTo(cx, cy); x.arc(cx, cy, r, i / n * 6.2832 - 1.76, (i + 1) / n * 6.2832 - 1.75); x.closePath(); x.fillStyle = k; x.fill(); }); }
-function vinBg(x, w, h) { const g = x.createRadialGradient(w / 2, h * .32, 40, w / 2, h * .4, h * .8); g.addColorStop(0, '#8E2236'); g.addColorStop(.5, '#6B1424'); g.addColorStop(1, '#3E0A14'); x.fillStyle = g; x.fillRect(0, 0, w, h); }
+function fan(x, face, s, cx, cy, r) { x.beginPath(); x.arc(cx, cy, r * 1.045, 0, 7); x.fillStyle = CRE; x.fill(); rays(x, cx, cy, r, rayCols(s)); oval(x, face, cx, cy, r * .525, r * .7, CRE, r * .04); }
+function vinBg(x, w, h) { const g = x.createRadialGradient(w / 2, h * .32, 40, w / 2, h * .4, h * .8); g.addColorStop(0, VINL); g.addColorStop(.5, VIN); g.addColorStop(1, VIND); x.fillStyle = g; x.fillRect(0, 0, w, h); }
 function head(x, c, s, title) { x.fillStyle = CRE; x.fillRect(0, 0, PW, PH); tx(x, `${c.name} · ${s.name}`.toUpperCase(), 90, 132, FB(500, 22), MUT, 'left', 4); tx(x, S.cfg.brand, PW - 90, 146, FS(84), VIN, 'right'); tx(x, title, 90, 310, FD(700, 118), VIN); }
 function foot(x, n) { tx(x, [S.cfg.sub, S.cfg.insta].filter(Boolean).join(' · ').toUpperCase(), 90, PH - 72, FB(500, 18), MUT, 'left', 3); tx(x, String(n), PW - 90, PH - 72, FB(500, 20), MUT, 'right'); }
 const lab = (x, t, Y) => tx(x, t.toUpperCase(), 90, Y, FB(600, 22), INK, 'left', 4);
 const grid4 = (x, cols, Y, h = 150) => cols.forEach((k, i) => sw(x, k, 90 + (i % 4) * 272, Y + Math.floor(i / 4) * (h + 26), 245, h));
+/* um "tecido": o rosto da cliente sobre a cor, com a marca de qual valorizou */
+function drapeTile(x, face, col, X, Y, w, h, ok, label, fs = 28) {
+  sw(x, col, X, Y, w, h, 28); oval(x, face, X + w / 2, Y + h / 2, h * .3, h * .4, '#fff', Math.max(5, h * .02));
+  if (ok) { const cx = X + w - 44, cy = Y + 44; x.beginPath(); x.arc(cx, cy, 32, 0, 7); x.fillStyle = OKC; x.fill(); x.beginPath(); x.moveTo(cx - 14, cy + 1); x.lineTo(cx - 4, cy + 11); x.lineTo(cx + 15, cy - 10); x.lineWidth = 7; x.lineCap = 'round'; x.lineJoin = 'round'; x.strokeStyle = '#fff'; x.stroke(); }
+  tx(x, label, X + w / 2, Y + h + fs * 1.6, FB(ok ? 600 : 400, fs), ok ? INK : MUT, 'center');
+}
+const evOk = (s, a, o) => s.v[a] !== 0 && Math.sign(o[2]) === Math.sign(s.v[a]);
 
 function pgCover(c, s, face) {
   const [cv, x] = mk(); vinBg(x, PW, PH);
-  tx(x, S.cfg.brand, PW / 2, 250, FS(190), ROS, 'center'); tx(x, S.cfg.sub.toUpperCase(), PW / 2, 318, FB(500, 26), CRE, 'center', 8);
-  x.beginPath(); x.arc(PW / 2, 830, 428, 0, 7); x.fillStyle = CRE; x.fill(); rays(x, PW / 2, 830, 410, rayCols(s));
-  oval(x, face, PW / 2, 830, 215, 287, CRE, 16);
-  tx(x, 'ANÁLISE DE COLORAÇÃO PESSOAL', PW / 2, 1376, FD(600, 42), CRE, 'center', 6);
+  tx(x, S.cfg.brand, PW / 2, 250, FS(190), ROS, 'center'); tx(x, S.cfg.sub.toUpperCase(), PW / 2, 318, FB(500, 26), '#fff', 'center', 8);
+  fan(x, face, s, PW / 2, 830, 410);
+  tx(x, 'ANÁLISE DE COLORAÇÃO PESSOAL', PW / 2, 1376, FD(600, 42), '#fff', 'center', 6);
   tx(x, c.name, PW / 2, 1478, FB(600, 80), '#fff', 'center');
   tx(x, s.name.toUpperCase(), PW / 2, 1566, FD(700, 62), ROS, 'center', 4);
-  tx(x, [new Date(c.doneAt || Date.now()).toLocaleDateString('pt-BR', { month: 'long', year: 'numeric' }), c.city].filter(Boolean).join(' · '), PW / 2, 1660, FB(400, 28), '#E3C9CE', 'center');
+  tx(x, [new Date(c.doneAt || Date.now()).toLocaleDateString('pt-BR', { month: 'long', year: 'numeric' }), c.city].filter(Boolean).join(' · '), PW / 2, 1660, FB(400, 28), ROS, 'center');
   return cv;
+}
+function pgAnalise(c, s, face) {
+  const [cv, x] = mk(), ax = axes(s); head(x, c, s, 'SUA ANÁLISE');
+  let Y = wrapT(x, c.reading ?? reading(c, s), 90, 386, PW - 180, 44, FB(400, 29), INK); Y = Math.min(Math.max(Y + 6, 610), 700);
+  EV.forEach(([a, l, ri, k], n) => {
+    const r = ROUNDS[ri], y = Y + n * 322; tx(x, l.toUpperCase(), 90, y + 96, FB(600, 20), MUT, 'left', 4); tx(x, ax[k], 90, y + 176, FD(700, 76), VIN);
+    [r.a, r.b].forEach((o, i) => drapeTile(x, face, o[1], 440 + i * 366, y, 340, 240, evOk(s, a, o), o[0]));
+  });
+  foot(x, 2); return cv;
 }
 function pgCores(c, s) {
   const [cv, x] = mk(), ax = axes(s); head(x, c, s, 'SUAS CORES');
@@ -547,7 +641,7 @@ function pgCores(c, s) {
   Y += 250; lab(x, 'Cores principais', Y); grid4(x, s.p, Y + 24);
   Y += 426; lab(x, 'Cores de destaque', Y); grid4(x, s.x, Y + 24);
   wrapT(x, 'Leve esta cartela com você na hora de comprar roupas, acessórios e maquiagem.', 90, Y + 236, PW - 180, 38, FB(400, 26), MUT);
-  foot(x, 2); return cv;
+  foot(x, 3); return cv;
 }
 function pgMake(c, s) {
   const [cv, x] = mk(); head(x, c, s, 'METAIS E MAQUIAGEM');
@@ -558,40 +652,39 @@ function pgMake(c, s) {
   lab(x, 'Blush', 1130); s.blush.forEach((k, i) => { x.beginPath(); x.arc(164 + i * 176, 1236, 74, 0, 7); x.fillStyle = k; x.fill(); });
   tx(x, 'SOMBRA', 540, 1130, FB(600, 22), INK, 'left', 4); s.eyes.forEach((k, i) => sw(x, k, 540 + i * 156, 1164, 136, 140, 22));
   lab(x, 'Esmaltes', 1392);
-  nails(s).forEach((k, i) => { const X = 90 + i * 218; x.beginPath(); x.roundRect ? x.roundRect(X, 1420, 140, 170, [70, 70, 20, 20]) : x.rect(X, 1420, 140, 170); x.fillStyle = k; x.fill(); if (lum(k) > .86) { x.lineWidth = 2; x.strokeStyle = '#D9CFC4'; x.stroke(); } x.beginPath(); x.ellipse(X + 40, 1474, 11, 40, 0, 0, 7); x.fillStyle = 'rgba(255,255,255,.28)'; x.fill(); });
-  foot(x, 3); return cv;
+  nails(s).forEach((k, i) => { const X = 90 + i * 218; rrp(x, X, 1420, 140, 170, [70, 70, 20, 20]); x.fillStyle = k; x.fill(); if (lum(k) > .86) { x.lineWidth = 2; x.strokeStyle = '#D9CFC4'; x.stroke(); } x.beginPath(); x.ellipse(X + 40, 1474, 11, 40, 0, 0, 7); x.fillStyle = 'rgba(255,255,255,.28)'; x.fill(); });
+  foot(x, 4); return cv;
 }
 function pgUso(c, s) {
   const [cv, x] = mk(); head(x, c, s, 'COMO USAR'); let Y = 420;
   tips(s).forEach(t => { x.beginPath(); x.arc(104, Y - 10, 9, 0, 7); x.fillStyle = VIN; x.fill(); Y = wrapT(x, t, 140, Y, PW - 230, 42, FB(400, 29), INK) + 14; });
   Y += 22; lab(x, 'Cores para evitar perto do rosto', Y);
-  se(s.opp).p.slice(0, 4).forEach((k, i) => { const X = 90 + i * 272; sw(x, k, X, Y + 24, 245, 116); x.save(); x.beginPath(); x.roundRect ? x.roundRect(X, Y + 24, 245, 116, 18) : x.rect(X, Y + 24, 245, 116); x.clip(); x.beginPath(); x.moveTo(X, Y + 140); x.lineTo(X + 245, Y + 24); x.lineWidth = 5; x.strokeStyle = 'rgba(255,255,255,.9)'; x.stroke(); x.restore(); });
+  se(s.opp).p.slice(0, 4).forEach((k, i) => { const X = 90 + i * 272; sw(x, k, X, Y + 24, 245, 116); x.save(); rrp(x, X, Y + 24, 245, 116, 18); x.clip(); x.beginPath(); x.moveTo(X, Y + 140); x.lineTo(X + 245, Y + 24); x.lineWidth = 5; x.strokeStyle = 'rgba(255,255,255,.9)'; x.stroke(); x.restore(); });
   Y += 186; const msg = (c.msg ?? defMsg(c)).trim();
   if (msg) { const end = wrapT(x, msg, 140, Y + 128, PW - 280, 44, FB(400, 30), 'rgba(0,0,0,0)'), h = Math.min(end - Y + 96, PH - 130 - Y); box(x, 90, Y, PW - 180, h, 30, '#fff'); tx(x, 'UM RECADO PARA VOCÊ', 140, Y + 70, FB(600, 20), VIN, 'left', 4); wrapT(x, msg, 140, Y + 128, PW - 280, 44, FB(400, 30), INK); tx(x, S.cfg.brand, PW - 140, Y + h - 34, FS(96), VIN, 'right'); }
-  foot(x, 4); return cv;
+  foot(x, 5); return cv;
 }
 async function pgLooks(c, s, looks, n) {
   const [cv, x] = mk(); head(x, c, s, 'SEUS LOOKS');
   for (let li = 0; li < looks.length; li++) {
     const l = looks[li], Y = 400 + li * 620; box(x, 90, Y, PW - 180, 580, 30, '#fff');
     const imgs = await Promise.all(l.items.map(i => loadImg(c.pieces[i]))), cells = { 1: [[0, 0, 500, 500]], 2: [[0, 0, 246, 500], [254, 0, 246, 500]], 3: [[0, 0, 246, 500], [254, 0, 246, 246], [254, 254, 246, 246]], 4: [[0, 0, 246, 246], [254, 0, 246, 246], [0, 254, 246, 246], [254, 254, 246, 246]] }[imgs.length];
-    imgs.forEach((im, i) => { const [a, b, w, h] = cells[i]; x.save(); x.beginPath(); x.roundRect ? x.roundRect(130 + a, Y + 40 + b, w, h, 16) : x.rect(130 + a, Y + 40 + b, w, h); x.clip(); cover(x, im, 130 + a, Y + 40 + b, w, h); x.restore(); });
+    imgs.forEach((im, i) => { const [a, b, w, h] = cells[i]; x.save(); rrp(x, 130 + a, Y + 40 + b, w, h, 16); x.clip(); cover(x, im, 130 + a, Y + 40 + b, w, h); x.restore(); });
     tx(x, l.title.toUpperCase(), 680, Y + 110, FD(600, 54), VIN); wrapT(x, l.note || '', 680, Y + 180, 420, 42, FB(400, 28), INK);
   }
   foot(x, n); return cv;
 }
-async function buildDossie(c) {
-  const s = se(c.season), face = await loadImg(c.photo), pages = [pgCover(c, s, face), pgCores(c, s), pgMake(c, s), pgUso(c, s)], lk = c.looks || [];
+async function buildDossie(c, s, face) {
+  const pages = [pgCover(c, s, face), pgAnalise(c, s, face), pgCores(c, s), pgMake(c, s), pgUso(c, s)], lk = c.looks || [];
   for (let i = 0; i < lk.length; i += 2) pages.push(await pgLooks(c, s, lk.slice(i, i + 2), pages.length + 1));
   return pages;
 }
-async function buildBolsa(c) {
-  const s = se(c.season), face = await loadImg(c.photo), [cv, x] = mk(), CW = 532, CH = 827, Y0 = 250, X1 = 70, X2 = PW - 70 - CW;
+function buildBolsa(c, s, face) {
+  const [cv, x] = mk(), CW = 532, CH = 827, Y0 = 250, X1 = 70, X2 = PW - 70 - CW;
   x.fillStyle = '#fff'; x.fillRect(0, 0, PW, PH);
   tx(x, 'CARTELA DE BOLSA', 70, 120, FD(700, 54), INK); tx(x, 'Imprima em papel firme (250 g ou mais), recorte nas marcas e cole frente e verso. Tamanho: 9 × 14 cm.', 70, 170, FB(400, 24), MUT);
-  const [f, fx] = mk(CW, CH); vinBg(fx, CW, CH); tx(fx, S.cfg.brand, CW / 2, 120, FS(92), ROS, 'center'); tx(fx, 'MINHA CARTELA DE CORES', CW / 2, 168, FB(500, 16), CRE, 'center', 5);
-  fx.beginPath(); fx.arc(CW / 2, 420, 196, 0, 7); fx.fillStyle = CRE; fx.fill(); rays(fx, CW / 2, 420, 186, rayCols(s)); oval(fx, face, CW / 2, 420, 98, 131, CRE, 8);
-  tx(fx, c.name, CW / 2, 700, FB(600, 40), '#fff', 'center'); tx(fx, s.name.toUpperCase(), CW / 2, 756, FD(700, 34), ROS, 'center', 3); x.drawImage(f, X1, Y0);
+  const [f, fx] = mk(CW, CH); vinBg(fx, CW, CH); tx(fx, S.cfg.brand, CW / 2, 120, FS(92), ROS, 'center'); tx(fx, 'MINHA CARTELA DE CORES', CW / 2, 168, FB(500, 16), '#fff', 'center', 5);
+  fan(fx, face, s, CW / 2, 420, 186); tx(fx, c.name, CW / 2, 700, FB(600, 40), '#fff', 'center'); tx(fx, s.name.toUpperCase(), CW / 2, 756, FD(700, 34), ROS, 'center', 3); x.drawImage(f, X1, Y0);
   const [b, bx] = mk(CW, CH); bx.fillStyle = CRE; bx.fillRect(0, 0, CW, CH); tx(bx, s.name.toUpperCase(), 36, 78, FD(700, 44), VIN); tx(bx, c.name, 36, 116, FB(500, 22), MUT);
   all16(s).forEach((k, i) => sw(bx, k, 36 + (i % 4) * 118, 148 + Math.floor(i / 4) * 118, 106, 106, 12));
   tx(bx, 'METAIS', 36, 664, FB(600, 16), INK, 'left', 3); metals(s).filter(m => m[2]).forEach(([n, g], i) => { const cx = 62 + i * 230, gr = bx.createRadialGradient(cx - 8, 700, 2, cx, 708, 28); gr.addColorStop(0, g[0]); gr.addColorStop(.5, g[1]); gr.addColorStop(1, g[2]); bx.beginPath(); bx.arc(cx, 708, 26, 0, 7); bx.fillStyle = gr; bx.fill(); tx(bx, n, cx + 40, 716, FB(500, 20), INK); });
@@ -599,41 +692,68 @@ async function buildBolsa(c) {
   x.strokeStyle = '#999'; x.lineWidth = 1.5;
   [X1, X2].forEach(X => [[X, Y0], [X + CW, Y0], [X, Y0 + CH], [X + CW, Y0 + CH]].forEach(([a, d]) => { const dx = a === X ? -1 : 1, dy = d === Y0 ? -1 : 1; x.beginPath(); x.moveTo(a + dx * 8, d); x.lineTo(a + dx * 34, d); x.moveTo(a, d + dy * 8); x.lineTo(a, d + dy * 34); x.stroke(); }));
   tx(x, 'FRENTE', X1 + CW / 2, Y0 + CH + 70, FB(500, 20), MUT, 'center', 4); tx(x, 'VERSO', X2 + CW / 2, Y0 + CH + 70, FB(500, 20), MUT, 'center', 4);
-  box(x, 70, 1270, PW - 140, 330, 24, CRE); tx(x, 'ENVIAR PARA', 110, 1336, FB(600, 20), VIN, 'left', 4); tx(x, c.name, 110, 1392, FB(600, 34), INK);
+  box(x, 70, 1270, PW - 140, 330, 24, '#F4F0EA'); tx(x, 'ENVIAR PARA', 110, 1336, FB(600, 20), VIN, 'left', 4); tx(x, c.name, 110, 1392, FB(600, 34), INK);
   wrapT(x, c.address || 'Endereço ainda não informado. Preencha na aba Dados da cliente.', 110, 1440, PW - 220, 38, FB(400, 26), c.address ? INK : MUT);
   return [cv];
 }
-let PDF = null;
-A.pdf = el => go('pdf', { id: cur().id, kind: el.dataset.k });
-V.pdf = {
-  h: p => `${bar(p.kind === 'bolsa' ? 'Cartela de bolsa' : 'Material da cliente')}<div id="pdf-out"><div class="load"><span class="spin"></span>Montando o material...</div></div>`,
+/* imagens 9:16 para a cliente postar nos stories */
+function buildKit(c, s, face) {
+  const ax = axes(s), insta = S.cfg.insta || S.cfg.brand, out = [];
+  let [cv, x] = mk(SW, SH); vinBg(x, SW, SH);
+  tx(x, S.cfg.brand, SW / 2, 300, FS(170), ROS, 'center'); tx(x, 'COLORAÇÃO PESSOAL', SW / 2, 372, FB(500, 28), '#fff', 'center', 10);
+  fan(x, face, s, SW / 2, 930, 400);
+  tx(x, 'MINHA CARTELA É', SW / 2, 1500, FB(500, 30), '#fff', 'center', 8); tx(x, s.name.toUpperCase(), SW / 2, 1636, FD(700, 118), ROS, 'center', 2);
+  tx(x, 'Análise por ' + insta, SW / 2, 1764, FB(400, 34), '#fff', 'center'); out.push(cv);
+  [cv, x] = mk(SW, SH); x.fillStyle = CRE; x.fillRect(0, 0, SW, SH);
+  tx(x, S.cfg.brand, SW / 2, 230, FS(120), VIN, 'center'); tx(x, 'VEJA A DIFERENÇA', SW / 2, 400, FD(700, 112), VIN, 'center');
+  EV.slice(0, 2).forEach(([a, l, ri, k], n) => { const r = ROUNDS[ri], y = 480 + n * 630; tx(x, `${l}: ${ax[k]}`.toUpperCase(), SW / 2, y + 44, FB(600, 28), INK, 'center', 5); [r.a, r.b].forEach((o, i) => drapeTile(x, face, o[1], 70 + i * 480, y + 76, 460, 430, evOk(s, a, o), o[0], 32)); });
+  tx(x, 'Coloração online com ' + insta, SW / 2, 1810, FB(500, 32), MUT, 'center'); out.push(cv);
+  [cv, x] = mk(SW, SH); x.fillStyle = CRE; x.fillRect(0, 0, SW, SH);
+  tx(x, S.cfg.brand, SW / 2, 230, FS(120), VIN, 'center'); tx(x, 'MINHAS CORES', SW / 2, 400, FD(700, 112), VIN, 'center'); tx(x, s.name.toUpperCase(), SW / 2, 474, FB(600, 30), INK, 'center', 8);
+  all16(s).forEach((k, i) => sw(x, k, 64 + (i % 4) * 244, 540 + Math.floor(i / 4) * 244, 220, 220, 26));
+  box(x, 64, 1560, SW - 128, 250, 40, VIN); tx(x, 'Quer descobrir as suas cores?', SW / 2, 1664, FB(600, 44), '#fff', 'center'); tx(x, 'Coloração online · ' + insta, SW / 2, 1736, FB(400, 32), ROS, 'center'); out.push(cv);
+  return out;
+}
+let OUT = null;
+const KIND = { dossie: 'Material da cliente', kit: 'Imagens para o Instagram', bolsa: 'Cartela de bolsa' };
+A.out = el => go('out', { id: cur().id, kind: el.dataset.k });
+V.out = {
+  h: p => `${bar(KIND[p.kind])}<div id="out"><div class="load"><span class="spin"></span>Montando...</div></div>`,
   async a(p) {
-    const c = cli(p.id), out = $('#pdf-out'); PDF = null;
+    const c = cli(p.id), out = $('#out'); OUT = null;
     try {
       await Promise.all([FD(700, 40), FD(600, 40), FB(400, 30), FB(500, 30), FB(600, 30), FS(80)].map(f => document.fonts.load(f, 'Aã'))).catch(() => {});
-      const pages = p.kind === 'bolsa' ? await buildBolsa(c) : await buildDossie(c);
-      const urls = pages.map(cv => cv.toDataURL('image/jpeg', .9)), doc = new window.jspdf.jsPDF({ unit: 'mm', format: 'a4', compress: true });
-      urls.forEach((u, i) => { if (i) doc.addPage(); doc.addImage(u, 'JPEG', 0, 0, 210, 297, undefined, 'FAST'); });
-      const nm = c.name.normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/[^\w]+/g, '-');
-      PDF = { blob: doc.output('blob'), name: (p.kind === 'bolsa' ? 'Cartela-de-bolsa-' : 'Coloracao-') + nm + '.pdf' };
-      if (S.stack[S.stack.length - 1].name !== 'pdf') return;
-      out.innerHTML = `<div class="pages">${urls.map((u, i) => `<img src="${u}" alt="Página ${i + 1}">`).join('')}</div><p class="m" style="text-align:center;margin-bottom:14px">${urls.length} página${urls.length > 1 ? 's' : ''}. Arraste para o lado para ver.</p>
-        <div class="stack">${p.kind === 'bolsa' ? `<button class="btn" data-a="download">${I.doc}Baixar para imprimir</button>` : `<button class="btn" data-a="share">${I.chat}Enviar para a cliente</button><button class="btn ghost" data-a="download">Baixar o PDF</button>`}</div>`;
+      useTheme(); const s = se(c.season), face = await loadImg(c.photo), nm = c.name.normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/[^\w]+/g, '-');
+      const pages = p.kind === 'kit' ? buildKit(c, s, face) : p.kind === 'bolsa' ? buildBolsa(c, s, face) : await buildDossie(c, s, face), urls = pages.map(cv => cv.toDataURL('image/jpeg', .92));
+      let files;
+      if (p.kind === 'kit') files = await Promise.all(pages.map((cv, i) => new Promise(r => cv.toBlob(b => r({ blob: b, name: `Coloracao-${nm}-${i + 1}.jpg` }), 'image/jpeg', .92))));
+      else { const doc = new window.jspdf.jsPDF({ unit: 'mm', format: 'a4', compress: true }); urls.forEach((u, i) => { if (i) doc.addPage(); doc.addImage(u, 'JPEG', 0, 0, 210, 297, undefined, 'FAST'); }); files = [{ blob: doc.output('blob'), name: (p.kind === 'bolsa' ? 'Cartela-de-bolsa-' : 'Coloracao-') + nm + '.pdf' }]; }
+      OUT = { kind: p.kind, id: c.id, files };
+      if (topv().name !== 'out') return;
+      const n = urls.length, hint = p.kind === 'kit' ? `${n} imagens no tamanho dos stories, para a cliente postar.${c.okPost ? '' : ' Marque em Dados quando ela autorizar a divulgação.'}` : `${n} página${n > 1 ? 's' : ''}. Arraste para o lado para ver.`;
+      out.innerHTML = `<div class="pages ${p.kind === 'kit' ? 'story' : ''}">${urls.map((u, i) => `<img src="${u}" alt="${p.kind === 'kit' ? 'Imagem' : 'Página'} ${i + 1}">`).join('')}</div><p class="m" style="text-align:center;margin-bottom:14px">${hint}</p>
+        <div class="stack">${p.kind === 'bolsa' ? `<button class="btn" data-a="save" data-n="0">${I.doc}Baixar para imprimir</button>` : `<button class="btn" data-a="share">${I.chat}Enviar para a cliente</button>${files.map((f, i) => `<button class="btn ghost" data-a="save" data-n="${i}">${p.kind === 'kit' ? 'Baixar a imagem ' + (i + 1) : 'Baixar o PDF'}</button>`).join('')}`}</div>`;
     } catch (e) { console.error(e); out.innerHTML = '<p class="empty">Não consegui montar o material. Volte e tente de novo.</p>'; }
   }
 };
-function download() { const a = document.createElement('a'); a.href = URL.createObjectURL(PDF.blob); a.download = PDF.name; document.body.appendChild(a); a.click(); a.remove(); }
-A.download = () => { if (PDF) { download(); toast('PDF baixado.'); } };
+async function delivered() { if (OUT && OUT.kind === 'dossie') { const c = cli(OUT.id); if (c && !c.sentAt) { c.sentAt = Date.now(); await save(c); } } }
+A.save = el => { if (!OUT) return; const f = OUT.files[+el.dataset.n]; dl(f.blob, f.name); toast('Arquivo baixado.'); delivered(); };
 A.share = async () => {
-  if (!PDF) return; const f = new File([PDF.blob], PDF.name, { type: 'application/pdf' });
-  if (navigator.canShare && navigator.canShare({ files: [f] })) { try { await navigator.share({ files: [f], title: PDF.name }); } catch (e) {} }
-  else { download(); toast('PDF baixado. Agora é só anexar na conversa da cliente.'); }
+  if (!OUT) return; const fs = OUT.files.map(f => new File([f.blob], f.name, { type: f.blob.type }));
+  if (navigator.canShare && navigator.canShare({ files: fs })) { try { await navigator.share({ files: fs }); delivered(); } catch (e) {} }
+  else { OUT.files.forEach((f, i) => setTimeout(() => dl(f.blob, f.name), i * 500)); toast('Arquivo baixado. Agora é só anexar na conversa da cliente.'); delivered(); }
 };
 
 /* ===================== INÍCIO ===================== */
 (async () => {
   await DB.open();
-  try { const cfg = await DB.get('cfg'); if (cfg) Object.assign(S.cfg, cfg); if (!(await DB.get('seeded'))) await seed(); S.clients = await DB.all(); } catch (e) { console.error(e); }
+  try {
+    const cfg = await DB.get('cfg'); if (cfg) Object.assign(S.cfg, cfg); S.cfg.pal = S.cfg.pal || {};
+    S.clients = await DB.all();
+    for (const c of S.clients.filter(c => c.demo)) await DB.del(c.id); /* remove os exemplos da primeira versão */
+    S.clients = S.clients.filter(c => !c.demo);
+  } catch (e) { console.error(e); }
+  applyTheme();
   let authed = false; try { authed = sessionStorage.getItem('lu-auth') === '1'; } catch (e) {}
   S.stack = [{ name: authed ? 'home' : 'login', p: {} }]; render();
 })();

@@ -16,9 +16,14 @@ Site de Luciane Almeida, consultora de imagem e estilo em Curitiba/PR. Feito por
 
 Ferramenta da Luciane para fazer a coloração online: https://p0sturee.github.io/luciane-almeida/estudio/
 
-- Senha de teste: 1234 (só uma tela de entrada; ainda não é um login de verdade)
+- Clientes, valores, autorizações de uso da foto e cartela física
+- Foto no oval com correção de luz (balanço de branco)
+- 9 comparações de cor, sugestão de cartela e provador das 12 cartelas
+- Material em PDF com a análise no rosto da própria cliente, cartela de bolsa e imagens para stories
+- Editor das cores de cada cartela, temas do material e backup em arquivo
+- Primeiro acesso: senha 1234 (é só uma tela de entrada; ainda não é um login de verdade)
 - Os dados e as fotos ficam salvos só no aparelho de quem usa (IndexedDB), nada vai para servidor
-- As 12 cartelas em `estudio/index.html` (array `SE`) são um ponto de partida, para ajustar com as cartelas dela
+- As 12 cartelas (array `BASE` em `estudio/index.html`) são um ponto de partida, para ajustar com as cartelas dela
 
 ## Estrutura
 
