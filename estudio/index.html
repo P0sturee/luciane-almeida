@@ -9,11 +9,11 @@
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 64 64%27%3E%3Ccircle cx=%2732%27 cy=%2732%27 r=%2732%27 fill=%27%231F2A44%27/%3E%3Ctext x=%2732%27 y=%2744%27 font-family=%27Georgia,serif%27 font-style=%27italic%27 font-size=%2734%27 fill=%27%23F6F5F2%27 text-anchor=%27middle%27%3EL%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Jost:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Jost:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 /* Protótipo: tudo fica salvo só neste aparelho (IndexedDB). Sem servidor. */
 :root{--pri:#1F2A44;--pri-d:#121A2E;--pri-l:#2F3F66;--soft:#CBD3EA;--key:#B0125B;--creme:#ECEAE6;--creme-2:#F6F5F2;--areia:#D9D7D2;--tinta:#1B1A1F;--muted:#6B6A72;--ok:#2F8F5B;--warn:#B7791F;
-  --f-d:'Cormorant Garamond',Georgia,'Times New Roman',serif;--f-b:'Jost',system-ui,-apple-system,sans-serif;--f-s:'Cormorant Garamond',Georgia,'Times New Roman',serif}
+  --f-d:'Instrument Serif',Georgia,'Times New Roman',serif;--f-b:'Jost',system-ui,-apple-system,sans-serif;--f-s:'Instrument Serif',Georgia,'Times New Roman',serif}
 *{box-sizing:border-box;margin:0;padding:0}
 html{-webkit-text-size-adjust:100%}
 body{background:var(--areia);color:var(--tinta);font-family:var(--f-b);font-size:16px;line-height:1.45;-webkit-font-smoothing:antialiased;overscroll-behavior:none}
@@ -22,11 +22,11 @@ input,textarea{font:inherit;color:inherit}
 :focus-visible{outline:2px solid var(--pri);outline-offset:2px}
 [hidden]{display:none!important}
 #app{max-width:480px;min-height:100dvh;margin:0 auto;background:var(--creme-2);padding:max(18px,env(safe-area-inset-top)) 18px calc(28px + env(safe-area-inset-bottom));position:relative;overflow-x:hidden}
-.sig{font-family:var(--f-s);font-style:italic;font-weight:500;font-size:34px;line-height:1;color:var(--pri)}
+.sig{font-family:var(--f-s);font-weight:400;font-size:27px;line-height:1;letter-spacing:.07em;text-transform:uppercase;color:var(--pri)}
 .brandbar{display:flex;width:96px;height:4px;border-radius:2px;overflow:hidden;margin:8px 0 6px}
 .brandbar i{flex:1}
 .up{font-size:11px;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:var(--muted)}
-.h1{font-family:var(--f-d);font-weight:600;font-size:38px;line-height:1.02;color:var(--pri)}
+.h1{font-family:var(--f-d);font-weight:400;font-size:38px;line-height:1.02;letter-spacing:.01em;text-transform:uppercase;color:var(--pri)}
 .h{font-weight:600;text-transform:uppercase;letter-spacing:.14em;font-size:12.5px;color:var(--tinta);margin:26px 0 12px}
 .m{color:var(--muted);font-size:14px}
 .top{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:18px}
@@ -45,7 +45,7 @@ a.btn{text-decoration:none}
 .card{background:#fff;border-radius:22px;padding:16px;box-shadow:0 8px 22px -18px rgba(27,21,23,.6)}
 .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:16px}
 .stat{background:#fff;border-radius:18px;padding:12px 8px;text-align:center}
-.stat b{display:block;font-family:var(--f-d);font-weight:600;font-size:30px;line-height:1;color:var(--pri);white-space:nowrap}
+.stat b{display:block;font-family:var(--f-d);font-weight:400;font-size:32px;line-height:1;color:var(--pri);white-space:nowrap}
 .stat span{display:block;font-size:11px;color:var(--muted);margin-top:6px;line-height:1.2}
 .row{display:flex;align-items:center;gap:14px;width:100%;text-align:left;background:#fff;border-radius:20px;padding:12px 14px;box-shadow:0 8px 22px -18px rgba(27,21,23,.6)}
 .row div{flex:1;min-width:0}
@@ -79,7 +79,7 @@ textarea.inp{min-height:96px;resize:vertical}
 
 /* login */
 .login{min-height:calc(100dvh - 60px);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center}
-.login .sig{font-size:48px}
+.login .sig{font-size:38px}
 .login .brandbar{margin:14px auto 10px}
 .dots{display:flex;gap:16px;margin:30px 0 8px}
 .dots i{width:16px;height:16px;border-radius:50%;border:2px solid var(--pri)}
@@ -111,7 +111,7 @@ textarea.inp{min-height:96px;resize:vertical}
 .prog{display:flex;gap:4px;margin:4px 0 14px}
 .prog i{flex:1;height:5px;border-radius:3px;background:var(--areia)}
 .prog i.on{background:var(--key)}
-.q{font-family:var(--f-d);font-weight:600;font-size:38px;line-height:1.02;color:var(--pri)}
+.q{font-family:var(--f-d);font-weight:400;font-size:40px;line-height:1.02;letter-spacing:.01em;text-transform:uppercase;color:var(--pri)}
 .drape{position:relative;width:100%;aspect-ratio:1;border-radius:26px;display:grid;place-items:center;overflow:hidden;box-shadow:0 14px 30px -18px rgba(27,21,23,.7)}
 .drape .ov{width:46%}
 .chips{display:flex;gap:8px;overflow-x:auto;padding:14px 18px 6px;margin:0 -18px;scrollbar-width:none}
@@ -698,14 +698,18 @@ A.pickrestore = () => $('#fi-restore').click();
 C.restore = async el => { try { const d = JSON.parse(await el.files[0].text()); if (d.app !== 'lu-estudio' || !Array.isArray(d.clients)) throw 0; for (const c of d.clients) if (c && c.id && c.name) await DB.put(c); if (d.cfg) { Object.assign(S.cfg, d.cfg); S.cfg.pal = S.cfg.pal || {}; if (!THEMES[S.cfg.theme]) S.cfg.theme = 'marinho'; await saveCfg(); } S.clients = await DB.all(); applyTheme(); backTo('home'); toast(`Backup restaurado: ${d.clients.length} cliente(s).`); } catch (e) { toast('Esse arquivo não é um backup do Estúdio.'); } };
 
 /* ===================== MATERIAIS (desenhados em canvas) ===================== */
-const PW = 1240, PH = 1754, SW = 1080, SH = 1920, MX = 100, INK = '#1B1A1F', MUT = '#6B6A72', OKC = '#2F8F5B';
+const PW = 1240, PH = 1754, SW = 1080, SH = 1920, MX = 100, INK = '#1B1A1F', MUT = '#6B6A72', OKC = '#2F8F5B', LINE = '#D5D3CE';
 const BR = ['#1F2A44', '#0B4D3B', '#5B2A86', '#B0125B', '#17151A']; /* as cores da marca: marinho, jade, roxo, fúcsia, preto */
 let VIN, VINL, VIND, ROS, CRE, KEY;
 const useTheme = () => { const t = TH(); VIN = t.a; VINL = t.l; VIND = t.d; ROS = t.s; CRE = t.bg; KEY = t.k; };
-const FD = (w, s) => `${w} ${s}px "Cormorant Garamond", Georgia, serif`, FI = (w, s) => `italic ${w} ${s}px "Cormorant Garamond", Georgia, serif`, FB = (w, s) => `${w} ${s}px Jost, Arial, sans-serif`;
+/* títulos em serifa editorial, em caixa alta; texto corrido em Jost */
+const FD = (w, s) => `400 ${s}px "Instrument Serif", Georgia, serif`, FI = (w, s) => `italic 400 ${s}px "Instrument Serif", Georgia, serif`, FB = (w, s) => `${w} ${s}px Jost, Arial, sans-serif`;
+const fd = z => FD(400, z), UP = t => String(t).toUpperCase();
 const mk = (w = PW, h = PH) => { const cv = document.createElement('canvas'); cv.width = w; cv.height = h; return [cv, cv.getContext('2d')]; };
 const loadImg = src => new Promise((res, rej) => { const i = new Image(); i.onload = () => res(i); i.onerror = rej; i.src = src; });
 const lum = h => { const n = parseInt(h.slice(1), 16); return (.299 * (n >> 16 & 255) + .587 * (n >> 8 & 255) + .114 * (n & 255)) / 255; };
+const toHsl = h => { const n = parseInt(h.slice(1), 16), r = (n >> 16 & 255) / 255, g = (n >> 8 & 255) / 255, b = (n & 255) / 255, mx = Math.max(r, g, b), mn = Math.min(r, g, b), l = (mx + mn) / 2, d = mx - mn, s = d ? d / (1 - Math.abs(2 * l - 1)) : 0; let hu = 0; if (d) { hu = mx === r ? ((g - b) / d) % 6 : mx === g ? (b - r) / d + 2 : (r - g) / d + 4; hu = (hu * 60 + 360) % 360; } return [hu, s, l]; };
+const hslCss = (h, s, l) => `hsl(${Math.round(h)},${Math.round(s * 100)}%,${Math.round(l * 100)}%)`;
 function tx(x, t, X, Y, font, col, al = 'left', ls = 0) { x.font = font; x.fillStyle = col; x.textAlign = al; x.textBaseline = 'alphabetic'; try { x.letterSpacing = ls + 'px'; } catch (e) {} x.fillText(t, X, Y); }
 function wrapT(x, t, X, Y, mw, lh, font, col, al = 'left', maxY = 1e9) {
   x.font = font; x.fillStyle = col; x.textAlign = al; try { x.letterSpacing = '0px'; } catch (e) {}
@@ -713,77 +717,153 @@ function wrapT(x, t, X, Y, mw, lh, font, col, al = 'left', maxY = 1e9) {
   for (const para of String(t).split('\n')) { let line = ''; for (const w of para.split(/\s+/)) { const tt = line ? line + ' ' + w : w; if (x.measureText(tt).width > mw && line) { put(line); line = w; } else line = tt; } put(line); }
   return Math.min(Y, maxY + lh);
 }
-function fitTx(x, t, X, Y, f, size, maxW, col, al = 'left') { try { x.letterSpacing = '0px'; } catch (e) {} x.font = f(size); while (x.measureText(t).width > maxW && size > 40) { size -= 4; x.font = f(size); } tx(x, t, X, Y, f(size), col, al); }
+function fitSize(x, t, f, size, maxW, ls = 0) { try { x.letterSpacing = ls + 'px'; } catch (e) {} x.font = f(size); while (x.measureText(t).width > maxW && size > 30) { size -= 2; x.font = f(size); } return size; }
+function fitTx(x, t, X, Y, f, size, maxW, col, al = 'left', ls = 0) { size = fitSize(x, t, f, size, maxW, ls); tx(x, t, X, Y, f(size), col, al, ls); return size; }
 function rrp(x, X, Y, w, h, r) { x.beginPath(); x.roundRect ? x.roundRect(X, Y, w, h, r) : x.rect(X, Y, w, h); }
 function box(x, X, Y, w, h, r, fill) { rrp(x, X, Y, w, h, r); x.fillStyle = fill; x.fill(); }
-function sw(x, col, X, Y, w, h, r = 18) { box(x, X, Y, w, h, r, col); if (lum(col) > .86) { x.lineWidth = 2; x.strokeStyle = '#D5D3CE'; x.stroke(); } }
-function cover(x, img, X, Y, w, h) { const k = Math.max(w / img.naturalWidth, h / img.naturalHeight), iw = img.naturalWidth * k, ih = img.naturalHeight * k; x.drawImage(img, X + (w - iw) / 2, Y + (h - ih) / 2, iw, ih); }
+function sw(x, col, X, Y, w, h, r = 18) { box(x, X, Y, w, h, r, col); if (lum(col) > .86) { x.lineWidth = 2; x.strokeStyle = LINE; x.stroke(); } }
+function cover(x, img, X, Y, w, h) { const nw = img.naturalWidth || img.width, nh = img.naturalHeight || img.height, k = Math.max(w / nw, h / nh), iw = nw * k, ih = nh * k; x.drawImage(img, X + (w - iw) / 2, Y + (h - ih) / 2, iw, ih); }
 function oval(x, img, cx, cy, rx, ry, ring, rw) { x.save(); x.beginPath(); x.ellipse(cx, cy, rx, ry, 0, 0, 7); x.clip(); cover(x, img, cx - rx, cy - ry, rx * 2, ry * 2); x.restore(); if (ring) { x.beginPath(); x.ellipse(cx, cy, rx, ry, 0, 0, 7); x.lineWidth = rw; x.strokeStyle = ring; x.stroke(); } }
 function rays(x, cx, cy, r, cols) { const n = cols.length; cols.forEach((k, i) => { x.beginPath(); x.moveTo(cx, cy); x.arc(cx, cy, r, i / n * 6.2832 - 1.76, (i + 1) / n * 6.2832 - 1.75); x.closePath(); x.fillStyle = k; x.fill(); }); }
 function fan(x, face, s, cx, cy, r) { x.beginPath(); x.arc(cx, cy, r * 1.045, 0, 7); x.fillStyle = CRE; x.fill(); rays(x, cx, cy, r, rayCols(s)); oval(x, face, cx, cy, r * .525, r * .7, CRE, r * .04); }
 function vinBg(x, w, h) { const g = x.createRadialGradient(w / 2, h * .32, 40, w / 2, h * .4, h * .8); g.addColorStop(0, VINL); g.addColorStop(.5, VIN); g.addColorStop(1, VIND); x.fillStyle = g; x.fillRect(0, 0, w, h); }
 const stripe = (x, w, h) => BR.forEach((k, i) => { x.fillStyle = k; x.fillRect(i * w / 5, 0, w / 5 + 1, h); });
+function tick(x, cx, cy, r) { x.beginPath(); x.arc(cx, cy, r + 3, 0, 7); x.fillStyle = '#fff'; x.fill(); x.beginPath(); x.arc(cx, cy, r, 0, 7); x.fillStyle = OKC; x.fill(); x.beginPath(); x.moveTo(cx - r * .44, cy + r * .03); x.lineTo(cx - r * .12, cy + r * .34); x.lineTo(cx + r * .47, cy - r * .31); x.lineWidth = r * .22; x.lineCap = 'round'; x.lineJoin = 'round'; x.strokeStyle = '#fff'; x.stroke(); }
+/* a foto da cliente em preto e branco, para a leitura do contraste */
+function gray(img) { const [cv, x] = mk(img.naturalWidth, img.naturalHeight); x.drawImage(img, 0, 0); const d = x.getImageData(0, 0, cv.width, cv.height), p = d.data; for (let i = 0; i < p.length; i += 4) p[i] = p[i + 1] = p[i + 2] = .299 * p[i] + .587 * p[i + 1] + .114 * p[i + 2]; x.putImageData(d, 0, 0); return cv; }
 /* um "tecido": o rosto da cliente sobre a cor, com a marca de qual valorizou */
 function drapeTile(x, face, col, X, Y, w, h, ok, label, fs = 28) {
   sw(x, col, X, Y, w, h, 24); oval(x, face, X + w / 2, Y + h / 2, h * .3, h * .4, '#fff', Math.max(4, h * .02));
-  if (ok) { const r = Math.max(20, w * .085), cx = X + w - r - 12, cy = Y + r + 12; x.beginPath(); x.arc(cx, cy, r, 0, 7); x.fillStyle = OKC; x.fill(); x.beginPath(); x.moveTo(cx - r * .44, cy + r * .03); x.lineTo(cx - r * .12, cy + r * .34); x.lineTo(cx + r * .47, cy - r * .31); x.lineWidth = r * .22; x.lineCap = 'round'; x.lineJoin = 'round'; x.strokeStyle = '#fff'; x.stroke(); }
+  if (ok) { const r = Math.max(20, w * .085); tick(x, X + w - r - 14, Y + r + 14, r); }
   tx(x, label, X + w / 2, Y + h + fs * 1.6, FB(ok ? 600 : 400, fs), ok ? INK : MUT, 'center');
 }
 const evOk = (s, a, o) => s.v[a] !== 0 && Math.sign(o[2]) === Math.sign(s.v[a]);
-/* página interna: faixa com as cores da marca, assinatura, título */
+/* página interna: faixa com as cores da marca, cabeçalho, título em caixa alta e rodapé */
 function pg(c, kicker, title, n) {
   const [cv, x] = mk(); x.fillStyle = CRE; x.fillRect(0, 0, PW, PH); stripe(x, PW, 14);
-  tx(x, S.cfg.brand, MX, 122, FI(500, 46), VIN); tx(x, c.name.toUpperCase(), PW - MX, 114, FB(500, 20), MUT, 'right', 4);
-  tx(x, kicker.toUpperCase(), MX, 240, FB(600, 22), KEY, 'left', 6);
-  fitTx(x, title, MX, 346, z => FD(600, z), 108, PW - 2 * MX, VIN);
-  tx(x, [S.cfg.sub, S.cfg.insta].filter(Boolean).join(' · ').toUpperCase(), MX, PH - 70, FB(500, 18), MUT, 'left', 3); tx(x, String(n), PW - MX, PH - 70, FB(500, 20), MUT, 'right');
+  tx(x, UP(S.cfg.brand), MX, 112, FD(400, 34), VIN, 'left', 3); const bw = x.measureText(UP(S.cfg.brand)).width;
+  x.fillStyle = LINE; x.fillRect(MX + bw + 14, 84, 2, 32); tx(x, UP(S.cfg.sub), MX + bw + 34, 107, FB(500, 16), MUT, 'left', 4);
+  tx(x, UP(c.name), PW - MX, 107, FB(500, 16), MUT, 'right', 4);
+  x.fillStyle = LINE; x.fillRect(MX, 142, PW - 2 * MX, 2);
+  tx(x, UP(kicker), MX, 230, FB(600, 21), KEY, 'left', 6);
+  fitTx(x, UP(title), MX, 352, fd, 132, PW - 2 * MX, VIN, 'left', 1);
+  x.fillStyle = LINE; x.fillRect(MX, PH - 118, PW - 2 * MX, 2);
+  tx(x, UP([S.cfg.sub, S.cfg.insta].filter(Boolean).join(' · ')), MX, PH - 68, FB(500, 17), MUT, 'left', 3); tx(x, String(n).padStart(2, '0'), PW - MX, PH - 60, FD(400, 42), VIN, 'right');
   return [cv, x];
 }
 const para = (x, t, Y, w = PW - 2 * MX, X = MX, size = 30, maxY) => wrapT(x, t, X, Y, w, Math.round(size * 1.5), FB(400, size), INK, 'left', maxY);
-const sub = (x, t, Y) => { tx(x, t, MX, Y, FD(600, 58), VIN); return Y + 60; };
-const kick = (x, t, Y, X = MX) => tx(x, t.toUpperCase(), X, Y, FB(600, 22), KEY, 'left', 6);
+const sub = (x, t, Y) => { tx(x, UP(t), MX, Y, FD(400, 52), VIN, 'left', 1); return Y + 60; };
+const kick = (x, t, Y, X = MX) => tx(x, UP(t), X, Y, FB(600, 21), KEY, 'left', 6);
 function named(x, cols, Y, h = 110, per = 4) { const w = 245, step = (PW - 2 * MX - w) / (per - 1); cols.forEach((k, i) => { const X = MX + (i % per) * step, y = Y + Math.floor(i / per) * (h + 62); sw(x, k, X, y, w, h, 18); tx(x, cname(k), X + w / 2, y + h + 34, FB(400, 21), MUT, 'center'); }); return Y + Math.ceil(cols.length / per) * (h + 62); }
 
 function pgCover(c, s, face) {
   const [cv, x] = mk(); vinBg(x, PW, PH);
-  tx(x, S.cfg.brand, PW / 2, 214, FI(500, 96), '#fff', 'center'); tx(x, S.cfg.sub.toUpperCase(), PW / 2, 272, FB(500, 24), ROS, 'center', 8);
-  x.beginPath(); x.ellipse(PW / 2, 770, 290, 378, 0, 0, 7); x.lineWidth = 2; x.strokeStyle = 'rgba(255,255,255,.4)'; x.stroke(); oval(x, face, PW / 2, 770, 264, 352, '#fff', 6);
-  s.p.forEach((k, i) => { x.beginPath(); x.arc(PW / 2 - 3.5 * 76 + i * 76, 1236, 25, 0, 7); x.fillStyle = k; x.fill(); x.lineWidth = 3; x.strokeStyle = 'rgba(255,255,255,.9)'; x.stroke(); });
-  tx(x, 'Sua coloração pessoal', PW / 2, 1386, FI(500, 84), '#fff', 'center'); fitTx(x, c.name, PW / 2, 1494, z => FD(600, z), 96, PW - 2 * MX, '#fff', 'center');
-  tx(x, s.name.toUpperCase(), PW / 2, 1566, FB(600, 28), ROS, 'center', 10);
-  tx(x, [`Uma leitura feita por ${S.cfg.brand}`, new Date(c.doneAt || Date.now()).toLocaleDateString('pt-BR', { month: 'long', year: 'numeric' }), c.city].filter(Boolean).join(' · '), PW / 2, 1664, FB(400, 25), ROS, 'center');
+  tx(x, UP(S.cfg.brand), PW / 2, 156, FD(400, 56), '#fff', 'center', 6); tx(x, UP(S.cfg.sub), PW / 2, 204, FB(500, 20), ROS, 'center', 8);
+  x.beginPath(); x.ellipse(PW / 2, 640, 268, 350, 0, 0, 7); x.lineWidth = 2; x.strokeStyle = 'rgba(255,255,255,.4)'; x.stroke(); oval(x, face, PW / 2, 640, 244, 325, '#fff', 6);
+  s.p.forEach((k, i) => { x.beginPath(); x.arc(PW / 2 - 3.5 * 76 + i * 76, 1070, 25, 0, 7); x.fillStyle = k; x.fill(); x.lineWidth = 3; x.strokeStyle = 'rgba(255,255,255,.9)'; x.stroke(); });
+  tx(x, 'COLORAÇÃO PESSOAL', PW / 2, 1168, FB(600, 22), ROS, 'center', 10);
+  const ls = UP(s.name).split(' '), lines = ls.length > 1 ? [ls[0], ls.slice(1).join(' ')] : ls, fs = Math.min(...lines.map(l => fitSize(x, l, fd, 196, PW - 2 * MX, 2)));
+  lines.forEach((l, i) => tx(x, l, PW / 2, 1196 + fs * .74 + i * fs * .9, fd(fs), '#fff', 'center', 2));
+  const yb = 1196 + fs * .74 + (lines.length - 1) * fs * .9;
+  fitTx(x, 'de ' + c.name, PW / 2, yb + 96, z => FI(400, z), 70, PW - 2 * MX, '#fff', 'center');
+  tx(x, [`Uma leitura feita por ${S.cfg.brand}`, new Date(c.doneAt || Date.now()).toLocaleDateString('pt-BR', { month: 'long', year: 'numeric' }), c.city].filter(Boolean).join(' · '), PW / 2, 1672, FB(400, 24), ROS, 'center');
   return cv;
 }
 function pgSobre(c, s, n) {
   const [cv, x] = pg(c, 'Antes das cores', 'Sobre você', n);
   let Y = para(x, txt(c, s, 'abertura'), 452, PW - 2 * MX, MX, 36, 900); Y = sub(x, 'Como fiz a sua análise', Y + 60) + 6; Y = para(x, txt(c, s, 'metodo'), Y, PW - 2 * MX, MX, 33, 1290);
-  const q = txt(c, s, 'sintese'), y0 = Y + 40, end = wrapT(x, q, MX + 60, y0 + 116, PW - 2 * MX - 120, 74, FI(500, 60), 'rgba(0,0,0,0)'), h = Math.min(end - y0 - 10, PH - 130 - y0);
-  box(x, MX, y0, PW - 2 * MX, h, 30, VIN); stripe2(x, MX + 60, y0 + 46); wrapT(x, q, MX + 60, y0 + 116, PW - 2 * MX - 120, 74, FI(500, 60), '#fff', 'left', y0 + h - 40);
+  const q = txt(c, s, 'sintese'), y0 = Y + 40, end = wrapT(x, q, MX + 60, y0 + 116, PW - 2 * MX - 120, 72, FI(400, 62), 'rgba(0,0,0,0)'), h = Math.min(end - y0 - 10, PH - 140 - y0);
+  box(x, MX, y0, PW - 2 * MX, h, 30, VIN); stripe2(x, MX + 60, y0 + 46); wrapT(x, q, MX + 60, y0 + 116, PW - 2 * MX - 120, 72, FI(400, 62), '#fff', 'left', y0 + h - 40);
   return cv;
 }
 const stripe2 = (x, X, Y) => [ROS, '#fff', ROS].forEach((k, i) => { x.fillStyle = k; x.globalAlpha = i === 1 ? .9 : .5; x.fillRect(X + i * 44, Y, 36, 5); x.globalAlpha = 1; });
-function dim(x, c, s, face, Y, key, a, label, ri) {
-  const ax = axes(s), r = ROUNDS[ri]; kick(x, label, Y); tx(x, { temp: ax.t, prof: ax.d, intens: ax.c }[key], MX, Y + 96, FD(600, 100), VIN);
-  [r.a, r.b].forEach((o, i) => drapeTile(x, face, o[1], 730 + i * 215, Y - 22, 195, 252, evOk(s, a, o), o[0], 24));
-  para(x, txt(c, s, key), Y + 338, PW - 2 * MX, MX, 29, Y + 338 + 44 * 5);
+
+/* ---------- a leitura do rosto: uma página para cada característica ---------- */
+/* faixa de comparação: o rosto da cliente sobre quatro cores, lado a lado */
+function strip(x, face, s, a, Y, h = 340) {
+  const os = ROUNDS.filter(r => r.ax === a && r.a[0] !== 'Dourado').slice(0, 2).flatMap(r => [r.a, r.b].sort((p, q) => p[2] - q[2])), w = (PW - 2 * MX) / os.length;
+  x.save(); rrp(x, MX, Y, PW - 2 * MX, h, 26); x.clip();
+  os.forEach((o, i) => { const X = MX + i * w; x.fillStyle = o[1]; x.fillRect(X, Y, w + 1, h); tx(x, o[0], X + w / 2, Y + 52, FB(600, 25), lum(o[1]) > .6 ? INK : '#fff', 'center'); oval(x, face, X + w / 2, Y + h / 2 + 28, h * .27, h * .36); if (evOk(s, a, o)) tick(x, X + w - 42, Y + h - 42, 22); });
+  x.restore();
 }
-function scale(x, lvl, X, Y) {
-  const tones = { baixo: '#C9AE93', medio: '#8A6A4E', alto: '#2A1E1A' }, nm = { baixo: 'Baixo', medio: 'Médio', alto: 'Alto' };
-  Object.keys(tones).forEach((k, i) => { const cx = X + 64 + i * 141, cy = Y + 96, on = k === lvl; x.save(); x.beginPath(); x.arc(cx, cy, 54, 0, 7); x.clip(); x.fillStyle = '#EBD5C0'; x.fillRect(cx - 54, cy - 54, 54, 108); x.fillStyle = tones[k]; x.fillRect(cx, cy - 54, 54, 108); x.restore(); if (on) { x.beginPath(); x.arc(cx, cy, 65, 0, 7); x.lineWidth = 5; x.strokeStyle = KEY; x.stroke(); } tx(x, nm[k], cx, cy + 112, FB(on ? 600 : 400, 24), on ? INK : MUT, 'center'); });
-  tx(x, 'pele e cabelo', X + 64 + 141, Y + 262, FB(400, 20), MUT, 'center');
+function result(x, kicker, value, Y) { kick(x, kicker, Y); tx(x, UP(value), MX, Y + 124, FD(400, 120), VIN, 'left', 1); }
+/* régua: de um extremo ao outro, com a posição da cliente */
+function ruler(x, Y, l, r, cols, t) {
+  const X = 650, w = PW - MX - X, g = x.createLinearGradient(X, 0, X + w, 0); cols.forEach((k, i) => g.addColorStop(i / (cols.length - 1), k));
+  rrp(x, X, Y, w, 26, 13); x.fillStyle = g; x.fill(); x.lineWidth = 1.5; x.strokeStyle = LINE; x.stroke();
+  const mx = X + 22 + (w - 44) * Math.max(0, Math.min(1, t)); x.beginPath(); x.arc(mx, Y + 13, 21, 0, 7); x.fillStyle = '#fff'; x.fill(); x.lineWidth = 6; x.strokeStyle = KEY; x.stroke();
+  tx(x, 'VOCÊ', mx, Y - 24, FB(600, 17), KEY, 'center', 3); tx(x, UP(l), X, Y + 72, FB(500, 18), MUT, 'left', 3); tx(x, UP(r), X + w, Y + 72, FB(500, 18), MUT, 'right', 3);
 }
-function pgTC(c, s, face, n) {
-  const [cv, x] = pg(c, 'A leitura do seu rosto', 'Temperatura e contraste', n), lv = contrast(c, s), Y = 1100;
-  dim(x, c, s, face, 486, 'temp', 0, 'Temperatura', 1);
-  kick(x, 'Contraste', Y); tx(x, { baixo: 'Baixo', medio: 'Médio', alto: 'Alto' }[lv], MX, Y + 96, FD(600, 100), VIN); scale(x, lv, 720, Y - 22); para(x, txt(c, s, 'contraste'), Y + 338, PW - 2 * MX, MX, 29, Y + 338 + 44 * 5);
+function satin(x, X, Y, w, h, g) { x.save(); rrp(x, X, Y, w, h, 22); x.clip(); const lg = x.createLinearGradient(X, Y, X + w, Y + h * 1.6), st = [g[1], g[0], g[1], g[2], g[1], g[0], g[1]]; st.forEach((k, i) => lg.addColorStop(i / (st.length - 1), k)); x.fillStyle = lg; x.fillRect(X, Y, w, h); x.restore(); }
+function exMetais(x, c, s, face, Y) {
+  const warm = s.v[0] > 0, w = 505, h = 216;
+  [['Dourado', ['#FFF1BF', '#DDB955', '#B08A2E'], warm], ['Prateado', ['#FFFFFF', '#D3D7DC', '#A3A9B0'], !warm]].forEach(([nm, g, ok], i) => {
+    const X = MX + i * (w + 30); satin(x, X, Y, w, h, g); oval(x, face, X + 118, Y + h / 2, 72, 96, '#fff', 4);
+    tx(x, UP(nm), X + 222, Y + 104, FD(400, 54), INK, 'left', 1); tx(x, ok ? 'Perto do rosto' : 'Longe do rosto', X + 224, Y + 146, FB(500, 23), INK); if (ok) tick(x, X + w - 46, Y + 46, 22);
+  });
+}
+function exEscala(x, c, s, face, Y) {
+  const cols = all16(s).slice().sort((a, b) => lum(b) - lum(a)), W = PW - 2 * MX, w = W / cols.length, d = s.v[1], [i0, i1] = d > 0 ? [8, 16] : d < 0 ? [0, 8] : [4, 12];
+  x.save(); rrp(x, MX, Y, W, 130, 22); x.clip(); cols.forEach((k, i) => { x.fillStyle = k; x.fillRect(MX + i * w, Y, w + 1, 130); }); x.restore(); rrp(x, MX, Y, W, 130, 22); x.lineWidth = 2; x.strokeStyle = LINE; x.stroke();
+  const a = MX + i0 * w + 6, b = MX + i1 * w - 6, y = Y + 162; x.strokeStyle = KEY; x.lineWidth = 4; x.lineJoin = 'round'; x.beginPath(); x.moveTo(a, y - 14); x.lineTo(a, y); x.lineTo(b, y); x.lineTo(b, y - 14); x.stroke();
+  tx(x, 'PERTO DO ROSTO', (a + b) / 2, y + 42, FB(600, 19), KEY, 'center', 4);
+  if (i0 > 0) tx(x, 'mais claras', MX, y + 42, FB(400, 21), MUT); if (i1 < 16) tx(x, 'mais escuras', PW - MX, y + 42, FB(400, 21), MUT, 'right');
+}
+function exIntens(x, c, s, face, Y) {
+  const i = s.v[2], cols = s.p.slice().sort((a, b) => toHsl(b)[1] - toHsl(a)[1]).slice(0, 6), X0 = 420, w = (PW - MX - X0 - 5 * 12) / 6;
+  const other = (k, n) => { const [h, sa, l] = toHsl(k), dull = i > 0 || (i === 0 && n < 3); return dull ? hslCss(h, sa * .28, l * .6 + .22) : hslCss(h, Math.min(1, sa * 1.9 + .3), l * .7 + .14); };
+  [['As suas cores', 'valorizam você', k => k], [i > 0 ? 'Apagadas' : i < 0 ? 'Vivas demais' : 'Fora do ponto', 'pedem cuidado', other]].forEach(([l, m, f], r) => {
+    const y = Y + r * 116; tx(x, UP(l), MX, y + 44, FB(600, 20), r ? MUT : INK, 'left', 4); tx(x, m, MX, y + 76, FB(400, 21), MUT);
+    cols.forEach((k, n) => { const X = X0 + n * (w + 12); rrp(x, X, y, w, 96, 18); x.fillStyle = f(k, n); x.fill(); if (r) { x.save(); rrp(x, X, y, w, 96, 18); x.clip(); x.beginPath(); x.moveTo(X, y + 96); x.lineTo(X + w, y); x.lineWidth = 4; x.strokeStyle = 'rgba(255,255,255,.85)'; x.stroke(); x.restore(); } });
+  });
+}
+/* pares de cores da cartela com a mesma distância de claro e escuro que o contraste da cliente */
+function pairsFor(s, lv) {
+  const cols = all16(s), rg = { baixo: [.04, .2], medio: [.24, .46], alto: [.55, 1] }[lv], all = [];
+  for (let i = 0; i < cols.length; i++) for (let j = i + 1; j < cols.length; j++) { const d = Math.abs(lum(cols[i]) - lum(cols[j])), out = d < rg[0] ? rg[0] - d : d > rg[1] ? d - rg[1] : 0; const li = lum(cols[i]) > lum(cols[j]) ? i : j; all.push([cols[i], cols[j], (lv === 'alto' ? (li > 11 ? 0 : .35) + 1 - d : (i > 11 && j > 11 ? .5 : 0) + Math.abs(d - (rg[0] + rg[1]) / 2)), out]); }
+  const used = new Set(), res = []; all.sort((a, b) => a[3] - b[3] || a[2] - b[2]);
+  const pick = ok => { for (const p of all) { if (res.length === 3) break; if (!res.includes(p) && ok(p)) { res.push(p); used.add(p[0]); used.add(p[1]); } } };
+  pick(p => !p[3] && !used.has(p[0]) && !used.has(p[1])); pick(p => !p[3] && !(used.has(p[0]) && used.has(p[1]))); pick(() => true);
+  return res.map(p => lum(p[0]) > lum(p[1]) ? [p[0], p[1]] : [p[1], p[0]]);
+}
+function exPares(x, c, s, face, Y) {
+  pairsFor(s, contrast(c, s)).forEach(([a, b], i) => {
+    const w = 320, X = MX + i * 360, n = 8; x.save(); rrp(x, X, Y, w, 150, 22); x.clip(); for (let k = 0; k < n; k++) { x.fillStyle = k % 2 ? b : a; x.fillRect(X + k * w / n, Y, w / n + 1, 150); } x.restore(); rrp(x, X, Y, w, 150, 22); x.lineWidth = 2; x.strokeStyle = LINE; x.stroke();
+    tx(x, `${cname(a)} + ${cname(b)}`, X + w / 2, Y + 190, FB(400, 21), MUT, 'center');
+  });
+}
+const DIMS = {
+  temp: { a: 0, title: 'Temperatura', val: ax => ax.t, l: 'Fria', r: 'Quente', cols: ['#3E5FB0', '#B9B6C9', '#E6CFA6', '#D9862B'], extra: ['O teste dos metais', exMetais] },
+  prof: { a: 1, title: 'Profundidade', val: ax => ax.d, l: 'Clara', r: 'Escura', cols: ['#F4EFE9', '#9A938D', '#1E1B1A'], extra: ['As suas cores, da mais clara à mais escura', exEscala] },
+  intens: { a: 2, title: 'Intensidade', val: ax => ax.c, l: 'Suave', r: 'Intensa', cols: ['#B9A6AA', '#C96A8A', '#E3004F'], extra: ['A mesma cor, em duas intensidades', exIntens] }
+};
+function pgDim(c, s, face, n, key, i) {
+  const d = DIMS[key], [cv, x] = pg(c, `A leitura do seu rosto · ${i} de 4`, d.title, n);
+  strip(x, face, s, d.a, 430); result(x, `A sua ${d.title.toLowerCase()} é`, d.val(axes(s)), 842); ruler(x, 904, d.l, d.r, d.cols, (s.v[d.a] + 2) / 4);
+  para(x, txt(c, s, key), 1040, PW - 2 * MX, MX, 30, 1040 + 45 * 5);
+  kick(x, d.extra[0], 1340); d.extra[1](x, c, s, face, 1368);
   return cv;
 }
-function pgPI(c, s, face, n) { const [cv, x] = pg(c, 'A leitura do seu rosto', 'Profundidade e intensidade', n); dim(x, c, s, face, 486, 'prof', 1, 'Profundidade', 0); dim(x, c, s, face, 1100, 'intens', 2, 'Intensidade', 2); return cv; }
+function pgContraste(c, s, face, n, i) {
+  const [cv, x] = pg(c, `A leitura do seu rosto · ${i} de 4`, 'Contraste', n), lv = contrast(c, s), NM = { baixo: 'Baixo', medio: 'Médio', alto: 'Alto' }, G = { baixo: ['#D8D8D8', '#B6B6B6'], medio: ['#BDBDBD', '#707070'], alto: ['#D4D4D4', '#1C1C1C'] };
+  [[face, 'Em cores'], [gray(face), 'Em preto e branco']].forEach(([im, l], k) => { const X = MX + k * 262; x.save(); rrp(x, X, 430, 240, 320, 24); x.clip(); cover(x, im, X, 430, 240, 320); x.restore(); tx(x, l, X + 120, 790, FB(400, 21), MUT, 'center'); });
+  Object.keys(G).forEach((k, r) => {
+    const X = 680, w = PW - MX - X, y = 430 + r * 112, on = k === lv, cy = y + 48; rrp(x, X, y, w, 96, 22); if (on) { x.fillStyle = '#fff'; x.fill(); x.lineWidth = 4; x.strokeStyle = KEY; x.stroke(); } else { x.lineWidth = 2; x.strokeStyle = LINE; x.stroke(); }
+    G[k].forEach((g, j) => { x.beginPath(); x.arc(X + 64 + j * 46, cy, 32, 0, 7); x.fillStyle = g; x.fill(); x.lineWidth = 3; x.strokeStyle = on ? '#fff' : CRE; x.stroke(); });
+    tx(x, UP(NM[k]), X + 166, cy + 16, FD(400, 46), on ? VIN : MUT, 'left', 1); if (on) tx(x, 'O SEU', X + w - 28, cy + 7, FB(600, 17), KEY, 'right', 4);
+  });
+  result(x, 'O seu contraste é', NM[lv], 842);
+  wrapT(x, 'Em preto e branco fica mais fácil ver a diferença entre os tons da pele, dos olhos e do cabelo.', 650, 900, PW - MX - 650, 36, FB(400, 24), MUT);
+  para(x, txt(c, s, 'contraste'), 1040, PW - 2 * MX, MX, 30, 1040 + 45 * 5);
+  kick(x, 'Na prática, com as suas cores', 1340); exPares(x, c, s, face, 1368);
+  return cv;
+}
+
 function pgCores(c, s, n) {
   const [cv, x] = pg(c, s.name, 'As suas melhores cores', n);
   let Y = para(x, txt(c, s, 'cores'), 446, PW - 2 * MX, MX, 30, 620); kick(x, 'Cores principais', Y + 26); Y = named(x, s.p, Y + 50);
   kick(x, 'Cores de destaque', Y + 14); Y = named(x, s.x, Y + 38);
-  Y = sub(x, 'Neutros ideais', Y + 62); Y = para(x, txt(c, s, 'neutros'), Y, PW - 2 * MX, MX, 28, Y + 130); named(x, s.n, Y + 6, 84);
+  Y = sub(x, 'Neutros ideais', Y + 58); Y = para(x, txt(c, s, 'neutros'), Y, PW - 2 * MX, MX, 28, Y + 130); named(x, s.n, Y + 6, 80);
   return cv;
 }
 function pgCuidado(c, s, n) {
@@ -792,16 +872,16 @@ function pgCuidado(c, s, n) {
   cols.forEach((k, i) => { const X = MX + i * 265; x.save(); rrp(x, X, Y, 245, 110, 18); x.clip(); x.beginPath(); x.moveTo(X, Y + 110); x.lineTo(X + 245, Y); x.lineWidth = 5; x.strokeStyle = 'rgba(255,255,255,.9)'; x.stroke(); x.restore(); });
   Y = sub(x, 'Acessórios e metais', Y + 290);
   metals(s).forEach(([nm, g, ok], i) => { const cx = MX + 86 + i * 347, cy = Y + 110, gr = x.createRadialGradient(cx - 28, cy - 32, 6, cx, cy, 94); gr.addColorStop(0, g[0]); gr.addColorStop(.45, g[1]); gr.addColorStop(1, g[2]); x.globalAlpha = ok ? 1 : .4; x.beginPath(); x.arc(cx, cy, 86, 0, 7); x.fillStyle = gr; x.fill(); x.globalAlpha = 1; tx(x, nm, cx + 100, cy - 2, FB(600, 24), ok ? INK : MUT); tx(x, ok ? 'Perto do rosto' : 'Longe do rosto', cx + 100, cy + 32, FB(400, 21), ok ? '#256B45' : MUT); });
-  para(x, txt(c, s, 'acess'), Y + 280, PW - 2 * MX, MX, 33, PH - 150);
+  para(x, txt(c, s, 'acess'), Y + 280, PW - 2 * MX, MX, 33, PH - 160);
   return cv;
 }
 function pgRotina(c, s, list, n) {
   const [cv, x] = pg(c, 'Da cartela para o espelho', 'Looks para a sua rotina', n);
-  para(x, 'Combinações montadas com as cores da sua cartela, pensando nas ocasiões do seu dia a dia.', 440, PW - 2 * MX, MX, 28);
+  para(x, 'Combinações montadas com as cores da sua cartela, pensando nas ocasiões do seu dia a dia.', 432, PW - 2 * MX, MX, 28);
   list.forEach((o, li) => {
-    const l = olook(c, s, o), Y = 506 + li * 290; box(x, MX, Y, PW - 2 * MX, 272, 28, '#fff'); tx(x, OCC[o], MX + 44, Y + 70, FD(600, 50), VIN);
-    l.pieces.forEach((p, i) => { const X = MX + 44 + i * 245; x.beginPath(); x.arc(X + 34, Y + 138, 34, 0, 7); x.fillStyle = p.c; x.fill(); if (lum(p.c) > .86) { x.lineWidth = 2; x.strokeStyle = '#D5D3CE'; x.stroke(); } tx(x, p.l, X + 82, Y + 132, FB(600, 22), INK); tx(x, p.n || cname(p.c), X + 82, Y + 160, FB(400, 20), MUT); });
-    wrapT(x, l.note || '', MX + 44, Y + 218, PW - 2 * MX - 88, 30, FB(400, 23), MUT, 'left', Y + 250);
+    const l = olook(c, s, o), Y = 516 + li * 280; box(x, MX, Y, PW - 2 * MX, 262, 28, '#fff'); tx(x, UP(OCC[o]), MX + 44, Y + 66, FD(400, 42), VIN, 'left', 1);
+    l.pieces.forEach((p, i) => { const X = MX + 44 + i * 245; x.beginPath(); x.arc(X + 34, Y + 130, 34, 0, 7); x.fillStyle = p.c; x.fill(); if (lum(p.c) > .86) { x.lineWidth = 2; x.strokeStyle = LINE; x.stroke(); } tx(x, p.l, X + 82, Y + 124, FB(600, 22), INK); tx(x, p.n || cname(p.c), X + 82, Y + 152, FB(400, 20), MUT); });
+    wrapT(x, l.note || '', MX + 44, Y + 210, PW - 2 * MX - 88, 30, FB(400, 23), MUT, 'left', Y + 242);
   });
   return cv;
 }
@@ -809,29 +889,30 @@ function pgMake(c, s, n) {
   const [cv, x] = pg(c, 'Perto do rosto', 'Maquiagem e cabelo', n);
   let Y = para(x, txt(c, s, 'make'), 452, PW - 2 * MX, MX, 33, 700) + 30;
   [['Batom', s.lips], ['Blush', s.blush], ['Sombra', s.eyes], ['Esmalte', nails(s)]].forEach(([l, cols], r) => { const y = Y + r * 104; tx(x, l.toUpperCase(), MX, y + 44, FB(600, 20), INK, 'left', 4); cols.forEach((k, i) => sw(x, k, MX + 210 + i * 164, y, 148, 72, 36)); });
-  Y = sub(x, 'Cabelo', Y + 4 * 104 + 76) + 6; para(x, txt(c, s, 'cabelo'), Y, PW - 2 * MX, MX, 33, PH - 150);
+  Y = sub(x, 'Cabelo', Y + 4 * 104 + 76) + 6; para(x, txt(c, s, 'cabelo'), Y, PW - 2 * MX, MX, 33, PH - 160);
   return cv;
 }
 function pgFecho(c, s, n) {
   const [cv, x] = pg(c, 'Para o dia a dia', 'Como usar a sua cartela', n); let Y = 450;
   tips(s).slice(3).concat(['Na dúvida entre duas peças, aproxime cada uma do rosto, na luz natural, e escolha a que deixa a pele mais uniforme.']).forEach(t => { x.beginPath(); x.arc(MX + 10, Y - 11, 8, 0, 7); x.fillStyle = KEY; x.fill(); Y = wrapT(x, t, MX + 44, Y, PW - 2 * MX - 60, 49, FB(400, 33), INK) + 18; });
-  Y += 40; const msg = txt(c, s, 'fecho'), end = wrapT(x, msg, MX + 50, Y + 134, PW - 2 * MX - 100, 50, FB(400, 33), 'rgba(0,0,0,0)'), h = Math.min(end - Y + 120, PH - 130 - Y);
-  box(x, MX, Y, PW - 2 * MX, h, 30, '#fff'); kick(x, 'Um recado para você', Y + 72, MX + 50); wrapT(x, msg, MX + 50, Y + 134, PW - 2 * MX - 100, 50, FB(400, 33), INK, 'left', Y + h - 130); tx(x, S.cfg.brand, PW - MX - 50, Y + h - 46, FI(500, 68), VIN, 'right');
+  Y += 40; const msg = txt(c, s, 'fecho'), end = wrapT(x, msg, MX + 50, Y + 134, PW - 2 * MX - 100, 50, FB(400, 33), 'rgba(0,0,0,0)'), h = Math.min(end - Y + 120, PH - 140 - Y);
+  box(x, MX, Y, PW - 2 * MX, h, 30, '#fff'); kick(x, 'Um recado para você', Y + 72, MX + 50); wrapT(x, msg, MX + 50, Y + 134, PW - 2 * MX - 100, 50, FB(400, 33), INK, 'left', Y + h - 130); tx(x, S.cfg.brand, PW - MX - 50, Y + h - 46, FI(400, 68), VIN, 'right');
   return cv;
 }
 async function pgPecas(c, s, looks, n) {
   const [cv, x] = pg(c, 'Com o que você já tem', 'Looks com as suas peças', n);
   for (let li = 0; li < looks.length; li++) {
-    const l = looks[li], Y = 440 + li * 610; box(x, MX, Y, PW - 2 * MX, 580, 30, '#fff');
+    const l = looks[li], Y = 436 + li * 602; box(x, MX, Y, PW - 2 * MX, 580, 30, '#fff');
     const imgs = await Promise.all(l.items.map(i => loadImg(c.pieces[i]))), cells = { 1: [[0, 0, 500, 500]], 2: [[0, 0, 246, 500], [254, 0, 246, 500]], 3: [[0, 0, 246, 500], [254, 0, 246, 246], [254, 254, 246, 246]], 4: [[0, 0, 246, 246], [254, 0, 246, 246], [0, 254, 246, 246], [254, 254, 246, 246]] }[imgs.length];
     imgs.forEach((im, i) => { const [a, b, w, h] = cells[i]; x.save(); rrp(x, MX + 40 + a, Y + 40 + b, w, h, 16); x.clip(); cover(x, im, MX + 40 + a, Y + 40 + b, w, h); x.restore(); });
-    tx(x, l.title, MX + 590, Y + 110, FD(600, 60), VIN); wrapT(x, l.note || '', MX + 590, Y + 180, 410, 42, FB(400, 28), INK, 'left', Y + 520);
+    fitTx(x, UP(l.title), MX + 590, Y + 104, fd, 50, 410, VIN, 'left', 1); wrapT(x, l.note || '', MX + 590, Y + 172, 410, 42, FB(400, 28), INK, 'left', Y + 520);
   }
   return cv;
 }
 async function buildDossie(c, s, face) {
   const pages = [pgCover(c, s, face)], add = f => pages.push(f(pages.length + 1)), oc = occs(c), lk = c.looks || [];
-  add(n => pgSobre(c, s, n)); add(n => pgTC(c, s, face, n)); add(n => pgPI(c, s, face, n)); add(n => pgCores(c, s, n)); add(n => pgCuidado(c, s, n));
+  add(n => pgSobre(c, s, n)); add(n => pgDim(c, s, face, n, 'temp', 1)); add(n => pgContraste(c, s, face, n, 2)); add(n => pgDim(c, s, face, n, 'prof', 3)); add(n => pgDim(c, s, face, n, 'intens', 4));
+  add(n => pgCores(c, s, n)); add(n => pgCuidado(c, s, n));
   for (let i = 0; i < oc.length; i += 4) add(n => pgRotina(c, s, oc.slice(i, i + 4), n));
   add(n => pgMake(c, s, n));
   for (let i = 0; i < lk.length; i += 2) pages.push(await pgPecas(c, s, lk.slice(i, i + 2), pages.length + 1));
@@ -841,10 +922,10 @@ async function buildDossie(c, s, face) {
 function buildBolsa(c, s, face) {
   const [cv, x] = mk(), CW = 532, CH = 827, Y0 = 250, X1 = 70, X2 = PW - 70 - CW;
   x.fillStyle = '#fff'; x.fillRect(0, 0, PW, PH);
-  tx(x, 'Cartela de bolsa', 70, 124, FD(600, 70), INK); tx(x, 'Imprima em papel firme (250 g ou mais), recorte nas marcas e cole frente e verso. Tamanho: 9 × 14 cm.', 70, 176, FB(400, 24), MUT);
-  const [f, fx2] = mk(CW, CH); vinBg(fx2, CW, CH); tx(fx2, S.cfg.brand, CW / 2, 112, FI(500, 58), '#fff', 'center'); tx(fx2, 'MINHA CARTELA DE CORES', CW / 2, 158, FB(500, 16), ROS, 'center', 5);
-  fan(fx2, face, s, CW / 2, 420, 186); tx(fx2, c.name, CW / 2, 704, FD(600, 54), '#fff', 'center'); tx(fx2, s.name.toUpperCase(), CW / 2, 756, FB(600, 20), ROS, 'center', 6); x.drawImage(f, X1, Y0);
-  const [b, bx] = mk(CW, CH); bx.fillStyle = CRE; bx.fillRect(0, 0, CW, CH); stripe(bx, CW, 8); tx(bx, s.name, 36, 86, FD(600, 52), VIN); tx(bx, c.name, 36, 122, FB(500, 21), MUT);
+  tx(x, 'CARTELA DE BOLSA', 70, 124, FD(400, 66), INK, 'left', 1); tx(x, 'Imprima em papel firme (250 g ou mais), recorte nas marcas e cole frente e verso. Tamanho: 9 × 14 cm.', 70, 176, FB(400, 24), MUT);
+  const [f, fx2] = mk(CW, CH); vinBg(fx2, CW, CH); fitTx(fx2, UP(S.cfg.brand), CW / 2, 108, fd, 42, CW - 80, '#fff', 'center', 4); tx(fx2, 'MINHA CARTELA DE CORES', CW / 2, 152, FB(500, 16), ROS, 'center', 5);
+  fan(fx2, face, s, CW / 2, 420, 186); fitTx(fx2, c.name, CW / 2, 704, fd, 54, CW - 60, '#fff', 'center'); tx(fx2, s.name.toUpperCase(), CW / 2, 756, FB(600, 20), ROS, 'center', 6); x.drawImage(f, X1, Y0);
+  const [b, bx] = mk(CW, CH); bx.fillStyle = CRE; bx.fillRect(0, 0, CW, CH); stripe(bx, CW, 8); fitTx(bx, UP(s.name), 36, 88, fd, 50, CW - 72, VIN, 'left', 1); tx(bx, c.name, 36, 122, FB(500, 21), MUT);
   all16(s).forEach((k, i) => sw(bx, k, 36 + (i % 4) * 118, 152 + Math.floor(i / 4) * 118, 106, 106, 12));
   tx(bx, 'METAIS', 36, 664, FB(600, 16), INK, 'left', 3); metals(s).filter(m => m[2]).forEach(([n, g], i) => { const cx = 62 + i * 230, gr = bx.createRadialGradient(cx - 8, 700, 2, cx, 708, 28); gr.addColorStop(0, g[0]); gr.addColorStop(.5, g[1]); gr.addColorStop(1, g[2]); bx.beginPath(); bx.arc(cx, 708, 26, 0, 7); bx.fillStyle = gr; bx.fill(); tx(bx, n, cx + 40, 716, FB(500, 20), INK); });
   tx(bx, [S.cfg.brand, S.cfg.insta].filter(Boolean).join(' · '), CW / 2, 794, FB(400, 17), MUT, 'center'); x.drawImage(b, X2, Y0);
@@ -859,18 +940,18 @@ function buildBolsa(c, s, face) {
 function buildKit(c, s, face) {
   const ax = axes(s), insta = S.cfg.insta || S.cfg.brand, out = [];
   let [cv, x] = mk(SW, SH); vinBg(x, SW, SH);
-  tx(x, S.cfg.brand, SW / 2, 270, FI(500, 100), '#fff', 'center'); tx(x, 'COLORAÇÃO PESSOAL', SW / 2, 336, FB(500, 28), ROS, 'center', 10);
+  tx(x, UP(S.cfg.brand), SW / 2, 262, FD(400, 66), '#fff', 'center', 7); tx(x, 'COLORAÇÃO PESSOAL', SW / 2, 326, FB(500, 26), ROS, 'center', 10);
   fan(x, face, s, SW / 2, 910, 400);
-  tx(x, 'Minha cartela é', SW / 2, 1500, FI(500, 66), '#fff', 'center'); fitTx(x, s.name, SW / 2, 1640, z => FD(600, z), 132, SW - 120, '#fff', 'center');
+  tx(x, 'Minha cartela é', SW / 2, 1480, FI(400, 64), '#fff', 'center'); fitTx(x, UP(s.name), SW / 2, 1630, fd, 150, SW - 120, '#fff', 'center', 2);
   tx(x, 'Uma leitura de ' + insta, SW / 2, 1770, FB(400, 34), ROS, 'center'); out.push(cv);
   [cv, x] = mk(SW, SH); x.fillStyle = CRE; x.fillRect(0, 0, SW, SH); stripe(x, SW, 18);
-  tx(x, S.cfg.brand, SW / 2, 200, FI(500, 70), VIN, 'center'); tx(x, 'Veja a diferença', SW / 2, 390, FD(600, 138), VIN, 'center');
+  tx(x, UP(S.cfg.brand), SW / 2, 196, FD(400, 46), VIN, 'center', 5); fitTx(x, 'VEJA A DIFERENÇA', SW / 2, 390, fd, 138, SW - 140, VIN, 'center', 1);
   EV.slice(0, 2).forEach(([a, l, ri, k], n) => { const r = ROUNDS[ri], y = 480 + n * 630; tx(x, `${l}: ${ax[k]}`.toUpperCase(), SW / 2, y + 44, FB(600, 28), KEY, 'center', 6); [r.a, r.b].forEach((o, i) => drapeTile(x, face, o[1], 70 + i * 480, y + 76, 460, 430, evOk(s, a, o), o[0], 32)); });
   tx(x, 'Coloração online com ' + insta, SW / 2, 1810, FB(500, 32), MUT, 'center'); out.push(cv);
   [cv, x] = mk(SW, SH); x.fillStyle = CRE; x.fillRect(0, 0, SW, SH); stripe(x, SW, 18);
-  tx(x, S.cfg.brand, SW / 2, 200, FI(500, 70), VIN, 'center'); tx(x, 'Minhas cores', SW / 2, 390, FD(600, 138), VIN, 'center'); tx(x, s.name.toUpperCase(), SW / 2, 468, FB(600, 30), KEY, 'center', 8);
+  tx(x, UP(S.cfg.brand), SW / 2, 196, FD(400, 46), VIN, 'center', 5); fitTx(x, 'MINHAS CORES', SW / 2, 390, fd, 138, SW - 140, VIN, 'center', 1); tx(x, s.name.toUpperCase(), SW / 2, 468, FB(600, 30), KEY, 'center', 8);
   all16(s).forEach((k, i) => sw(x, k, 64 + (i % 4) * 244, 540 + Math.floor(i / 4) * 244, 220, 220, 26));
-  box(x, 64, 1560, SW - 128, 250, 40, VIN); tx(x, 'Quer descobrir as suas cores?', SW / 2, 1672, FD(600, 70), '#fff', 'center'); tx(x, 'Coloração online · ' + insta, SW / 2, 1742, FB(400, 32), ROS, 'center'); out.push(cv);
+  box(x, 64, 1560, SW - 128, 250, 40, VIN); tx(x, 'Quer descobrir as suas cores?', SW / 2, 1672, FD(400, 72), '#fff', 'center'); tx(x, 'Coloração online · ' + insta, SW / 2, 1742, FB(400, 32), ROS, 'center'); out.push(cv);
   return out;
 }
 let OUT = null;
