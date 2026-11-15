@@ -23,6 +23,9 @@ Ferramenta da Luciane para fazer a coloração online: https://p0sturee.github.i
 - Material em PDF em formato de leitura: sobre ela, temperatura, contraste, profundidade, intensidade, melhores cores, cores que pedem cuidado, neutros, looks por ocasião, maquiagem, cabelo e acessórios
 - Uma página para cada característica (temperatura, contraste, profundidade e intensidade), com o rosto da cliente nas comparações, a foto em preto e branco e exemplos com as cores da cartela dela
 - Títulos em serifa editorial, em caixa alta (Instrument Serif)
+- Página de combinações de cores (tom sobre tom, neutro com cor, cores vizinhas e cores opostas), com exemplos da cartela
+- Ficha com profissão, rotina e estilo, perguntas prontas para enviar pelo WhatsApp e foto em preto e branco para avaliar o contraste
+- Valor padrão da análise em Ajustes
 - Cartela de bolsa e imagens para stories
 - Identidade nas cores da cartela dela: marinho, verde jade, roxo, fúcsia e preto
 - Editor das cores de cada cartela, temas do material e backup em arquivo

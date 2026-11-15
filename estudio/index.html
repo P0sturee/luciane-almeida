@@ -133,6 +133,7 @@ textarea.inp{min-height:96px;resize:vertical}
 .seg button{flex:1;height:48px;border-radius:14px;background:#fff;border:1.5px solid var(--areia);font-size:15px}
 .seg button.on,.tg button.on{background:var(--pri);color:#fff;border-color:var(--pri)}
 .tg{display:flex;flex-wrap:wrap;gap:8px}
+.bw{display:flex;gap:10px;margin-top:4px}.bw img{width:calc(50% - 5px);aspect-ratio:3/4;object-fit:cover;border-radius:16px;display:block}
 .tg button{padding:10px 14px;border-radius:999px;border:1.5px solid var(--areia);background:#fff;font-size:14px}
 .lk{display:flex;flex-wrap:wrap;gap:8px 14px;margin-top:10px}
 .lk span{display:flex;align-items:center;gap:7px;font-size:13.5px}
@@ -250,7 +251,7 @@ const THEMES = {
   roxo: ['Roxo', { a: '#3B1F4A', l: '#563068', d: '#24122E', s: '#E2D3EA', bg: '#F7F5F8', k: '#B0125B' }],
   preto: ['Preto', { a: '#17151A', l: '#2E2A33', d: '#000000', s: '#DAD5E2', bg: '#F6F5F3', k: '#B0125B' }]
 };
-const S = { clients: [], cfg: { brand: 'Luciane Almeida', sub: 'Consultoria de imagem', insta: '@lu.consultoradeimagem', pin: '1234', theme: 'marinho', pal: {} }, stack: [], pin: '' };
+const S = { clients: [], cfg: { brand: 'Luciane Almeida', sub: 'Consultoria de imagem', insta: '@lu.consultoradeimagem', pin: '1234', theme: 'marinho', price: '250', pal: {} }, stack: [], pin: '' };
 const TH = () => (THEMES[S.cfg.theme] || THEMES.marinho)[1];
 function applyTheme() { const t = TH(), r = document.documentElement.style; r.setProperty('--pri', t.a); r.setProperty('--pri-l', t.l); r.setProperty('--pri-d', t.d); r.setProperty('--soft', t.s); r.setProperty('--creme-2', t.bg); r.setProperty('--key', t.k); const m = $('meta[name=theme-color]'); if (m) m.content = t.a; }
 const se = id => { const b = BASE.find(s => s.id === id), o = S.cfg.pal && S.cfg.pal[id]; return o ? { ...b, ...o } : b; };
@@ -319,6 +320,7 @@ const reading = (c, s) => {
 };
 const digits = p => { const d = String(p || '').replace(/\D/g, ''); return d && d.length <= 11 ? '55' + d : d; };
 const wa = (c, msg) => `https://wa.me/${digits(c.phone)}?text=${encodeURIComponent(msg)}`;
+const briefing = c => `Oi, ${first(c)}! Para a sua análise ficar com a sua cara, me conta um pouquinho de você:\n\n1. Qual é a sua profissão e como é a sua rotina?\n2. O que você mais gosta de vestir?\n3. Em quais ocasiões você mais quer acertar nas cores? (culto, trabalho, dia a dia, eventos, vídeos)\n4. Você usa só saias e vestidos?\n5. Como está o seu cabelo hoje? É a cor natural?\n6. O que você espera da análise?\n\nPode responder por áudio, se preferir. 🤍`;
 const photoGuide = c => `Oi, ${first(c)}! Para a sua análise de coloração online, preciso de uma foto sua assim:\n\n1. De frente para uma janela, com luz natural (sem sol direto)\n2. Sem maquiagem e sem filtro\n3. Cabelo solto, mostrando a cor natural\n4. Sem óculos, com uma blusa branca\n5. Segure uma folha de papel branca ao lado do rosto (ajuda a acertar as cores da foto)\n6. Rosto e pescoço aparecendo, olhando para a câmera\n\nPode me enviar por aqui mesmo. 🤍`;
 
 /* ===================== NAVEGAÇÃO ===================== */
@@ -379,7 +381,7 @@ const formHTML = (c = {}, full) => `
   <label class="f" for="f-name">Nome da cliente</label><input class="inp" id="f-name" value="${esc(c.name)}" autocomplete="off" placeholder="Nome e sobrenome">
   <label class="f" for="f-phone">WhatsApp (com DDD)</label><input class="inp" id="f-phone" value="${esc(c.phone)}" inputmode="tel" autocomplete="off" placeholder="41 99999-0000">
   <label class="f" for="f-city">Cidade</label><input class="inp" id="f-city" value="${esc(c.city)}" autocomplete="off" placeholder="Cidade e país">
-  <label class="f" for="f-price">Valor da análise (R$)</label><input class="inp" id="f-price" value="${esc(c.price)}" inputmode="decimal" autocomplete="off" placeholder="0,00">
+  <label class="f" for="f-price">Valor da análise (R$)</label><input class="inp" id="f-price" value="${esc(c.price === undefined ? S.cfg.price : c.price)}" inputmode="decimal" autocomplete="off" placeholder="0,00">
   ${full ? `<label class="chk"><input type="checkbox" id="f-paid" ${c.paid ? 'checked' : ''}> Já pagou</label>` : ''}
   <label class="chk"><input type="checkbox" id="f-c1" ${c.okPhoto ? 'checked' : ''}> A cliente autorizou o uso da foto na análise</label>
   <label class="chk"><input type="checkbox" id="f-c2" ${c.okPost ? 'checked' : ''}> Autorizou divulgar o resultado (Instagram)</label>
@@ -403,17 +405,20 @@ A.create = async () => {
 const fx = c => c.ficha || {};
 const OCC = { culto: 'Culto e igreja', trabalho: 'Trabalho', dia: 'Dia a dia', evento: 'Eventos e festas', conteudo: 'Gravação de conteúdo' };
 const fichaHTML = c => { const f = fx(c), oc = f.occ || []; return `<p class="m">Quanto mais você contar sobre a cliente, mais pessoal fica o material. O texto da interpretação é montado a partir daqui.</p>
-  <label class="f" for="k-about">Sobre ela e a rotina (escreva falando com ela)</label><textarea class="inp" id="k-about" placeholder="Você é mãe de dois, trabalha com moda e grava vídeos quase todos os dias.">${esc(f.about)}</textarea>
+  ${c.phone ? `<a class="btn ghost" style="margin-top:14px" href="${wa(c, briefing(c))}" target="_blank" rel="noopener">${I.chat}Enviar as perguntas pelo WhatsApp</a>` : ''}
+  <label class="f" for="k-job">Profissão ou ocupação</label><input class="inp" id="k-job" value="${esc(f.job)}" autocomplete="off" placeholder="professora e mãe de dois">
+  <label class="f" for="k-about">Sobre ela e a rotina (escreva falando com ela)</label><textarea class="inp" id="k-about" placeholder="Você acorda cedo, dá aula de manhã e grava vídeos quase todos os dias.">${esc(f.about)}</textarea>
+  <label class="f" for="k-style">O que ela gosta de vestir</label><input class="inp" id="k-style" value="${esc(f.style)}" autocomplete="off" placeholder="peças clássicas, saias midi e tons neutros">
   <label class="f" for="k-goal">Ela me procurou porque...</label><input class="inp" id="k-goal" value="${esc(f.goal)}" autocomplete="off" placeholder="quer acertar nas cores das roupas e da maquiagem">
   <label class="f" for="k-hair">Cabelo hoje</label><input class="inp" id="k-hair" value="${esc(f.hair)}" autocomplete="off" placeholder="castanho escuro, longo e natural">
-  <label class="f">Contraste pessoal (pele, olhos e cabelo)</label><div class="seg" id="k-con">${[['baixo', 'Baixo'], ['medio', 'Médio'], ['alto', 'Alto']].map(([k, l]) => `<button type="button" class="${f.contrast === k ? 'on' : ''}" data-a="seg" data-k="${k}">${l}</button>`).join('')}</div>
+  <label class="f">Contraste pessoal (pele, olhos e cabelo)</label>${c.photo ? `<div class="bw"><img src="${c.photo}" alt="Foto em cores"><img src="${c.photo}" alt="Foto em preto e branco" style="filter:grayscale(1)"></div><p class="m" style="margin:8px 0 10px">Em preto e branco fica mais fácil ver a diferença entre os tons da pele, dos olhos e do cabelo.</p>` : ''}<div class="seg" id="k-con">${[['baixo', 'Baixo'], ['medio', 'Médio'], ['alto', 'Alto']].map(([k, l]) => `<button type="button" class="${f.contrast === k ? 'on' : ''}" data-a="seg" data-k="${k}">${l}</button>`).join('')}</div>
   <label class="f">Ocasiões para os looks</label><div class="tg" id="k-occ">${Object.entries(OCC).map(([k, l]) => `<button type="button" class="${oc.includes(k) ? 'on' : ''}" data-a="tg" data-k="${k}">${l}</button>`).join('')}</div>
   <label class="chk"><input type="checkbox" id="k-skirt" ${f.skirt ? 'checked' : ''}> Usa só saias e vestidos</label>
   <label class="f" for="k-obs">O que você observou na análise</label><textarea class="inp" id="k-obs" placeholder="As cores frias uniformizaram a pele na hora, e o olhar ganhou vida com os tons mais escuros.">${esc(f.obs)}</textarea>
   <button class="btn" style="margin-top:20px" data-a="saveficha">Salvar ficha</button>`; };
 A.seg = el => { const was = el.classList.contains('on'); $$('#k-con button').forEach(b => b.classList.remove('on')); if (!was) el.classList.add('on'); };
 A.tg = el => el.classList.toggle('on');
-A.saveficha = async () => { const c = cur(), on = $('#k-con .on'); c.ficha = { about: $('#k-about').value.trim(), goal: $('#k-goal').value.trim(), hair: $('#k-hair').value.trim(), contrast: on ? on.dataset.k : '', occ: $$('#k-occ .on').map(b => b.dataset.k), skirt: $('#k-skirt').checked, obs: $('#k-obs').value.trim() }; await save(c); render(); toast('Ficha salva.'); };
+A.saveficha = async () => { const c = cur(), on = $('#k-con .on'); c.ficha = { job: $('#k-job').value.trim(), style: $('#k-style').value.trim(), about: $('#k-about').value.trim(), goal: $('#k-goal').value.trim(), hair: $('#k-hair').value.trim(), contrast: on ? on.dataset.k : '', occ: $$('#k-occ .on').map(b => b.dataset.k), skirt: $('#k-skirt').checked, obs: $('#k-obs').value.trim() }; await save(c); render(); toast('Ficha salva.'); };
 const lookCard = (c, s, o) => { const l = olook(c, s, o); return `<div class="card"><b>${OCC[o]}</b><div class="lk">${l.pieces.map(p => `<span><i style="background:${p.c}"></i>${esc(p.l)}: ${esc(p.n || cname(p.c))}</span>`).join('')}</div><p class="m" style="margin-top:8px">${esc(l.note)}</p><button class="link" style="margin:6px 0 0;padding:4px 0" data-a="oledit" data-k="${o}">Trocar cores e texto</button></div>`; };
 V.client = {
   h(p) {
@@ -425,7 +430,7 @@ V.client = {
       else if (!s) body = `<div class="card" style="text-align:center"><p><b>Foto pronta.</b> Agora compare as cores, como você faz com os tecidos.</p></div>
         <div class="stack" style="margin-top:14px"><button class="btn" data-a="start">Começar a análise</button><button class="btn ghost" data-a="try">Provar as cartelas livremente</button><button class="btn soft" data-a="pickphoto">${I.cam}Trocar a foto</button></div>`;
       else body = `<div class="card"><p class="up">Cartela da cliente</p><p class="h1" style="margin-top:6px">${esc(s.name)}</p>${pills(s)}<div class="pal">${all16(s).map(k => `<i style="background:${k}"></i>`).join('')}</div></div>
-        ${fx(c).about ? '' : `<div class="card" style="margin-top:12px"><p><b>Deixe o material com a cara dela.</b></p><p class="m" style="margin-top:4px">Preencha a Ficha com a rotina da cliente e o que você observou. A interpretação é escrita a partir dela.</p><button class="btn soft" style="margin-top:12px" data-a="tab" data-t="ficha">Preencher a ficha</button></div>`}
+        ${fx(c).about || fx(c).job || fx(c).style ? '' : `<div class="card" style="margin-top:12px"><p><b>Deixe o material com a cara dela.</b></p><p class="m" style="margin-top:4px">Preencha a Ficha com a rotina da cliente e o que você observou. A interpretação é escrita a partir dela.</p><button class="btn soft" style="margin-top:12px" data-a="tab" data-t="ficha">Preencher a ficha</button></div>`}
         <div class="stack" style="margin-top:14px"><button class="btn ghost" data-a="texto">Revisar o texto da interpretação</button><button class="btn" data-a="out" data-k="dossie">${I.doc}Gerar o material da cliente (PDF)</button><button class="btn ghost" data-a="out" data-k="kit">${I.img}Imagens para o Instagram</button><button class="btn ghost" data-a="out" data-k="bolsa">Cartela de bolsa para imprimir</button><button class="btn soft" data-a="try">Provar outras cartelas</button><button class="btn soft" data-a="start">Refazer a análise</button></div>`;
     } else if (tab === 'ficha') body = fichaHTML(c);
     else if (tab === 'looks') {
@@ -600,12 +605,12 @@ function cname(h) {
   if (hue < 325) return dk ? 'ameixa' : lt ? 'rosa-lilás' : s < .4 ? 'malva' : 'magenta';
   return dk ? 'vinho' : lt ? 'rosa-claro' : s < .45 ? 'rosa-antigo' : l < .45 ? 'cereja' : 'pink';
 }
-const SECS = [['abertura', 'Abertura: sobre ela'], ['metodo', 'Como você fez a análise'], ['sintese', 'Frase de destaque'], ['temp', 'Temperatura'], ['contraste', 'Contraste'], ['prof', 'Profundidade'], ['intens', 'Intensidade'], ['cores', 'Melhores cores'], ['neutros', 'Neutros ideais'], ['cuidado', 'Cores que pedem cuidado'], ['acess', 'Acessórios e metais'], ['make', 'Maquiagem'], ['cabelo', 'Cabelo'], ['fecho', 'Recado final']];
+const SECS = [['abertura', 'Abertura: sobre ela'], ['metodo', 'Como você fez a análise'], ['sintese', 'Frase de destaque'], ['temp', 'Temperatura'], ['contraste', 'Contraste'], ['prof', 'Profundidade'], ['intens', 'Intensidade'], ['cores', 'Melhores cores'], ['neutros', 'Neutros ideais'], ['cuidado', 'Cores que pedem cuidado'], ['combina', 'Como combinar as cores'], ['acess', 'Acessórios e metais'], ['make', 'Maquiagem'], ['cabelo', 'Cabelo'], ['fecho', 'Recado final']];
 /* sugestão de texto, montada com a ficha e a análise. A Luciane ajusta com as palavras dela. */
 function sugg(c, s, k) {
-  const f = fx(c), n = first(c), warm = s.v[0] > 0, d = s.v[1], i = s.v[2], ax = axes(s), mt = metals(s), goal = f.goal ? ` Você me procurou porque ${dotend(f.goal)}` : '';
+  const f = fx(c), n = first(c), warm = s.v[0] > 0, d = s.v[1], i = s.v[2], ax = axes(s), mt = metals(s), goal = f.goal ? ` Você me procurou porque ${dotend(f.goal)}` : '', who = [f.job && `Você é ${dotend(f.job)}`, dotend(f.about), f.style && `No dia a dia, você gosta de vestir ${dotend(f.style)}`].filter(Boolean).join(' ');
   switch (k) {
-    case 'abertura': return f.about ? `${n}, antes de falar de cores, quero falar de você. ${dotend(f.about)}${goal} Foi pensando nessa rotina que fiz a sua análise e montei este material.` : `${n}, este material foi feito só para você.${goal} Ele não é uma lista de regras: é a minha leitura das cores que valorizam o seu rosto, para facilitar as suas escolhas no dia a dia.`;
+    case 'abertura': return who ? `${n}, antes de falar de cores, quero falar de você. ${who}${goal} Foi pensando nessa rotina que fiz a sua análise e montei este material.` : `${n}, este material foi feito só para você.${goal} Ele não é uma lista de regras: é a minha leitura das cores que valorizam o seu rosto, para facilitar as suas escolhas no dia a dia.`;
     case 'metodo': return `Recebi a sua foto com luz natural e sem maquiagem e comparei o seu rosto com cores de diferentes temperaturas, profundidades e intensidades. Em cada uma, observei como a pele, os olhos e o contorno do rosto reagiam.${f.obs ? ' ' + dotend(f.obs) : ''}`;
     case 'sintese': return `A sua cartela é ${s.name}. A característica mais forte dela é ${prim(s)}.`;
     case 'temp': return `A temperatura mostra se a sua pele combina mais com cores de fundo amarelado, as quentes, ou de fundo azulado, as frias. ${warm ? 'No seu rosto, os tons quentes deixaram a pele mais viva e uniforme, e os frios tiraram um pouco do seu brilho natural. Por isso a sua temperatura é quente: dourados, corais e terrosos são seus aliados.' : 'No seu rosto, os tons frios deixaram a pele mais uniforme e descansada, e os quentes amarelaram e pesaram a expressão. Por isso a sua temperatura é fria: tons azulados, rosados e arroxeados são seus aliados.'}`;
@@ -615,6 +620,7 @@ function sugg(c, s, k) {
     case 'cores': return 'Estas são as cores que mais valorizam você. Use as principais em blusas, vestidos, casacos e lenços, sempre perto do rosto. As de destaque ficam lindas no batom, nos acessórios e naquela peça que você quer que seja notada.';
     case 'neutros': return `Os neutros são a base do guarda-roupa: saias, casacos, bolsas e sapatos. Para você, ${listPt(s.n.map(cname))} funcionam melhor que os neutros comuns e combinam com todas as outras cores da cartela.`;
     case 'cuidado': return `Estas cores não são proibidas, mas pedem cuidado: perto do rosto elas tendem a ${warm ? 'acinzentar' : 'amarelar'} a sua pele. Se gostar de alguma, use na parte de baixo, em sapatos e bolsas, ou junto de uma cor da sua cartela perto do rosto.`;
+    case 'combina': return `Combinar as cores é mais simples do que parece. ${{ alto: 'Com o seu contraste alto, você sustenta combinações marcantes: um neutro com uma cor viva, claro com escuro e até duas cores opostas no mesmo look.', medio: 'Com o seu contraste médio, o equilíbrio é o seu ponto forte: um neutro com uma cor, ou duas cores vizinhas, ficam em harmonia com você.', baixo: 'Com o seu contraste baixo, o tom sobre tom e as cores vizinhas são as suas melhores combinações: tudo próximo, sem cortes fortes.' }[contrast(c, s)]} Na dúvida, comece por um neutro da cartela e traga uma cor para perto do rosto.`;
     case 'acess': return `${listPt(mt.filter(m => m[2]).map(m => m[0].toLowerCase())).replace(/^./, m => m.toUpperCase())} são os metais que mais iluminam o seu rosto. ${mt.filter(m => !m[2]).map(m => m[0]).join('')} fica melhor longe do rosto, em cintos e bolsas. Em pedras e bijuterias, siga as cores de destaque da cartela.`;
     case 'make': return `Na maquiagem vale a mesma lógica das roupas: estes tons de batom, blush e sombra acompanham a sua temperatura ${ax.t.toLowerCase()}. No dia a dia, fique com os mais discretos. Em ocasiões especiais, use os mais marcantes.`;
     case 'cabelo': return `${f.hair ? `Hoje o seu cabelo é ${dotend(f.hair)} ` : ''}${warm ? (d > 0 ? 'Tons escuros e quentes harmonizam com você: castanho chocolate, castanho acobreado e ruivo escuro. Tons acinzentados e o preto azulado tendem a apagar a sua pele.' : 'Tons quentes e luminosos harmonizam com você: loiro dourado, mel, caramelo e cobre claro. Tons acinzentados tendem a apagar a sua pele.') : (d > 0 ? 'Tons escuros e frios harmonizam com você: castanho escuro, café e preto. Se quiser iluminar, prefira reflexos discretos em tom frio. Dourados e acobreados tendem a amarelar a sua pele.' : 'Tons frios harmonizam com você: loiro bege, loiro acinzentado e castanho claro frio. Dourados intensos e acobreados tendem a amarelar a sua pele.')}`;
@@ -670,13 +676,14 @@ V.cfg = {
     <label class="f" for="c-sub">Linha abaixo do nome</label><input class="inp" id="c-sub" value="${esc(S.cfg.sub)}">
     <label class="f" for="c-insta">Instagram</label><input class="inp" id="c-insta" value="${esc(S.cfg.insta)}">
     <label class="f">Estilo do material e do aplicativo</label><div class="thm">${Object.entries(THEMES).map(([id, [n, t]]) => `<button class="${S.cfg.theme === id ? 'on' : ''}" data-a="theme" data-t="${id}"><i style="background:${t.a}"></i>${n}</button>`).join('')}</div>
+    <label class="f" for="c-price">Valor padrão da análise (R$)</label><input class="inp" id="c-price" inputmode="decimal" value="${esc(S.cfg.price)}" placeholder="250">
     <label class="f" for="c-pin">Senha de entrada (4 números)</label><input class="inp" id="c-pin" inputmode="numeric" maxlength="4" value="${esc(S.cfg.pin)}">
     <button class="btn" style="margin-top:18px" data-a="savecfg">Salvar</button>
     <h2 class="h">Minhas cartelas</h2><p class="m" style="margin-bottom:10px">Ajuste as cores de cada cartela para ficarem iguais às suas.</p><button class="btn ghost" data-a="pals">Editar as cores das cartelas</button>
     <h2 class="h">Backup</h2><p class="m" style="margin-bottom:10px">As clientes e as fotos ficam só neste aparelho. Guarde uma cópia de vez em quando.</p>
     <div class="stack"><button class="btn ghost" data-a="backup">Baixar backup</button><button class="btn soft" data-a="pickrestore">Restaurar um backup</button></div><input type="file" accept="application/json,.json" id="fi-restore" data-c="restore" hidden>`
 };
-const readCfg = () => { const pin = $('#c-pin').value.trim(); if (!/^\d{4}$/.test(pin)) { toast('A senha precisa ter 4 números.'); return false; } Object.assign(S.cfg, { brand: $('#c-brand').value.trim() || 'Luciane Almeida', sub: $('#c-sub').value.trim(), insta: $('#c-insta').value.trim(), pin }); return true; };
+const readCfg = () => { const pin = $('#c-pin').value.trim(); if (!/^\d{4}$/.test(pin)) { toast('A senha precisa ter 4 números.'); return false; } Object.assign(S.cfg, { brand: $('#c-brand').value.trim() || 'Luciane Almeida', sub: $('#c-sub').value.trim(), insta: $('#c-insta').value.trim(), price: $('#c-price').value.trim(), pin }); return true; };
 A.savecfg = async () => { if (!readCfg()) return; await saveCfg(); history.back(); toast('Ajustes salvos.'); };
 A.theme = async el => { if (!readCfg()) return; S.cfg.theme = el.dataset.t; applyTheme(); await saveCfg(); const y = window.scrollY; render(); window.scrollTo(0, y); };
 A.pals = () => go('pals', {});
@@ -875,6 +882,26 @@ function pgCuidado(c, s, n) {
   para(x, txt(c, s, 'acess'), Y + 280, PW - 2 * MX, MX, 33, PH - 160);
   return cv;
 }
+/* combinações de cores: quatro jeitos de combinar, com exemplos tirados da cartela */
+function combos(s) {
+  const ch = [...s.p, ...s.x].filter((k, i, a) => a.indexOf(k) === i).map(k => [k, ...toHsl(k)]).filter(k => k[2] > .18 && k[3] > .08 && k[3] < .95), hd = (a, b) => { const d = Math.abs(a[1] - b[1]); return Math.min(d, 360 - d); }, prs = [];
+  for (let i = 0; i < ch.length; i++) for (let j = i + 1; j < ch.length; j++) prs.push([ch[i], ch[j], hd(ch[i], ch[j]), Math.abs(lum(ch[i][0]) - lum(ch[j][0]))]);
+  const take = (ok, sc) => { const u = new Set(), r = []; prs.filter(ok).sort((a, b) => sc(a) - sc(b)).forEach(p => { if (r.length < 3 && !u.has(p[0][0]) && !u.has(p[1][0])) { u.add(p[0][0]); u.add(p[1][0]); r.push([p[0][0], p[1][0]]); } }); return r; };
+  const tone = k => { const [hh, sa, l] = toHsl(k); return [k, hslCss(hh, sa * .85, l > .5 ? l * .62 : l + (1 - l) * .5), 1]; };
+  let mono = take(p => p[2] < 14 && p[3] > .1, p => p[2]); if (mono.length < 3) mono = mono.concat(s.p.filter(k => toHsl(k)[1] > .18 && !mono.flat().includes(k)).slice(0, 3 - mono.length).map(tone));
+  return [mono, [[s.n[3], s.p[0]], [s.n[0], s.p[1]], [s.n[2], s.x[0]]], take(p => p[2] >= 24 && p[2] <= 75, p => Math.abs(p[2] - 45)), take(p => p[2] >= 140, p => 180 - p[2])];
+}
+function pgCombina(c, s, n) {
+  const [cv, x] = pg(c, 'Do jeito certo', 'Como combinar as suas cores', n), lv = contrast(c, s), best = { baixo: [0, 2], medio: [1, 2], alto: [1, 3] }[lv], cb = combos(s);
+  para(x, txt(c, s, 'combina'), 446, PW - 2 * MX, MX, 30, 446 + 45 * 4);
+  [['Tom sobre tom', 'A mesma cor em tons diferentes. Alonga e fica elegante.'], ['Neutro com cor', 'Um neutro de base e uma cor da cartela. O mais fácil de usar.'], ['Cores vizinhas', 'Cores parecidas, uma ao lado da outra. Harmonia suave.'], ['Cores opostas', 'Duas cores bem diferentes. Chama atenção e pede equilíbrio.']].forEach(([t, d, ], r) => {
+    const Y = 712 + r * 226, on = best.includes(r); x.fillStyle = LINE; x.fillRect(MX, Y - 22, PW - 2 * MX, 2);
+    tx(x, UP(t), MX, Y + 46, FD(400, 42), VIN, 'left', 1); const e = wrapT(x, d, MX, Y + 84, 330, 31, FB(400, 22), MUT); if (on) tx(x, 'IDEAL PARA VOCÊ', MX, e + 14, FB(600, 17), KEY, 'left', 4);
+    cb[r].forEach(([a, b, made], i) => { const X = 470 + i * 228, w = 214; x.save(); rrp(x, X, Y, w, 112, 20); x.clip(); x.fillStyle = a; x.fillRect(X, Y, w / 2, 112); x.fillStyle = b; x.fillRect(X + w / 2, Y, w / 2 + 1, 112); x.restore(); rrp(x, X, Y, w, 112, 20); x.lineWidth = 2; x.strokeStyle = LINE; x.stroke(); wrapT(x, made || cname(a) === cname(b) ? `${cname(a)} em dois tons` : `${cname(a)} + ${cname(b)}`, X + w / 2, Y + 146, w + 8, 25, FB(400, 19), MUT, 'center'); });
+    if (!cb[r].length) tx(x, 'A sua cartela não tem este tipo de combinação.', 470, Y + 66, FB(400, 22), MUT);
+  });
+  return cv;
+}
 function pgRotina(c, s, list, n) {
   const [cv, x] = pg(c, 'Da cartela para o espelho', 'Looks para a sua rotina', n);
   para(x, 'Combinações montadas com as cores da sua cartela, pensando nas ocasiões do seu dia a dia.', 432, PW - 2 * MX, MX, 28);
@@ -912,7 +939,7 @@ async function pgPecas(c, s, looks, n) {
 async function buildDossie(c, s, face) {
   const pages = [pgCover(c, s, face)], add = f => pages.push(f(pages.length + 1)), oc = occs(c), lk = c.looks || [];
   add(n => pgSobre(c, s, n)); add(n => pgDim(c, s, face, n, 'temp', 1)); add(n => pgContraste(c, s, face, n, 2)); add(n => pgDim(c, s, face, n, 'prof', 3)); add(n => pgDim(c, s, face, n, 'intens', 4));
-  add(n => pgCores(c, s, n)); add(n => pgCuidado(c, s, n));
+  add(n => pgCores(c, s, n)); add(n => pgCuidado(c, s, n)); add(n => pgCombina(c, s, n));
   for (let i = 0; i < oc.length; i += 4) add(n => pgRotina(c, s, oc.slice(i, i + 4), n));
   add(n => pgMake(c, s, n));
   for (let i = 0; i < lk.length; i += 2) pages.push(await pgPecas(c, s, lk.slice(i, i + 2), pages.length + 1));
